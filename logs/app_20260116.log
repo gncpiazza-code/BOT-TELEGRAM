@@ -1,0 +1,231 @@
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260116.log
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 28600
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | __main__             | <module>                  | L95   | ================================================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | __main__             | <module>                  | L96   | 🤖 BOT HOST INICIANDO...
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | __main__             | <module>                  | L97   | ================================================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-16 16:56:47 | PID:28600  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-16 16:56:48 | PID:28600  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-16 16:56:50 | PID:28600  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-16 16:56:51 | PID:28600  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-16 16:56:51 | PID:28600  | [32mINFO[0m | __main__             | post_init                 | L1587 | 🚦 Monitor de semáforo iniciado
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260116.log
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 2692
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | __main__             | <module>                  | L95   | ================================================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | __main__             | <module>                  | L96   | 🤖 BOT HOST INICIANDO...
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | __main__             | <module>                  | L97   | ================================================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-16 16:58:04 | PID:2692   | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-16 16:58:05 | PID:2692   | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-16 16:58:07 | PID:2692   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-16 16:58:08 | PID:2692   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-16 16:58:08 | PID:2692   | [32mINFO[0m | __main__             | post_init                 | L1587 | 🚦 Monitor de semáforo iniciado
+2026-01-16 17:29:05 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 17:29:05 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 17:29:08 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-16 17:29:08 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-16 17:29:50 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=6bd080b1...
+2026-01-16 17:29:51 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 17:29:51 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=6bd080b1... Cliente=40260
+2026-01-16 17:33:05 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=6bd080b1... → Aprobado
+2026-01-16 17:33:07 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-16 18:51:10 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 18:51:10 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 18:51:11 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 18:51:11 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 18:51:12 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 18:51:12 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 18:51:13 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 18:51:13 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 18:51:13 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-16 21:51:22 UTC)" was missed by 0:00:01.393457
+2026-01-16 18:51:53 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=aeb73ef1...
+2026-01-16 18:51:54 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 18:51:54 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=aeb73ef1... Cliente=703
+2026-01-16 18:51:54 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-16 21:52:02 UTC)" was missed by 0:00:02.003602
+2026-01-16 18:51:54 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-16 21:52:22 UTC)" was missed by 0:00:02.000625
+2026-01-16 18:52:01 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=a08f7687...
+2026-01-16 18:52:01 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 18:52:01 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=a08f7687... Cliente=703
+2026-01-16 20:19:23 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 20:19:23 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 20:19:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 20:19:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 20:19:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 20:19:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 20:19:27 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 20:19:27 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 20:20:20 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=72016327...
+2026-01-16 20:20:21 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 20:20:21 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=72016327... Cliente=3086
+2026-01-16 20:20:28 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=9c5b6d9f...
+2026-01-16 20:20:28 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 20:20:28 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=9c5b6d9f... Cliente=3086
+2026-01-16 20:43:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 20:43:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 20:43:29 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 20:43:29 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 20:43:30 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 20:43:30 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 20:43:31 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 20:43:31 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 20:46:59 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=946a3fba...
+2026-01-16 20:46:59 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 20:46:59 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=946a3fba... Cliente=567
+2026-01-16 20:47:05 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=932c7554...
+2026-01-16 20:47:06 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 20:47:06 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=932c7554... Cliente=567
+2026-01-16 20:47:06 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-16 23:47:12 UTC)" was missed by 0:00:04.034548
+2026-01-16 21:50:44 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 21:50:44 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 21:50:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 21:50:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 21:50:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-16 21:50:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-16 21:50:48 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-16 21:50:48 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-16 21:52:23 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 00:52:32 UTC)" was missed by 0:00:01.222438
+2026-01-16 21:52:23 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 00:52:52 UTC)" was missed by 0:00:01.220459
+2026-01-16 21:52:30 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=69c6b375...
+2026-01-16 21:52:31 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 21:52:31 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=69c6b375... Cliente=575
+2026-01-16 21:52:37 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=28c96d50...
+2026-01-16 21:52:38 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-16 21:52:38 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=28c96d50... Cliente=575
+2026-01-16 23:02:56 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 02:03:02 UTC)" was missed by 0:00:03.456043
+2026-01-16 23:02:56 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 02:03:22 UTC)" was missed by 0:00:03.453960
+2026-01-17 02:38:17 | PID:2692   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: httpx.ReadError: 
+2026-01-17 02:38:17 | PID:2692   | [31mERROR[0m | __main__             | error_handler             | L1507 | Error capturado por error_handler: httpx.ReadError: 
+2026-01-17 02:38:17 | PID:2692   | [31mERROR[0m | telegram.ext.Application | process_error             | L1794 | An error was raised and an uncaught error was raised while handling the error with an error_handler.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1790, in process_error
+    await callback(update, context)
+  File "C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\host_bot.py", line 1510, in error_handler
+    if isinstance(error, telegram.error.BadRequest):
+                         ^^^^^^^^
+NameError: name 'telegram' is not defined
+2026-01-17 08:00:38 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:00:32 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:01:15 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:01:02 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:02:35 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:01:32 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:02:35 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 11:01:52 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:03:18 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:02:52 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:03:18 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 11:03:22 UTC)" was missed by 0:00:25.467177
+2026-01-17 08:06:08 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:03:32 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:06:08 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 11:03:52 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:06:30 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:06:22 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:06:30 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 11:06:52 UTC)" was missed by 0:00:07.833167
+2026-01-17 08:06:49 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:06:42 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:07:21 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:07:02 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:07:59 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 11:07:32 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 08:07:59 | PID:2692   | [33mWARNING[0m | apscheduler.scheduler | _process_jobs             | L1197 | Execution of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 11:07:52 UTC)" skipped: maximum number of running instances reached (1)
+2026-01-17 09:28:03 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 09:28:03 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 09:28:05 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-17 09:28:05 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-17 09:29:10 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=63cbfdd1...
+2026-01-17 09:29:11 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 09:29:11 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=63cbfdd1... Cliente=43473
+2026-01-17 09:53:42 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 09:53:42 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 09:53:45 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-17 09:53:45 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-17 09:53:45 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 12:53:52 UTC)" was missed by 0:00:03.402800
+2026-01-17 09:54:50 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=2e5dc912...
+2026-01-17 09:54:51 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 09:54:51 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=2e5dc912... Cliente=43474
+2026-01-17 09:59:08 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 09:59:08 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 09:59:09 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-17 09:59:09 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-17 09:59:50 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=896ef4a8...
+2026-01-17 09:59:50 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 09:59:50 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=896ef4a8... Cliente=40806
+2026-01-17 10:09:43 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 10:09:43 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 10:09:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-17 10:09:46 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-17 10:10:23 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=d83c93cb...
+2026-01-17 10:10:24 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 10:10:24 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=d83c93cb... Cliente=40807
+2026-01-17 10:10:24 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 13:10:32 UTC)" was missed by 0:00:01.649189
+2026-01-17 10:10:24 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 13:10:52 UTC)" was missed by 0:00:01.647213
+2026-01-17 10:41:47 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=896ef4a8... → Aprobado
+2026-01-17 10:41:48 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:42:01 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=d83c93cb... → Aprobado
+2026-01-17 10:42:03 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:42:03 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 13:42:12 UTC)" was missed by 0:00:01.001000
+2026-01-17 10:42:37 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=aeb73ef1... → Aprobado
+2026-01-17 10:42:39 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:42:45 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=a08f7687... → Aprobado
+2026-01-17 10:42:46 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:43:06 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=72016327... → Destacado
+2026-01-17 10:43:07 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:43:29 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=9c5b6d9f... → Aprobado
+2026-01-17 10:43:30 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:44:12 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=946a3fba... → Destacado
+2026-01-17 10:44:13 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:44:13 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 13:44:22 UTC)" was missed by 0:00:01.200058
+2026-01-17 10:44:15 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=932c7554... → Aprobado
+2026-01-17 10:44:17 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:44:24 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=69c6b375... → Destacado
+2026-01-17 10:44:25 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:44:37 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=28c96d50... → Aprobado
+2026-01-17 10:44:39 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:44:53 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=63cbfdd1... → Aprobado
+2026-01-17 10:44:54 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 10:45:11 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L668  | 🔄 Actualizando estado: UUID=2e5dc912... → Aprobado
+2026-01-17 10:45:12 | PID:2692   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L696  | ✅ Estado actualizado correctamente
+2026-01-17 12:09:22 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 12:09:22 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 12:09:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-17 12:09:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-17 12:09:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 12:09:25 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 12:09:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-17 12:09:26 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-17 12:09:27 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 15:09:32 UTC)" was missed by 0:00:04.826965
+2026-01-17 12:09:27 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 15:09:52 UTC)" was missed by 0:00:04.823988
+2026-01-17 12:09:54 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=893fae42...
+2026-01-17 12:09:55 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 12:09:55 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=893fae42... Cliente=43475
+2026-01-17 12:09:55 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 15:10:02 UTC)" was missed by 0:00:02.612116
+2026-01-17 12:09:55 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 15:10:22 UTC)" was missed by 0:00:02.610139
+2026-01-17 12:10:02 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=15e90914...
+2026-01-17 12:10:02 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 12:10:02 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=15e90914... Cliente=43475
+2026-01-17 12:48:57 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 12:48:57 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 12:48:58 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-17 12:48:58 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-17 12:48:59 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 12:48:59 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 12:49:00 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-17 12:49:00 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-17 12:49:24 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=1d9dbe17...
+2026-01-17 12:49:24 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 12:49:24 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=1d9dbe17... Cliente=43477
+2026-01-17 12:49:24 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 15:49:32 UTC)" was missed by 0:00:02.385344
+2026-01-17 12:49:24 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-17 15:49:52 UTC)" was missed by 0:00:02.382367
+2026-01-17 12:49:31 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=59db3b0f...
+2026-01-17 12:49:32 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 12:49:32 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=59db3b0f... Cliente=43477
+2026-01-17 12:49:34 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 15:49:42 UTC)" was missed by 0:00:01.791372
+2026-01-17 13:03:58 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-17 13:03:58 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-17 13:04:01 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Artur (ID: 5837207381)
+2026-01-17 13:04:01 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Arturo Ojeda (ID: -1003214578226)
+2026-01-17 13:04:47 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=e9a66678...
+2026-01-17 13:04:47 | PID:2692   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-17 13:04:47 | PID:2692   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=e9a66678... Cliente=34126
+2026-01-17 13:04:47 | PID:2692   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-17 16:04:52 UTC)" was missed by 0:00:05.330960

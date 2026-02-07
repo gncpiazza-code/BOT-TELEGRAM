@@ -1,0 +1,890 @@
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260130.log
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 51228
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-30 15:29:53 | PID:51228  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-30 15:29:54 | PID:51228  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-30 15:29:55 | PID:51228  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-30 15:29:55 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1010 | ================================================================================
+2026-01-30 15:29:55 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1010 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-30 15:29:55 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1010 | ================================================================================
+2026-01-30 15:29:55 | PID:51228  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:51228)
+2026-01-30 15:29:57 | PID:51228  | [32mINFO[0m | host_lock            | _cleanup_all              | L1114 | 🧹 Host muerto (3460.362338s), limpiando...
+2026-01-30 15:29:58 | PID:51228  | [32mINFO[0m | host_lock            | _become_host              | L988  | 👑 Host asignado: cigar@cigarreros2025 (PID:51228)
+2026-01-30 15:29:58 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1018 | ================================================================================
+2026-01-30 15:29:58 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1018 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:51228)
+2026-01-30 15:29:58 | PID:51228  | [32mINFO[0m | __main__             | <module>                  | L1018 | ================================================================================
+2026-01-30 15:29:59 | PID:51228  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-01-30 15:29:59 | PID:51228  | [32mINFO[0m | __main__             | post_init                 | L1051 | 🚦 Monitor de semáforo iniciado
+2026-01-30 15:29:59 | PID:51228  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 15:30:04 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:30:04 | PID:51228  | [33mWARNING[0m | __main__             | error_handler             | L825  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:30:05 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:30:05 | PID:51228  | [33mWARNING[0m | __main__             | error_handler             | L825  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:30:05 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=a12f367c... → Aprobado
+2026-01-30 15:30:06 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:30:07 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=e6baeb95... → Aprobado
+2026-01-30 15:30:08 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:30:10 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=7c97b6ca... → Aprobado
+2026-01-30 15:30:11 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:30:37 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=a0e6f20a... → Destacado
+2026-01-30 15:30:38 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:30:42 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: 'stage'
+2026-01-30 15:30:42 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L829  | Traceback completo:
+2026-01-30 15:30:42 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L830  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1234, in process_update
+    await coroutine
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\host_bot.py", line 532, in handle_text
+    if session["stage"] == STAGE_WAITING_ID:
+       ~~~~~~~^^^^^^^^^
+KeyError: 'stage'
+
+2026-01-30 15:30:59 | PID:51228  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 15:31:09 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: 'stage'
+2026-01-30 15:31:09 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L829  | Traceback completo:
+2026-01-30 15:31:09 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L830  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1234, in process_update
+    await coroutine
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\host_bot.py", line 532, in handle_text
+    if session["stage"] == STAGE_WAITING_ID:
+       ~~~~~~~^^^^^^^^^
+KeyError: 'stage'
+
+2026-01-30 15:32:19 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=72f7686e... → Destacado
+2026-01-30 15:32:20 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:32:27 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=8b53e141... → Destacado
+2026-01-30 15:32:28 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:32:40 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: 'stage'
+2026-01-30 15:32:40 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L829  | Traceback completo:
+2026-01-30 15:32:40 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L830  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1234, in process_update
+    await coroutine
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\host_bot.py", line 532, in handle_text
+    if session["stage"] == STAGE_WAITING_ID:
+       ~~~~~~~^^^^^^^^^
+KeyError: 'stage'
+
+2026-01-30 15:33:02 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=8e6c8ab9... → Aprobado
+2026-01-30 15:33:03 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:33:27 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=532e1475... → Aprobado
+2026-01-30 15:33:27 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:33:40 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=de05dacc... → Aprobado
+2026-01-30 15:33:41 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:33:49 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L822  | Error capturado por error_handler: 'stage'
+2026-01-30 15:33:49 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L829  | Traceback completo:
+2026-01-30 15:33:49 | PID:51228  | [31mERROR[0m | __main__             | error_handler             | L830  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_application.py", line 1234, in process_update
+    await coroutine
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\host_bot.py", line 532, in handle_text
+    if session["stage"] == STAGE_WAITING_ID:
+       ~~~~~~~^^^^^^^^^
+KeyError: 'stage'
+
+2026-01-30 15:34:04 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=d0a79397... → Aprobado
+2026-01-30 15:34:05 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:34:19 | PID:51228  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=a3b60a3d... → Rechazado
+2026-01-30 15:34:20 | PID:51228  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260130.log
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 40272
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-30 15:35:18 | PID:40272  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-30 15:35:19 | PID:40272  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-30 15:35:20 | PID:40272  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-30 15:35:20 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1014 | ================================================================================
+2026-01-30 15:35:20 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1014 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-30 15:35:20 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1014 | ================================================================================
+2026-01-30 15:35:20 | PID:40272  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:40272)
+2026-01-30 15:35:22 | PID:40272  | [32mINFO[0m | host_lock            | try_acquire_host          | L118  | ♻️ Recuperando sesión
+2026-01-30 15:35:23 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1022 | ================================================================================
+2026-01-30 15:35:23 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1022 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:40272)
+2026-01-30 15:35:23 | PID:40272  | [32mINFO[0m | __main__             | <module>                  | L1022 | ================================================================================
+2026-01-30 15:35:24 | PID:40272  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-01-30 15:35:24 | PID:40272  | [32mINFO[0m | __main__             | post_init                 | L1055 | 🚦 Monitor de semáforo iniciado
+2026-01-30 15:35:25 | PID:40272  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 15:35:26 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:26 | PID:40272  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:26 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:26 | PID:40272  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:27 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:27 | PID:40272  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:27 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:27 | PID:40272  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 15:35:54 | PID:40272  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=92f1ddcf...
+2026-01-30 15:35:55 | PID:40272  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 15:36:24 | PID:40272  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 15:36:29 | PID:40272  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-01-30 15:36:29 | PID:40272  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9581 editado exitosamente.
+2026-01-30 15:37:46 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=60997fb8... → Aprobado
+2026-01-30 15:37:47 | PID:40272  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:37:53 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=0924048a... → Aprobado
+2026-01-30 15:37:54 | PID:40272  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:38:11 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=a16a6c71... → Aprobado
+2026-01-30 15:38:12 | PID:40272  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:39:00 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=b66c2f65... → Aprobado
+2026-01-30 15:39:01 | PID:40272  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:39:08 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=a816327e... → Destacado
+2026-01-30 15:39:09 | PID:40272  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 15:42:12 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 15:42:12 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 15:42:12 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 15:42:12 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:08 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:08 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:08 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:08 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:14 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:14 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:14 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:14 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:20 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:20 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:20 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:20 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:28 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:28 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:28 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:28 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:35 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:35 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:35 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:35 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:11:47 | PID:40272  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:47 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-30 16:11:47 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-30 16:11:47 | PID:40272  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-30 16:13:32 | PID:40272  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=ab1f5742...
+2026-01-30 16:13:33 | PID:40272  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 16:13:57 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=ab1f5742... → Rechazado
+2026-01-30 16:13:58 | PID:40272  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260130.log
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 35476
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-30 19:30:58 | PID:35476  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-30 19:30:59 | PID:35476  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-30 19:31:01 | PID:35476  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-30 19:31:01 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1014 | ================================================================================
+2026-01-30 19:31:01 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1014 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-30 19:31:01 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1014 | ================================================================================
+2026-01-30 19:31:01 | PID:35476  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:35476)
+2026-01-30 19:31:03 | PID:35476  | [32mINFO[0m | host_lock            | _cleanup_all              | L1114 | 🧹 Host muerto (3131.549731s), limpiando...
+2026-01-30 19:31:04 | PID:35476  | [32mINFO[0m | host_lock            | try_acquire_host          | L114  | ✅ Sin host, tomando control
+2026-01-30 19:31:04 | PID:35476  | [32mINFO[0m | host_lock            | _become_host              | L988  | 👑 Host asignado: cigar@cigarreros2025 (PID:35476)
+2026-01-30 19:31:04 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1022 | ================================================================================
+2026-01-30 19:31:04 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1022 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:35476)
+2026-01-30 19:31:04 | PID:35476  | [32mINFO[0m | __main__             | <module>                  | L1022 | ================================================================================
+2026-01-30 19:31:05 | PID:35476  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-01-30 19:31:05 | PID:35476  | [32mINFO[0m | __main__             | post_init                 | L1055 | 🚦 Monitor de semáforo iniciado
+2026-01-30 19:31:06 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 19:31:13 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Message to be replied not found
+2026-01-30 19:31:13 | PID:35476  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Message to be replied not found
+2026-01-30 19:32:06 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 19:33:55 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=0962f4f3...
+2026-01-30 19:33:56 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 19:38:27 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=e0ad2a2c...
+2026-01-30 19:38:34 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 19:38:37 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: Query is too old and response timeout expired or query id is invalid
+2026-01-30 19:38:37 | PID:35476  | [33mWARNING[0m | __main__             | error_handler             | L829  | BadRequest ignorado: Query is too old and response timeout expired or query id is invalid
+2026-01-30 19:42:44 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=e8718951...
+2026-01-30 19:42:45 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 19:43:35 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=17a2ab0b...
+2026-01-30 19:43:35 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 19:49:04 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=ba19ec8b...
+2026-01-30 19:49:04 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:00:00 | PID:35476  | [32mINFO[0m | __main__             | handle_hibernation_start  | L980  | 🌙 Modo hibernación ACTIVADO (23:00-07:00)
+2026-01-30 20:00:00 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 20:01:29 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=17a2ab0b... → Destacado
+2026-01-30 20:01:30 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:01:44 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=ba19ec8b... → Aprobado
+2026-01-30 20:01:45 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:01:57 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=e0ad2a2c... → Aprobado
+2026-01-30 20:01:58 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:02:14 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=cad45aba...
+2026-01-30 20:02:15 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:02:15 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-30 23:02:39 UTC)" was missed by 0:00:05.659007
+2026-01-30 20:02:39 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=cad45aba... → Destacado
+2026-01-30 20:02:40 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:02:40 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-30 23:03:09 UTC)" was missed by 0:00:01.000593
+2026-01-30 20:03:41 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=769f9cb5...
+2026-01-30 20:03:42 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:03:42 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-30 23:04:09 UTC)" was missed by 0:00:02.288044
+2026-01-30 20:05:07 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=769f9cb5... → Destacado
+2026-01-30 20:05:09 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:09:16 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=f8d58bcd...
+2026-01-30 20:09:16 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:09:16 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-30 23:10:14 UTC)" was missed by 0:00:01.931044
+2026-01-30 20:09:19 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=508bec25... → Aprobado
+2026-01-30 20:09:20 | PID:35476  | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L800  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-30 20:10:45 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=f8d58bcd... → Aprobado
+2026-01-30 20:10:47 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:17:35 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=276c6694...
+2026-01-30 20:17:36 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:31:17 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=8a79b823...
+2026-01-30 20:31:17 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:31:17 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-30 23:32:14 UTC)" was missed by 0:00:02.699787
+2026-01-30 20:32:09 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=8a79b823... → Aprobado
+2026-01-30 20:32:10 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:32:21 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=e8718951... → Destacado
+2026-01-30 20:32:22 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:32:44 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=0962f4f3... → Destacado
+2026-01-30 20:32:46 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:32:56 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=21bb6bf6... → Aprobado
+2026-01-30 20:32:57 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 20:46:55 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=3aef272b...
+2026-01-30 20:46:55 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 20:53:41 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=3aef272b... → Aprobado
+2026-01-30 20:53:42 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-30 21:28:41 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=1e5278cc...
+2026-01-30 21:28:42 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 21:28:42 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 00:29:09 UTC)" was missed by 0:00:02.883032
+2026-01-30 21:31:38 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=b02c627c...
+2026-01-30 21:31:39 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-30 23:32:05 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-30 23:54:41 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 02:55:09 UTC)" was missed by 0:00:01.968482
+2026-01-31 03:32:05 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-31 04:00:00 | PID:35476  | [32mINFO[0m | __main__             | handle_hibernation_end    | L987  | ☀️ Modo hibernación DESACTIVADO (07:00)
+2026-01-31 04:00:00 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-31 07:32:05 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-31 09:28:24 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 12:28:39 UTC)" was missed by 0:00:14.720314
+2026-01-31 09:28:24 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-31 12:28:49 UTC)" was missed by 0:00:04.720322
+2026-01-31 09:28:24 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-31 12:29:14 UTC)" was missed by 0:00:09.718311
+2026-01-31 09:28:24 | PID:35476  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:28:24 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:28:24 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-31 09:28:25 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 377, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1585, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1674, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1702, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1739, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1776, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 376, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 292, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+2026-01-31 09:28:25 | PID:35476  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:28:25 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:28:25 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-31 09:28:25 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 377, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1585, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1674, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1702, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1739, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1776, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 376, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 292, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+2026-01-31 09:33:30 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 12:33:39 UTC)" was missed by 0:00:20.605188
+2026-01-31 09:33:30 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-31 12:33:49 UTC)" was missed by 0:00:10.605194
+2026-01-31 09:33:30 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-31 12:34:14 UTC)" was missed by 0:00:15.603183
+2026-01-31 09:33:30 | PID:35476  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:33:30 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L826  | Error capturado por error_handler: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+2026-01-31 09:33:30 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L833  | Traceback completo:
+2026-01-31 09:33:30 | PID:35476  | [31mERROR[0m | __main__             | error_handler             | L834  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 377, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1585, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1674, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1702, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1739, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1776, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 376, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 292, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+2026-01-31 09:33:43 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 12:34:09 UTC)" was missed by 0:00:03.510137
+2026-01-31 09:50:33 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=34f0423d...
+2026-01-31 09:50:34 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 09:51:10 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-01-31 09:51:11 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 801 editado exitosamente.
+2026-01-31 09:51:40 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-01-31 09:51:41 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9649 editado exitosamente.
+2026-01-31 09:51:42 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 832 editado exitosamente.
+2026-01-31 09:52:10 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-01-31 09:52:11 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 838 editado exitosamente.
+2026-01-31 09:52:12 | PID:35476  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9667 editado exitosamente.
+2026-01-31 09:53:33 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=1a95e975...
+2026-01-31 09:53:34 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 10:19:40 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=d29ec1ac...
+2026-01-31 10:19:40 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 10:20:01 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=edbe56ad...
+2026-01-31 10:20:01 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 10:32:10 | PID:35476  | [31mERROR[0m | sheets_manager       | get_unsynced_actions      | L860  | Error en get_unsynced_actions: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-01-31 10:37:01 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=eb8af16c...
+2026-01-31 10:37:01 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 10:41:15 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=df2b21d8...
+2026-01-31 10:41:16 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 10:41:16 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-31 13:42:14 UTC)" was missed by 0:00:01.615610
+2026-01-31 10:47:32 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=b368a124...
+2026-01-31 10:47:32 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:00:58 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=3deb0013...
+2026-01-31 11:00:59 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:01:06 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=14c06447...
+2026-01-31 11:01:07 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:12:31 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=0e55cb82...
+2026-01-31 11:12:31 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:26:07 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=d6098b25...
+2026-01-31 11:26:08 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:32:05 | PID:35476  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-31 11:44:11 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=09467ed4...
+2026-01-31 11:44:11 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:44:11 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 14:44:39 UTC)" was missed by 0:00:01.973618
+2026-01-31 11:55:52 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=1a7ab995...
+2026-01-31 11:55:53 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 11:55:53 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-31 14:56:19 UTC)" was missed by 0:00:03.673069
+2026-01-31 12:07:36 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=f3d9a45c...
+2026-01-31 12:07:36 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 12:20:40 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=58cc0aac...
+2026-01-31 12:20:40 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 12:27:20 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=07202f16...
+2026-01-31 12:27:22 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 12:27:22 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-31 15:27:49 UTC)" was missed by 0:00:02.858077
+2026-01-31 13:05:47 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=67aac593...
+2026-01-31 13:05:48 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:23:31 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=ce2ef590...
+2026-01-31 13:23:32 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:24:09 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L784  | 🔄 Actualizando estado: UUID=f3d9a45c... → Aprobado
+2026-01-31 13:24:11 | PID:35476  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L812  | ✅ Estado actualizado correctamente
+2026-01-31 13:24:11 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 16:24:39 UTC)" was missed by 0:00:01.266457
+2026-01-31 13:27:58 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=3985ab43...
+2026-01-31 13:27:59 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:43:02 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=d2c20b0f...
+2026-01-31 13:43:03 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:49:03 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=0c0ff640...
+2026-01-31 13:49:03 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:51:40 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=8bba3fed...
+2026-01-31 13:51:41 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:51:41 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 16:52:09 UTC)" was missed by 0:00:01.271434
+2026-01-31 13:53:23 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=9c82924c...
+2026-01-31 13:53:23 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:55:58 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=f24cd2a3...
+2026-01-31 13:55:58 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:56:41 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=72b262ba...
+2026-01-31 13:56:42 | PID:35476  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-31 13:56:42 | PID:35476  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-31 16:57:09 UTC)" was missed by 0:00:02.512270

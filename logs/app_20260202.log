@@ -1,0 +1,440 @@
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260202.log
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 41424
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-02 12:01:07 | PID:41424  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-02 12:01:08 | PID:41424  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-02 12:01:11 | PID:41424  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-02 12:01:11 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1025 | ================================================================================
+2026-02-02 12:01:11 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1026 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-02 12:01:11 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1027 | ================================================================================
+2026-02-02 12:01:11 | PID:41424  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:41424)
+2026-02-02 12:01:12 | PID:41424  | [32mINFO[0m | host_lock            | _cleanup_all              | L1207 | 🧹 Host muerto (30114s), limpiando...
+2026-02-02 12:01:13 | PID:41424  | [32mINFO[0m | host_lock            | try_acquire_host          | L129  | ✅ Sin host, tomando control
+2026-02-02 12:01:13 | PID:41424  | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:41424)
+2026-02-02 12:01:14 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1045 | ================================================================================
+2026-02-02 12:01:14 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1046 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:41424)
+2026-02-02 12:01:14 | PID:41424  | [32mINFO[0m | __main__             | <module>                  | L1047 | ================================================================================
+2026-02-02 12:01:15 | PID:41424  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-02 12:01:15 | PID:41424  | [32mINFO[0m | __main__             | post_init                 | L1104 | 🚦 Monitor de semáforo iniciado
+2026-02-02 12:01:15 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:15 | PID:41424  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-02-02 12:01:19 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:20 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:20 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:20 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:22 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:23 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:23 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:24 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:24 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:27 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:27 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:28 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:28 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:29 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:33 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:33 | PID:41424  | [31mERROR[0m | __main__             | handle_photo              | L515  | Error enviando respuesta: Message to be replied not found
+2026-02-02 12:01:33 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:33 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:01:45 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:02:00 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:02:15 | PID:41424  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-02-02 12:02:15 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:02:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:02:45 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:02:54 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:03:00 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:03:15 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:03:18 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:03:30 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:03:43 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=c1f92fbb...
+2026-02-02 12:03:43 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:03:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:04:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:04:05 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:04:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:04:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:04:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:05:05 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=749272f7...
+2026-02-02 12:05:05 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:05:05 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:05:05 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:05:29 UTC)" was missed by 0:00:06.287996
+2026-02-02 12:05:11 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=89367dc4...
+2026-02-02 12:05:12 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:05:20 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:05:27 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=7791528e...
+2026-02-02 12:05:27 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:05:27 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-02 15:06:24 UTC)" was missed by 0:00:03.193313
+2026-02-02 12:05:33 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=89106031...
+2026-02-02 12:05:33 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:05:35 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:05:35 | PID:41424  | [31mERROR[0m | __main__             | button_callback           | L726  | Error en post-procesamiento: Message to be replied not found
+2026-02-02 12:05:50 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:05:56 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:05 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:20 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:25 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=eba37b62...
+2026-02-02 12:06:26 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:06:26 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-02 15:07:24 UTC)" was missed by 0:00:01.636089
+2026-02-02 12:06:35 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:35 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:36 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:06:50 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:04 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=1495c8b6...
+2026-02-02 12:07:04 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:07:06 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:36 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:07:50 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=f1cca8f2...
+2026-02-02 12:07:51 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:07:51 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-02 15:08:19 UTC)" was missed by 0:00:02.068706
+2026-02-02 12:07:51 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:06 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:36 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:08:51 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:06 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:15 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:21 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:36 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:51 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:09:59 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=20236dbd...
+2026-02-02 12:10:01 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:10:01 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:10:29 UTC)" was missed by 0:00:02.189830
+2026-02-02 12:10:07 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=670b10f0...
+2026-02-02 12:10:07 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:10:07 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:10:22 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:10:37 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:10:52 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:11:00 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=904f62a7...
+2026-02-02 12:11:01 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:11:01 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:11:29 UTC)" was missed by 0:00:01.782538
+2026-02-02 12:11:06 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=7442e624...
+2026-02-02 12:11:06 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:11:08 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:11:23 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:11:38 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:11:53 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:12:08 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:12:23 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:12:38 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:12:53 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:13:00 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=9b40bf12...
+2026-02-02 12:13:01 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:13:01 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:13:29 UTC)" was missed by 0:00:01.849262
+2026-02-02 12:13:07 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=7f0ecdd6...
+2026-02-02 12:13:07 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:13:09 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:13:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:13:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:13:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:14:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:14:12 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:14:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:14:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:14:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:15:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:15:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:15:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:15:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:16:05 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=d1ae2ead...
+2026-02-02 12:16:07 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:16:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:16:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:16:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:16:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:17:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:17:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:17:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:17:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:18:05 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:18:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:18:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:18:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:18:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:08 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:09 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:19:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:20:09 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=94bd9874...
+2026-02-02 12:20:09 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:20:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:20:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:20:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:20:36 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=db0114d3...
+2026-02-02 12:20:36 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:20:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:20:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:21:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:21:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:21:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:21:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:22:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:22:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:22:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:22:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:23:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:23:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:23:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:23:55 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:24:10 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:24:25 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:24:40 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:24:58 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=d9099439...
+2026-02-02 12:24:59 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:24:59 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:25:04 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=677377c5...
+2026-02-02 12:25:05 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:25:10 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=e0257ada...
+2026-02-02 12:25:10 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:25:15 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=c737a3c5...
+2026-02-02 12:25:16 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:25:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:25:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:25:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:25:50 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:26:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:26:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:26:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:26:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:27:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:27:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:27:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:27:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:28:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:28:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:28:31 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:28:46 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:28:50 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:29:01 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:29:16 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:29:31 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=1c32ce48...
+2026-02-02 12:29:32 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:29:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:29:32 | PID:41424  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:29:59 UTC)" was missed by 0:00:02.687328
+2026-02-02 12:29:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:30:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:30:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:30:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:30:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:31:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:31:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:31:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:31:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:32:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:32:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:32:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:32:39 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=6afdf08d...
+2026-02-02 12:32:39 | PID:41424  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:32:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:33:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:33:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:33:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:33:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:34:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:34:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:34:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:34:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:35:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:35:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:35:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:35:47 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:36:02 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:36:17 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:36:32 | PID:41424  | [31mERROR[0m | sheets_manager       | get_semaforo_estado       | L1289 | Error semáforo: Worksheet.get() got an unexpected keyword argument 'default_blank'
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260202.log
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 51204
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-02 12:37:00 | PID:51204  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-02 12:37:01 | PID:51204  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-02 12:37:03 | PID:51204  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-02 12:37:03 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1025 | ================================================================================
+2026-02-02 12:37:03 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1026 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-02 12:37:03 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1027 | ================================================================================
+2026-02-02 12:37:03 | PID:51204  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:51204)
+2026-02-02 12:37:04 | PID:51204  | [31mERROR[0m | host_lock            | _cleanup_all              | L1266 | Error en limpieza: 'HostLock' object has no attribute '_extract_machine_id'
+2026-02-02 12:37:04 | PID:51204  | [32mINFO[0m | host_lock            | try_acquire_host          | L133  | ♻️ Recuperando sesión
+2026-02-02 12:37:05 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1045 | ================================================================================
+2026-02-02 12:37:05 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1046 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:51204)
+2026-02-02 12:37:05 | PID:51204  | [32mINFO[0m | __main__             | <module>                  | L1047 | ================================================================================
+2026-02-02 12:37:07 | PID:51204  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-02 12:37:07 | PID:51204  | [32mINFO[0m | __main__             | post_init                 | L1104 | 🚦 Monitor de semáforo iniciado
+2026-02-02 12:37:07 | PID:51204  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-02-02 12:37:12 | PID:51204  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L902  | 🔄 Actualizando estado: UUID=c1f92fbb... → Rechazado
+2026-02-02 12:37:14 | PID:51204  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L930  | ✅ Estado actualizado correctamente
+2026-02-02 12:38:07 | PID:51204  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-02-02 12:39:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 12:39:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9673 editado exitosamente.
+2026-02-02 12:39:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9681 editado exitosamente.
+2026-02-02 12:40:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 12:40:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9685 editado exitosamente.
+2026-02-02 12:40:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9690 editado exitosamente.
+2026-02-02 12:40:52 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=94cb3ba1...
+2026-02-02 12:40:53 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:40:53 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:41:21 UTC)" was missed by 0:00:01.966079
+2026-02-02 12:43:23 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=8d0b47b9...
+2026-02-02 12:43:24 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:43:24 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 15:43:51 UTC)" was missed by 0:00:03.578718
+2026-02-02 12:47:50 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=335e9e81...
+2026-02-02 12:47:51 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:53:46 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=6a4a182e...
+2026-02-02 12:53:47 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:55:20 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=2b10bf69...
+2026-02-02 12:55:20 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 12:55:20 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-02 15:56:16 UTC)" was missed by 0:00:04.772841
+2026-02-02 13:02:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:02:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 185 editado exitosamente.
+2026-02-02 13:02:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9696 editado exitosamente.
+2026-02-02 13:02:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-02 13:02:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9706 editado exitosamente.
+2026-02-02 13:02:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9707 editado exitosamente.
+2026-02-02 13:02:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9713 editado exitosamente.
+2026-02-02 13:03:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:03:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9718 editado exitosamente.
+2026-02-02 13:03:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:03:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9725 editado exitosamente.
+2026-02-02 13:04:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:04:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9730 editado exitosamente.
+2026-02-02 13:04:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-02 13:04:44 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9740 editado exitosamente.
+2026-02-02 13:04:44 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9745 editado exitosamente.
+2026-02-02 13:04:45 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9750 editado exitosamente.
+2026-02-02 13:05:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:05:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 190 editado exitosamente.
+2026-02-02 13:05:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 195 editado exitosamente.
+2026-02-02 13:05:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-02 13:05:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 200 editado exitosamente.
+2026-02-02 13:05:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 205 editado exitosamente.
+2026-02-02 13:05:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 342 editado exitosamente.
+2026-02-02 13:06:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:06:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 343 editado exitosamente.
+2026-02-02 13:06:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 727 editado exitosamente.
+2026-02-02 13:06:29 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=15140429...
+2026-02-02 13:06:30 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:06:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:06:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 732 editado exitosamente.
+2026-02-02 13:06:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 738 editado exitosamente.
+2026-02-02 13:07:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:07:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 743 editado exitosamente.
+2026-02-02 13:07:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9858 editado exitosamente.
+2026-02-02 13:07:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:07:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9859 editado exitosamente.
+2026-02-02 13:07:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 753 editado exitosamente.
+2026-02-02 13:08:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:08:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 754 editado exitosamente.
+2026-02-02 13:08:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9863 editado exitosamente.
+2026-02-02 13:14:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:14:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9864 editado exitosamente.
+2026-02-02 13:14:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:14:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 763 editado exitosamente.
+2026-02-02 13:14:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 768 editado exitosamente.
+2026-02-02 13:24:27 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=ff1f9cd4...
+2026-02-02 13:24:27 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:25:25 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=ec421f88...
+2026-02-02 13:25:25 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:25:25 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-02 16:25:51 UTC)" was missed by 0:00:04.704915
+2026-02-02 13:27:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:27:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 773 editado exitosamente.
+2026-02-02 13:27:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9866 editado exitosamente.
+2026-02-02 13:27:31 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=939b704e...
+2026-02-02 13:27:32 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:27:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:27:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9867 editado exitosamente.
+2026-02-02 13:28:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:28:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9868 editado exitosamente.
+2026-02-02 13:28:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9869 editado exitosamente.
+2026-02-02 13:28:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:28:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9874 editado exitosamente.
+2026-02-02 13:28:43 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 778 editado exitosamente.
+2026-02-02 13:29:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:29:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 783 editado exitosamente.
+2026-02-02 13:30:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-02 13:30:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9882 editado exitosamente.
+2026-02-02 13:30:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 578 editado exitosamente.
+2026-02-02 13:30:13 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 788 editado exitosamente.
+2026-02-02 13:30:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:30:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 844 editado exitosamente.
+2026-02-02 13:30:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9887 editado exitosamente.
+2026-02-02 13:31:11 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-02 13:31:12 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 9892 editado exitosamente.
+2026-02-02 13:31:41 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L852  | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-02 13:31:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 584 editado exitosamente.
+2026-02-02 13:31:42 | PID:51204  | [32mINFO[0m | __main__             | sync_telegram_job         | L903  | ✅ Mensaje 794 editado exitosamente.
+2026-02-02 13:37:13 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=47dfbe1b...
+2026-02-02 13:37:14 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:37:14 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-02 16:37:41 UTC)" was missed by 0:00:03.661766
+2026-02-02 13:39:51 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=5fbc21f1...
+2026-02-02 13:39:52 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:40:02 | PID:51204  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L902  | 🔄 Actualizando estado: UUID=5fbc21f1... → Destacado
+2026-02-02 13:40:04 | PID:51204  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L930  | ✅ Estado actualizado correctamente
+2026-02-02 13:56:48 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=35a16bf7...
+2026-02-02 13:56:48 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 13:58:39 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=4779b563...
+2026-02-02 13:58:40 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 14:16:40 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=67f9b59d...
+2026-02-02 14:16:41 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 14:17:13 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=7ebd647e...
+2026-02-02 14:17:14 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 14:17:14 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-02 17:17:41 UTC)" was missed by 0:00:03.331720
+2026-02-02 14:42:40 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=8569248d...
+2026-02-02 14:42:41 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 14:43:15 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=45b3ccdb...
+2026-02-02 14:43:15 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 16:29:48 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=b6b161b1...
+2026-02-02 16:29:48 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 16:29:48 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-02 19:30:11 UTC)" was missed by 0:00:07.700224
+2026-02-02 16:30:43 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L819  | 📝 Registrando imagen: UUID=66993072...
+2026-02-02 16:30:44 | PID:51204  | [32mINFO[0m | sheets_manager       | register_image            | L868  | ✅ Imagen registrada correctamente
+2026-02-02 16:30:44 | PID:51204  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-02 19:31:11 UTC)" was missed by 0:00:03.783213

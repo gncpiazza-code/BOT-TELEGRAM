@@ -1,0 +1,1316 @@
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260129.log
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 36256
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-29 09:31:09 | PID:36256  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-29 09:31:10 | PID:36256  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-29 09:31:11 | PID:36256  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-29 09:31:11 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L931  | ================================================================================
+2026-01-29 09:31:11 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L931  | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-29 09:31:11 | PID:36256  | [32mINFO[0m | __main__             | <module>                  | L931  | ================================================================================
+2026-01-29 09:31:11 | PID:36256  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:36256)
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260129.log
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 26312
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-29 09:31:42 | PID:26312  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-29 09:31:44 | PID:26312  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-29 09:31:44 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L931  | ================================================================================
+2026-01-29 09:31:44 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L931  | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-29 09:31:44 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L931  | ================================================================================
+2026-01-29 09:31:44 | PID:26312  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:26312)
+2026-01-29 09:31:45 | PID:26312  | [32mINFO[0m | host_lock            | try_acquire_host          | L118  | ♻️ Recuperando sesión
+2026-01-29 09:31:46 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L939  | ================================================================================
+2026-01-29 09:31:46 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L939  | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:26312)
+2026-01-29 09:31:46 | PID:26312  | [32mINFO[0m | __main__             | <module>                  | L939  | ================================================================================
+2026-01-29 09:31:47 | PID:26312  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-01-29 09:31:47 | PID:26312  | [32mINFO[0m | __main__             | post_init                 | L972  | 🚦 Monitor de semáforo iniciado
+2026-01-29 09:31:48 | PID:26312  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-29 09:32:47 | PID:26312  | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-29 10:09:05 | PID:26312  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=6cf58a40...
+2026-01-29 10:09:06 | PID:26312  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 10:09:06 | PID:26312  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-29 13:09:31 UTC)" was missed by 0:00:04.956963
+2026-01-29 10:12:36 | PID:26312  | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=cd92afb2...
+2026-01-29 10:12:37 | PID:26312  | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260129.log
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 5668
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L108  | ================================================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L109  | 🤖 BOT HOST INICIANDO...
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L110  | ================================================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-29 10:14:04 | PID:5668   | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-29 10:14:05 | PID:5668   | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-29 10:14:06 | PID:5668   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-29 10:14:06 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1021 | ================================================================================
+2026-01-29 10:14:06 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1021 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-29 10:14:06 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1021 | ================================================================================
+2026-01-29 10:14:06 | PID:5668   | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:5668)
+2026-01-29 10:14:09 | PID:5668   | [32mINFO[0m | host_lock            | try_acquire_host          | L118  | ♻️ Recuperando sesión
+2026-01-29 10:14:10 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1029 | ================================================================================
+2026-01-29 10:14:10 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1029 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:5668)
+2026-01-29 10:14:10 | PID:5668   | [32mINFO[0m | __main__             | <module>                  | L1029 | ================================================================================
+2026-01-29 10:14:11 | PID:5668   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-01-29 10:14:11 | PID:5668   | [32mINFO[0m | __main__             | post_init                 | L1062 | 🚦 Monitor de semáforo iniciado
+2026-01-29 10:14:11 | PID:5668   | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-29 10:14:16 | PID:5668   | [32mINFO[0m | __main__             | sync_telegram_job         | L842  | 🔄 Sincronizando 27 evaluaciones desde el Visor...
+2026-01-29 10:14:40 | PID:5668   | [32mINFO[0m | __main__             | sync_telegram_job         | L922  | ✅ Sincronizados 27 registros.
+2026-01-29 10:15:11 | PID:5668   | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-29 10:16:18 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=112f36d4...
+2026-01-29 10:16:19 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 10:16:19 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-29 13:16:45 UTC)" was missed by 0:00:03.597277
+2026-01-29 10:20:21 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=112f36d4... → Aprobado
+2026-01-29 10:20:22 | PID:5668   | [33mWARNING[0m | sheets_manager       | update_status_by_uuid     | L785  | 🔒 UUID ya evaluado (estado actual: Aprobado)
+2026-01-29 10:51:03 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=4456b825...
+2026-01-29 10:51:03 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:02:57 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=6ec31fac...
+2026-01-29 11:02:58 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:02:58 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-29 14:03:25 UTC)" was missed by 0:00:02.647946
+2026-01-29 11:04:05 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=8d8f5c20...
+2026-01-29 11:04:06 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:05:31 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=903099d3...
+2026-01-29 11:05:32 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:06:01 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=7fe99e26...
+2026-01-29 11:06:01 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:08:39 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=508bec25...
+2026-01-29 11:08:40 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:12:54 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=2605a15d...
+2026-01-29 11:12:55 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:22:35 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=f2ecaef6...
+2026-01-29 11:22:35 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:24:28 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=aba27f09...
+2026-01-29 11:24:29 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:24:29 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-29 14:24:55 UTC)" was missed by 0:00:03.846351
+2026-01-29 11:32:53 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=fb7ea4c3...
+2026-01-29 11:32:54 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 11:56:04 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=f21ae05a...
+2026-01-29 11:56:05 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 12:04:25 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=87c1ccde...
+2026-01-29 12:04:26 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 12:08:25 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:25 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:25 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:08:25 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:08:35 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:35 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:35 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:08:35 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:08:46 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:46 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:08:46 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:08:46 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:09:00 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:00 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:00 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:09:00 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:09:17 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:17 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:17 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:09:17 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:09:40 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:40 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:09:40 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:09:40 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:10:10 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:10:10 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:10:10 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:10:10 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:10:45 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:10:45 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:10:45 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:10:45 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:11:21 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:11:21 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:11:21 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:11:21 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:25:54 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:25:54 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:25:54 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:25:54 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:26:29 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:26:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:26:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:26:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:27:04 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:27:04 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:27:04 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:27:04 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:27:39 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:27:39 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:27:39 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:27:39 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:28:14 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:28:14 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 12:28:14 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 12:28:14 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 12:32:04 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=b7360902...
+2026-01-29 12:32:04 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 12:38:08 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=c9c1cbec...
+2026-01-29 12:38:09 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 12:58:06 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=421816d3...
+2026-01-29 12:58:07 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 12:59:33 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=717c1e26...
+2026-01-29 12:59:33 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:07:12 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:07:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:07:29 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:07:29 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:07:37 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:37 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:37 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:07:37 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:07:48 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:07:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:07:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:08:02 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:08:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:08:10 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=6bd9c36f...
+2026-01-29 13:08:11 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:08:19 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:19 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:19 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:08:19 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:08:41 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:41 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:08:41 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:08:41 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:09:01 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=3e639419...
+2026-01-29 13:09:02 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:09:12 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:09:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:09:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:09:12 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:09:47 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:09:47 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:09:47 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:09:47 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:20:25 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=072e945d...
+2026-01-29 13:20:25 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:33:59 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=630fdc83...
+2026-01-29 13:34:00 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:44:16 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:44:16 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:44:16 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:44:16 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:44:51 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:44:51 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:44:51 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:44:51 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:45:27 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:45:27 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:45:27 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:45:27 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:45:58 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=c08b31eb...
+2026-01-29 13:45:58 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 13:45:58 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-29 16:46:25 UTC)" was missed by 0:00:03.516010
+2026-01-29 13:46:02 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:46:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:46:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:46:02 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:46:38 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:46:38 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:46:38 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:46:38 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:47:13 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:47:13 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:47:13 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:47:13 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:47:48 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:47:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:47:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:47:48 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:48:23 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:48:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 13:48:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 13:48:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 13:55:59 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=b01679fe...
+2026-01-29 13:56:00 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 14:15:11 | PID:5668   | [32mINFO[0m | __main__             | notify_superuser          | L209  | 📬 Notificación enviada al superusuario
+2026-01-29 14:34:23 | PID:5668   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 14:34:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L816  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-29 14:34:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L823  | Traceback completo:
+2026-01-29 14:34:23 | PID:5668   | [31mERROR[0m | __main__             | error_handler             | L824  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-29 14:38:37 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-01-29 17:39:20 UTC)" was missed by 0:00:16.661642
+2026-01-29 14:38:37 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-29 17:38:55 UTC)" was missed by 0:00:11.663536
+2026-01-29 14:45:42 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L701  | 📝 Registrando imagen: UUID=1539d563...
+2026-01-29 14:45:43 | PID:5668   | [32mINFO[0m | sheets_manager       | register_image            | L750  | ✅ Imagen registrada correctamente
+2026-01-29 15:27:41 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=c08b31eb... → Aprobado
+2026-01-29 15:27:43 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:27:48 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=1539d563... → Aprobado
+2026-01-29 15:27:49 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:31:01 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=4456b825... → Aprobado
+2026-01-29 15:31:03 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:31:17 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=903099d3... → Aprobado
+2026-01-29 15:31:19 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:31:24 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=fb7ea4c3... → Aprobado
+2026-01-29 15:31:25 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:31:46 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=87c1ccde... → Destacado
+2026-01-29 15:31:48 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:32:07 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=b7360902... → Aprobado
+2026-01-29 15:32:08 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:32:24 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=421816d3... → Aprobado
+2026-01-29 15:32:25 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:32:45 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=072e945d... → Aprobado
+2026-01-29 15:32:46 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:32:46 | PID:5668   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-01-29 18:33:15 UTC)" was missed by 0:00:01.345080
+2026-01-29 15:33:11 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=630fdc83... → Aprobado
+2026-01-29 15:33:12 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:33:25 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=b01679fe... → Aprobado
+2026-01-29 15:33:27 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:34:58 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=717c1e26... → Aprobado
+2026-01-29 15:34:59 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente
+2026-01-29 15:45:22 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L769  | 🔄 Actualizando estado: UUID=7fe99e26... → Aprobado
+2026-01-29 15:45:24 | PID:5668   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L797  | ✅ Estado actualizado correctamente

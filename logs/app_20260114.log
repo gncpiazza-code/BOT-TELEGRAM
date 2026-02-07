@@ -1,0 +1,1025 @@
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260114.log
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 14680
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | __main__             | <module>                  | L95   | ================================================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | __main__             | <module>                  | L96   | 🤖 BOT HOST INICIANDO...
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | __main__             | <module>                  | L97   | ================================================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-14 09:06:18 | PID:14680  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-14 09:06:19 | PID:14680  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-14 09:06:21 | PID:14680  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-14 09:06:22 | PID:14680  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-14 09:06:22 | PID:14680  | [32mINFO[0m | __main__             | post_init                 | L1266 | 🚦 Monitor de semáforo iniciado
+2026-01-14 09:06:27 | PID:14680  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:06:27 | PID:14680  | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:06:33 | PID:14680  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:06:33 | PID:14680  | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260114.log
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 8844
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | __main__             | <module>                  | L95   | ================================================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | __main__             | <module>                  | L96   | 🤖 BOT HOST INICIANDO...
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | __main__             | <module>                  | L97   | ================================================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-14 09:06:52 | PID:8844   | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-14 09:06:53 | PID:8844   | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-14 09:06:55 | PID:8844   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-14 09:06:56 | PID:8844   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-14 09:06:56 | PID:8844   | [32mINFO[0m | __main__             | post_init                 | L1266 | 🚦 Monitor de semáforo iniciado
+2026-01-14 09:07:02 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:02 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:09 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:09 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:16 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:16 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:22 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:22 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:32 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:32 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:47 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:07:47 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:08:08 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:08:08 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:09:30 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:09:30 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:10:01 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:10:01 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:10:36 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:10:36 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:11:12 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:11:12 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:11:47 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:11:47 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:12:23 | PID:8844   | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:12:23 | PID:8844   | [31mERROR[0m | telegram.ext.Application | process_error             | L1801 | No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260114.log
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 9196
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | __main__             | <module>                  | L95   | ================================================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | __main__             | <module>                  | L96   | 🤖 BOT HOST INICIANDO...
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | __main__             | <module>                  | L97   | ================================================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-14 09:13:39 | PID:9196   | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-14 09:13:40 | PID:9196   | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-14 09:13:42 | PID:9196   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-14 09:13:43 | PID:9196   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-14 09:13:43 | PID:9196   | [32mINFO[0m | __main__             | post_init                 | L1266 | 🚦 Monitor de semáforo iniciado
+2026-01-14 09:19:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:19:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:19:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:19:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:19:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:19:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:19:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:19:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:20:34 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=d5e9ba44...
+2026-01-14 09:20:35 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:20:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=d5e9ba44... Cliente=727
+2026-01-14 09:20:43 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=6e76cc13...
+2026-01-14 09:20:43 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:20:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=6e76cc13... Cliente=727
+2026-01-14 09:44:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:44:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:44:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:44:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:44:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:44:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:44:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:44:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:44:42 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=aed7dc75...
+2026-01-14 09:44:42 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:44:42 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=aed7dc75... Cliente=731
+2026-01-14 09:44:48 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=ca6889ad...
+2026-01-14 09:44:49 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:44:49 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=ca6889ad... Cliente=731
+2026-01-14 09:44:49 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:44:57 UTC)" was missed by 0:00:01.899369
+2026-01-14 09:45:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:45:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:45:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 09:45:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 09:45:19 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:45:27 UTC)" was missed by 0:00:01.681461
+2026-01-14 09:45:48 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=294ca005...
+2026-01-14 09:45:49 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:45:49 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=294ca005... Cliente=40505
+2026-01-14 09:45:49 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:45:57 UTC)" was missed by 0:00:01.563269
+2026-01-14 09:58:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:58:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:58:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:58:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:58:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 09:58:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 09:59:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 09:59:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 09:59:01 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:59:07 UTC)" was missed by 0:00:03.525259
+2026-01-14 09:59:01 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 12:59:27 UTC)" was missed by 0:00:03.521252
+2026-01-14 09:59:38 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=b8b1d437...
+2026-01-14 09:59:39 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:59:39 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=b8b1d437... Cliente=733
+2026-01-14 09:59:39 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:59:47 UTC)" was missed by 0:00:01.944263
+2026-01-14 09:59:46 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=d2c4d298...
+2026-01-14 09:59:47 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 09:59:47 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=d2c4d298... Cliente=733
+2026-01-14 09:59:49 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 12:59:57 UTC)" was missed by 0:00:02.187440
+2026-01-14 10:05:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:05:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:05:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 10:05:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 10:05:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:05:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:05:24 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 10:05:24 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 10:05:52 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=a15709c3...
+2026-01-14 10:05:52 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:05:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=a15709c3... Cliente=43392
+2026-01-14 10:05:52 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:05:57 UTC)" was missed by 0:00:05.296220
+2026-01-14 10:06:00 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=aded6958...
+2026-01-14 10:06:01 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:06:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=aded6958... Cliente=43392
+2026-01-14 10:06:01 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:06:07 UTC)" was missed by 0:00:03.962433
+2026-01-14 10:06:01 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 13:06:27 UTC)" was missed by 0:00:03.957428
+2026-01-14 10:24:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:24:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:24:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-14 10:24:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-14 10:25:04 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=2a69a620...
+2026-01-14 10:25:05 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:25:05 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=2a69a620... Cliente=43394
+2026-01-14 10:27:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:27:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:27:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: 59810 Luciano (ID: 6823099488)
+2026-01-14 10:27:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Luciano Iturria (ID: -5069978844)
+2026-01-14 10:27:49 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=402f6344...
+2026-01-14 10:27:50 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:27:50 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=402f6344... Cliente=42482
+2026-01-14 10:27:50 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:27:57 UTC)" was missed by 0:00:02.554551
+2026-01-14 10:33:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:33:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:33:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 10:33:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 10:33:47 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=a5eefca9...
+2026-01-14 10:33:47 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:33:47 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=a5eefca9... Cliente=43284
+2026-01-14 10:39:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:39:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:39:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 10:39:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 10:39:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:39:43 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:39:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 10:39:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 10:40:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:40:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:40:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 10:40:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 10:41:10 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=4a3133ce...
+2026-01-14 10:41:11 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:41:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=4a3133ce... Cliente=724
+2026-01-14 10:41:11 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:41:17 UTC)" was missed by 0:00:03.845748
+2026-01-14 10:41:17 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=287695db...
+2026-01-14 10:41:18 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:41:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=287695db... Cliente=724
+2026-01-14 10:45:25 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:45:25 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:45:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-14 10:45:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-14 10:46:38 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=0e206c65...
+2026-01-14 10:46:38 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:46:38 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=0e206c65... Cliente=43395
+2026-01-14 10:46:38 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:46:47 UTC)" was missed by 0:00:01.039905
+2026-01-14 10:55:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 10:55:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 10:56:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 10:56:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 10:57:18 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=3621b4c8...
+2026-01-14 10:57:19 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 10:57:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=3621b4c8... Cliente=42211
+2026-01-14 10:57:19 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 13:57:27 UTC)" was missed by 0:00:01.498908
+2026-01-14 11:10:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:10:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:10:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: David Brunetto (ID: 8445390804)
+2026-01-14 11:10:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones David cba (ID: -1003198174763)
+2026-01-14 11:11:03 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=4c592489...
+2026-01-14 11:11:04 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:11:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=4c592489... Cliente=41703
+2026-01-14 11:11:04 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 14:11:07 UTC)" was missed by 0:00:06.458642
+2026-01-14 11:11:04 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 14:11:27 UTC)" was missed by 0:00:06.453637
+2026-01-14 11:12:54 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:12:54 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:12:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 11:12:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 11:14:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=85000212...
+2026-01-14 11:14:03 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:14:03 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=85000212... Cliente=41160
+2026-01-14 11:14:34 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:14:34 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:14:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 11:14:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 11:14:51 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:14:51 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:14:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 11:14:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 11:15:23 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=a3519a3c...
+2026-01-14 11:15:23 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:15:23 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=a3519a3c... Cliente=43396
+2026-01-14 11:19:33 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:19:33 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:19:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: David Brunetto (ID: 8445390804)
+2026-01-14 11:19:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones David cba (ID: -1003198174763)
+2026-01-14 11:20:12 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=ac080c10...
+2026-01-14 11:20:12 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:20:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=ac080c10... Cliente=42388
+2026-01-14 11:21:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:21:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:21:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Kary Alegre (ID: 6339134545)
+2026-01-14 11:21:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Karina Alegre (ID: -1003102586222)
+2026-01-14 11:21:39 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=9a38f061...
+2026-01-14 11:21:41 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:21:41 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=9a38f061... Cliente=34109
+2026-01-14 11:21:41 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 14:21:47 UTC)" was missed by 0:00:03.854107
+2026-01-14 11:24:24 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:24:24 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:24:26 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 11:24:26 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 11:25:01 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=3039ce5e...
+2026-01-14 11:25:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:25:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=3039ce5e... Cliente=41156
+2026-01-14 11:25:50 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=1035f0a2...
+2026-01-14 11:25:51 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:25:51 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=1035f0a2... Cliente=2
+2026-01-14 11:25:51 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 14:25:57 UTC)" was missed by 0:00:03.987358
+2026-01-14 11:26:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:26:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:26:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 11:26:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 11:26:33 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=e11ee9f1...
+2026-01-14 11:26:33 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:26:33 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=e11ee9f1... Cliente=43320
+2026-01-14 11:52:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:52:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:52:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 11:52:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 11:55:03 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=78fee32e...
+2026-01-14 11:55:04 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:55:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=78fee32e... Cliente=41413
+2026-01-14 11:58:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 11:58:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 11:58:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Martíncho (ID: 1475503729)
+2026-01-14 11:58:22 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Martin Palacios (ID: -4998434019)
+2026-01-14 11:58:50 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=f76fec76...
+2026-01-14 11:58:51 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 11:58:51 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=f76fec76... Cliente=43399
+2026-01-14 11:58:51 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 14:58:57 UTC)" was missed by 0:00:03.949420
+2026-01-14 12:02:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:02:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:02:41 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-14 12:02:41 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-14 12:03:40 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=9e30c7d2...
+2026-01-14 12:03:41 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:03:41 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=9e30c7d2... Cliente=43400
+2026-01-14 12:03:41 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:03:47 UTC)" was missed by 0:00:03.844934
+2026-01-14 12:09:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:09:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:09:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: David Brunetto (ID: 8445390804)
+2026-01-14 12:09:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones David cba (ID: -1003198174763)
+2026-01-14 12:10:20 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=ccad3f4c...
+2026-01-14 12:10:20 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:10:20 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=ccad3f4c... Cliente=43265
+2026-01-14 12:10:20 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:10:27 UTC)" was missed by 0:00:03.240991
+2026-01-14 12:14:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:14:00 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:14:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 12:14:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 12:14:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:14:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:14:03 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 12:14:03 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 12:14:30 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=3b133233...
+2026-01-14 12:14:31 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:14:31 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=3b133233... Cliente=43398
+2026-01-14 12:14:31 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:14:37 UTC)" was missed by 0:00:03.797571
+2026-01-14 12:14:31 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 15:14:57 UTC)" was missed by 0:00:03.792566
+2026-01-14 12:14:37 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=435b61eb...
+2026-01-14 12:14:38 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:14:38 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=435b61eb... Cliente=43398
+2026-01-14 12:15:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:15:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:15:08 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 12:15:08 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 12:15:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:15:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:15:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 12:15:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 12:15:11 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:15:17 UTC)" was missed by 0:00:03.923347
+2026-01-14 12:15:38 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:15:47 UTC)" was missed by 0:00:01.292065
+2026-01-14 12:15:45 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=7a75ed8b...
+2026-01-14 12:15:46 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:15:46 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=7a75ed8b... Cliente=1569
+2026-01-14 12:15:52 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=88dae42d...
+2026-01-14 12:15:53 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:15:53 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=88dae42d... Cliente=1569
+2026-01-14 12:19:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:19:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:19:15 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 12:19:15 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 12:19:16 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:19:16 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:19:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Monchi Ayala (ID: 5466310928)
+2026-01-14 12:19:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Ivan Soto (ID: -1003160329074)
+2026-01-14 12:19:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:19:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:19:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 12:19:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 12:19:55 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=0432acc1...
+2026-01-14 12:19:56 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:19:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=0432acc1... Cliente=1081
+2026-01-14 12:20:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=6d3021b5...
+2026-01-14 12:20:03 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:20:03 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=6d3021b5... Cliente=1081
+2026-01-14 12:20:08 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:20:17 UTC)" was missed by 0:00:01.034163
+2026-01-14 12:21:27 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=e46efdf5...
+2026-01-14 12:21:28 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:21:28 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=e46efdf5... Cliente=41197
+2026-01-14 12:40:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:40:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:40:29 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Hernan (ID: 7647689717)
+2026-01-14 12:40:29 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Hernan Benetti (ID: -4911150406)
+2026-01-14 12:40:30 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:40:37 UTC)" was missed by 0:00:02.622695
+2026-01-14 12:40:30 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 15:40:57 UTC)" was missed by 0:00:02.617690
+2026-01-14 12:42:06 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=4574b23b...
+2026-01-14 12:42:07 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:42:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=4574b23b... Cliente=41412
+2026-01-14 12:42:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:42:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:42:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 12:42:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 12:42:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:42:11 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:42:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Jesus Grimaldi (ID: 2015463724)
+2026-01-14 12:42:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Jesus Grimaldi (ID: -5213301465)
+2026-01-14 12:42:44 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=8996c9c5...
+2026-01-14 12:42:45 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:42:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=8996c9c5... Cliente=43402
+2026-01-14 12:42:51 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=6a7551ef...
+2026-01-14 12:42:52 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:42:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=6a7551ef... Cliente=43402
+2026-01-14 12:51:25 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:51:25 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:51:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Martíncho (ID: 1475503729)
+2026-01-14 12:51:27 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Martin Palacios (ID: -4998434019)
+2026-01-14 12:52:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:52:18 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:52:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Romina Cigarreros (ID: 7626448715)
+2026-01-14 12:52:19 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Romina Soru (ID: -1003360338583)
+2026-01-14 12:52:35 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=09f61666...
+2026-01-14 12:52:35 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:52:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=09f61666... Cliente=43403
+2026-01-14 12:52:59 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=74ad720c...
+2026-01-14 12:52:59 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:52:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=74ad720c... Cliente=34011
+2026-01-14 12:52:59 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:53:07 UTC)" was missed by 0:00:02.196416
+2026-01-14 12:52:59 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 15:53:27 UTC)" was missed by 0:00:02.191411
+2026-01-14 12:55:48 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:55:48 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:55:50 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Romina Cigarreros (ID: 7626448715)
+2026-01-14 12:55:50 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Romina Soru (ID: -1003360338583)
+2026-01-14 12:56:08 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:56:17 UTC)" was missed by 0:00:01.371442
+2026-01-14 12:56:16 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=0dcaecfa...
+2026-01-14 12:56:17 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:56:17 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=0dcaecfa... Cliente=34014
+2026-01-14 12:57:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 12:57:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 12:57:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Romina Cigarreros (ID: 7626448715)
+2026-01-14 12:57:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Romina Soru (ID: -1003360338583)
+2026-01-14 12:57:40 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=8b4e6e71...
+2026-01-14 12:57:41 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 12:57:41 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=8b4e6e71... Cliente=34015
+2026-01-14 12:57:41 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 15:57:47 UTC)" was missed by 0:00:03.770134
+2026-01-14 13:03:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:03:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:03:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Romina Cigarreros (ID: 7626448715)
+2026-01-14 13:03:07 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Romina Soru (ID: -1003360338583)
+2026-01-14 13:03:35 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=a2ebdef1...
+2026-01-14 13:03:36 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:03:36 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=a2ebdef1... Cliente=30644
+2026-01-14 13:05:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:05:35 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:05:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Hernan (ID: 7647689717)
+2026-01-14 13:05:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Hernan Benetti (ID: -4911150406)
+2026-01-14 13:06:39 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:06:47 UTC)" was missed by 0:00:01.443689
+2026-01-14 13:06:50 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=52ec0194...
+2026-01-14 13:06:51 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:06:51 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=52ec0194... Cliente=41398
+2026-01-14 13:06:51 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:06:57 UTC)" was missed by 0:00:03.711115
+2026-01-14 13:07:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:07:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:08:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 13:08:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 13:08:29 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=3c9f8d4b...
+2026-01-14 13:08:29 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:08:29 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=3c9f8d4b... Cliente=41454
+2026-01-14 13:08:29 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:08:37 UTC)" was missed by 0:00:02.109663
+2026-01-14 13:08:29 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 16:08:57 UTC)" was missed by 0:00:02.105653
+2026-01-14 13:09:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:09:52 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:09:54 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-14 13:09:54 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-14 13:10:28 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:10:37 UTC)" was missed by 0:00:01.286577
+2026-01-14 13:10:28 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 16:10:57 UTC)" was missed by 0:00:01.281572
+2026-01-14 13:10:36 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=8e0356b2...
+2026-01-14 13:10:37 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:10:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=8e0356b2... Cliente=43407
+2026-01-14 13:19:34 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:19:34 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:19:36 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 13:19:36 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 13:20:11 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=f1d1d9b1...
+2026-01-14 13:20:12 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:20:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=f1d1d9b1... Cliente=41321
+2026-01-14 13:34:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:34:06 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:34:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 13:34:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 13:34:09 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:34:17 UTC)" was missed by 0:00:02.109520
+2026-01-14 13:34:36 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=574d029a...
+2026-01-14 13:34:37 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:34:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=574d029a... Cliente=41318
+2026-01-14 13:42:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:42:59 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:43:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 13:43:01 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 13:43:38 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:43:47 UTC)" was missed by 0:00:01.022018
+2026-01-14 13:43:46 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=07bea0d6...
+2026-01-14 13:43:47 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:43:47 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=07bea0d6... Cliente=41574
+2026-01-14 13:52:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:52:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:52:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Hernan (ID: 7647689717)
+2026-01-14 13:52:14 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Hernan Benetti (ID: -4911150406)
+2026-01-14 13:52:39 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:52:47 UTC)" was missed by 0:00:01.717042
+2026-01-14 13:52:55 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=3d5e993c...
+2026-01-14 13:52:55 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:52:55 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=3d5e993c... Cliente=41665
+2026-01-14 13:54:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 13:54:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 13:54:39 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Claudio (ID: 8307966399)
+2026-01-14 13:54:39 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Claudio Boda (ID: -5264245283)
+2026-01-14 13:55:40 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=7bf6fead...
+2026-01-14 13:55:40 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 13:55:40 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=7bf6fead... Cliente=43409
+2026-01-14 13:55:40 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 16:55:47 UTC)" was missed by 0:00:03.300143
+2026-01-14 14:17:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 14:17:45 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 14:17:48 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Romina Cigarreros (ID: 7626448715)
+2026-01-14 14:17:48 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciónes Romina Soru (ID: -1003360338583)
+2026-01-14 14:17:49 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 17:17:57 UTC)" was missed by 0:00:01.681496
+2026-01-14 14:18:25 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=4e163008...
+2026-01-14 14:18:26 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 14:18:26 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=4e163008... Cliente=33295
+2026-01-14 14:20:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 14:20:09 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 14:20:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: David Brunetto (ID: 8445390804)
+2026-01-14 14:20:10 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones David cba (ID: -1003198174763)
+2026-01-14 14:20:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 14:20:12 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 14:20:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 14:20:13 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 14:20:14 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "job_process_photo_group (trigger: date[2026-01-14 17:20:12 UTC], next run at: 2026-01-14 17:20:12 UTC)" was missed by 0:00:01.161847
+2026-01-14 14:21:37 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=db8f98eb...
+2026-01-14 14:21:37 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 14:21:37 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=db8f98eb... Cliente=41340
+2026-01-14 14:25:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=76259f49...
+2026-01-14 14:25:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 14:25:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=76259f49... Cliente=41159
+2026-01-14 14:40:28 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 14:40:28 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 14:40:31 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Ricardo Lauro (ID: 8122890749)
+2026-01-14 14:40:31 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Ricardo Lauro (ID: -4850772455)
+2026-01-14 14:41:04 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=96e9cb0d...
+2026-01-14 14:41:04 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 14:41:04 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=96e9cb0d... Cliente=41459
+2026-01-14 16:16:55 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 16:16:55 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 16:16:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 16:16:56 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 16:16:57 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 16:16:57 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 16:16:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: Sergio Gustavo Marek (ID: 7384705615)
+2026-01-14 16:16:58 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones Sergio Marek (ID: -5040939393)
+2026-01-14 16:16:59 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 19:17:07 UTC)" was missed by 0:00:01.803016
+2026-01-14 16:16:59 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 19:17:27 UTC)" was missed by 0:00:01.798011
+2026-01-14 16:17:22 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=6e9693a6...
+2026-01-14 16:17:23 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 16:17:23 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=6e9693a6... Cliente=43411
+2026-01-14 16:17:29 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=562778eb...
+2026-01-14 16:17:30 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 16:17:30 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=562778eb... Cliente=43411
+2026-01-14 16:17:30 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 19:17:37 UTC)" was missed by 0:00:02.605580
+2026-01-14 16:17:30 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 19:17:57 UTC)" was missed by 0:00:02.600575
+2026-01-14 16:52:21 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ============================================================
+2026-01-14 16:52:21 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 📸 NUEVA FOTO RECIBIDA
+2026-01-14 16:52:23 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 👤 Usuario: David Brunetto (ID: 8445390804)
+2026-01-14 16:52:23 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | 💬 Chat: Exhibiciones David cba (ID: -1003198174763)
+2026-01-14 16:52:23 | PID:9196   | [33mWARNING[0m | __main__             | handle_photo              | L699  | ⚠️ No se pudo cancelar job anterior (ignorable): 'No job by the id of 5659c326d5f7436fb07d93d450401636 was found'
+2026-01-14 16:52:54 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=b8ef9aaf...
+2026-01-14 16:52:55 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 16:52:55 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=b8ef9aaf... Cliente=43013
+2026-01-14 16:53:01 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L599  | 📝 Registrando imagen: UUID=dd6d4352...
+2026-01-14 16:53:02 | PID:9196   | [32mINFO[0m | sheets_manager       | register_image            | L649  | ✅ Imagen registrada correctamente
+2026-01-14 16:53:02 | PID:9196   | [32mINFO[0m | __main__             | log_and_print             | L119  | ✅ Foto registrada: UUID=dd6d4352... Cliente=43013
+2026-01-14 16:53:02 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:10], next run at: 2026-01-14 19:53:07 UTC)" was missed by 0:00:04.466956
+2026-01-14 16:53:02 | PID:9196   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-01-14 19:53:27 UTC)" was missed by 0:00:04.461951

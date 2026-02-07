@@ -1,0 +1,129 @@
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260128.log
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 47388
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L107  | ================================================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L108  | 🤖 BOT HOST INICIANDO...
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L109  | ================================================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-28 13:21:58 | PID:47388  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-28 13:22:00 | PID:47388  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-28 13:22:00 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1037 | ================================================================================
+2026-01-28 13:22:00 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1038 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-28 13:22:00 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1039 | ================================================================================
+2026-01-28 13:22:00 | PID:47388  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:47388)
+2026-01-28 13:22:02 | PID:47388  | [32mINFO[0m | host_lock            | try_acquire_host          | L118  | ♻️ Recuperando sesión
+2026-01-28 13:22:03 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1061 | ================================================================================
+2026-01-28 13:22:03 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1062 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:47388)
+2026-01-28 13:22:03 | PID:47388  | [32mINFO[0m | __main__             | <module>                  | L1063 | ================================================================================
+2026-01-28 13:22:04 | PID:47388  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-28 13:22:04 | PID:47388  | [32mINFO[0m | __main__             | post_init                 | L1107 | 🚦 Monitor de semáforo iniciado
+2026-01-28 13:22:04 | PID:47388  | [32mINFO[0m | __main__             | notify_superuser          | L210  | 📬 Notificación enviada al superusuario
+2026-01-28 13:22:09 | PID:47388  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-28 13:22:09 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L834  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-28 13:22:09 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L841  | Traceback completo:
+2026-01-28 13:22:09 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L842  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-28 13:22:15 | PID:47388  | [31mERROR[0m | telegram.ext.Updater | _network_loop_retry       | L701  | Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-28 13:22:15 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L834  | Error capturado por error_handler: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-01-28 13:22:15 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L841  | Traceback completo:
+2026-01-28 13:22:15 | PID:47388  | [31mERROR[0m | __main__             | error_handler             | L842  | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 688, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 558, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 3584, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 613, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 641, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 381, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260128.log
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 36980
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L107  | ================================================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L108  | 🤖 BOT HOST INICIANDO...
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L109  | ================================================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | sheets_manager       | __init__                  | L130  | ============================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | 📊 Inicializando SheetsManager...
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | ============================================================
+2026-01-28 13:22:52 | PID:36980  | [32mINFO[0m | sheets_manager       | _connect                  | L209  | 🔌 Conectando a Google Sheets...
+2026-01-28 13:22:53 | PID:36980  | [32mINFO[0m | sheets_manager       | _connect                  | L248  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-01-28 13:22:54 | PID:36980  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-01-28 13:22:54 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1037 | ================================================================================
+2026-01-28 13:22:54 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1038 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-01-28 13:22:54 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1039 | ================================================================================
+2026-01-28 13:22:54 | PID:36980  | [32mINFO[0m | host_lock            | __init__                  | L75   | 🔐 HostLock: cigar@cigarreros2025 (PID:36980)
+2026-01-28 13:22:56 | PID:36980  | [32mINFO[0m | host_lock            | try_acquire_host          | L118  | ♻️ Recuperando sesión
+2026-01-28 13:22:57 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1061 | ================================================================================
+2026-01-28 13:22:57 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1062 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:36980)
+2026-01-28 13:22:57 | PID:36980  | [32mINFO[0m | __main__             | <module>                  | L1063 | ================================================================================
+2026-01-28 13:22:58 | PID:36980  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 5s)
+2026-01-28 13:22:58 | PID:36980  | [32mINFO[0m | __main__             | post_init                 | L1107 | 🚦 Monitor de semáforo iniciado
+2026-01-28 13:22:58 | PID:36980  | [32mINFO[0m | __main__             | notify_superuser          | L210  | 📬 Notificación enviada al superusuario
+2026-01-28 13:23:58 | PID:36980  | [32mINFO[0m | __main__             | notify_superuser          | L210  | 📬 Notificación enviada al superusuario
+2026-01-28 13:25:08 | PID:36980  | [31mERROR[0m | host_lock            | _get_cached_data          | L1086 | Error leyendo datos: {'code': 400, 'message': "Unable to parse range: 'HOST_CONTROL'", 'status': 'INVALID_ARGUMENT'}
+2026-01-28 13:25:08 | PID:36980  | [33mWARNING[0m | __main__             | update_host_heartbeat     | L909  | ⚠️ ¡Host perdido! Cambiando a modo monitoreo...
+2026-01-28 13:25:09 | PID:36980  | [32mINFO[0m | __main__             | notify_superuser          | L210  | 📬 Notificación enviada al superusuario
+2026-01-28 13:25:09 | PID:36980  | [31mERROR[0m | __main__             | update_host_heartbeat     | L958  | Error en update_host_heartbeat: {'code': 400, 'message': "Unable to parse range: 'HOST_CONTROL'", 'status': 'INVALID_ARGUMENT'}
