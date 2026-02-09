@@ -1,0 +1,1205 @@
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260209.log
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 31368
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-09 10:34:50 | PID:31368  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-09 10:34:51 | PID:31368  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-09 10:34:55 | PID:31368  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-09 10:34:55 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1972 | ================================================================================
+2026-02-09 10:34:55 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1973 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-09 10:34:55 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1974 | ================================================================================
+2026-02-09 10:34:55 | PID:31368  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:31368)
+2026-02-09 10:34:57 | PID:31368  | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:31368)
+2026-02-09 10:34:57 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1992 | ================================================================================
+2026-02-09 10:34:57 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1993 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:31368)
+2026-02-09 10:34:57 | PID:31368  | [32mINFO[0m | __main__             | <module>                  | L1994 | ================================================================================
+2026-02-09 10:34:58 | PID:31368  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-09 10:34:58 | PID:31368  | [32mINFO[0m | __main__             | post_init                 | L2053 | 🚦 Monitor de semáforo iniciado
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | setup_bot_commands        | L694  | ✅ Menú de comandos configurado
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 10:34:59 | PID:31368  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 10:34:59 | PID:31368  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 10:34:59 | PID:31368  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 10:35:00 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Guille (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:35:00 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:35:15 | PID:31368  | [31mERROR[0m | __main__             | cmd_mirol                 | L671  | Error en /mirol: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-09 10:35:21 | PID:31368  | [32mINFO[0m | __main__             | cmd_setall_rol            | L983  | 🎭 /setall_rol iniciado por superusuario en grupo -1003108035087
+2026-02-09 10:35:21 | PID:31368  | [31mERROR[0m | __main__             | cmd_setall_rol            | L1032 | Error en /setall_rol: 'SheetsManager' object has no attribute 'get_known_users_in_group'
+2026-02-09 10:35:58 | PID:31368  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 10:36:14 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Darío (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:36:14 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:36:27 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=c9186db8...
+2026-02-09 10:36:28 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:36:34 | PID:31368  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=c9186db8... → Rechazado
+2026-02-09 10:36:36 | PID:31368  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 10:36:49 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Luciano (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:36:49 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:36:49 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Luciano (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:36:49 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:36:59 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=90df4691...
+2026-02-09 10:37:00 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:37:12 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=de07de4d...
+2026-02-09 10:37:13 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:37:13 | PID:31368  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-09 13:38:08 UTC)" was missed by 0:00:05.547635
+2026-02-09 10:37:23 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=223db593...
+2026-02-09 10:37:23 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:37:25 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:37:25 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:37:36 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=cd470c97...
+2026-02-09 10:37:37 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:37:37 | PID:31368  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 13:38:03 UTC)" was missed by 0:00:04.410499
+2026-02-09 10:38:38 | PID:31368  | [33mWARNING[0m | __main__             | cmd_help                  | L599  | ⚠️ No se encontró imagen de ayuda en ninguna ubicación
+2026-02-09 10:46:03 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Dante (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:46:03 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:46:04 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Dante (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:46:04 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:46:14 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:46:14 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:46:15 | PID:31368  | [32mINFO[0m | __main__             | handle_photo              | L1339 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:46:15 | PID:31368  | [31mERROR[0m | __main__             | handle_photo              | L1366 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:46:26 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=ef5511fc...
+2026-02-09 10:46:27 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:46:41 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=8ae2e411...
+2026-02-09 10:46:42 | PID:31368  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260209.log
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 22208
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-09 10:50:44 | PID:22208  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-09 10:50:48 | PID:22208  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-09 10:50:48 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2044 | ================================================================================
+2026-02-09 10:50:48 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2045 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-09 10:50:48 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2046 | ================================================================================
+2026-02-09 10:50:48 | PID:22208  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:22208)
+2026-02-09 10:50:50 | PID:22208  | [32mINFO[0m | host_lock            | try_acquire_host          | L133  | ♻️ Recuperando sesión
+2026-02-09 10:50:51 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2064 | ================================================================================
+2026-02-09 10:50:51 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2065 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:22208)
+2026-02-09 10:50:51 | PID:22208  | [32mINFO[0m | __main__             | <module>                  | L2066 | ================================================================================
+2026-02-09 10:50:52 | PID:22208  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-09 10:50:52 | PID:22208  | [32mINFO[0m | __main__             | post_init                 | L2125 | 🚦 Monitor de semáforo iniciado
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | setup_bot_commands        | L727  | ✅ Menú de comandos configurado
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 10:50:53 | PID:22208  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 10:50:53 | PID:22208  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 10:50:53 | PID:22208  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 10:51:03 | PID:22208  | [33mWARNING[0m | __main__             | cmd_help                  | L607  | ⚠️ No se encontró imagen de ayuda en ninguna ubicación
+2026-02-09 10:51:52 | PID:22208  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 10:51:59 | PID:22208  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Luciano (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:51:59 | PID:22208  | [31mERROR[0m | __main__             | handle_photo              | L1438 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:52:30 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=f7db7923...
+2026-02-09 10:52:32 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:52:32 | PID:22208  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 13:52:56 UTC)" was missed by 0:00:05.425621
+2026-02-09 10:54:42 | PID:22208  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:54:42 | PID:22208  | [31mERROR[0m | __main__             | handle_photo              | L1438 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:54:43 | PID:22208  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:54:43 | PID:22208  | [31mERROR[0m | __main__             | handle_photo              | L1438 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:54:49 | PID:22208  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Guille (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:54:49 | PID:22208  | [31mERROR[0m | __main__             | handle_photo              | L1438 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:55:08 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=bdf2cde5...
+2026-02-09 10:55:09 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:55:09 | PID:22208  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 13:55:36 UTC)" was missed by 0:00:02.363730
+2026-02-09 10:55:22 | PID:22208  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Guille (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 10:55:22 | PID:22208  | [31mERROR[0m | __main__             | handle_photo              | L1438 | ⚠️ Error en auto-asignación de rol: 'SheetsManager' object has no attribute 'set_user_role_in_group'
+2026-02-09 10:55:51 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=107a77dc...
+2026-02-09 10:55:52 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:57:34 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=be9daa23...
+2026-02-09 10:57:34 | PID:22208  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 10:58:37 | PID:22208  | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 10:58:37 | PID:22208  | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 10:58:37 | PID:22208  | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260209.log
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 2072
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-09 10:59:53 | PID:2072   | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-09 10:59:54 | PID:2072   | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-09 10:59:58 | PID:2072   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-09 10:59:58 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2044 | ================================================================================
+2026-02-09 10:59:58 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2045 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-09 10:59:58 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2046 | ================================================================================
+2026-02-09 10:59:58 | PID:2072   | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:2072)
+2026-02-09 10:59:59 | PID:2072   | [32mINFO[0m | host_lock            | try_acquire_host          | L133  | ♻️ Recuperando sesión
+2026-02-09 11:00:01 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2064 | ================================================================================
+2026-02-09 11:00:01 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2065 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:2072)
+2026-02-09 11:00:01 | PID:2072   | [32mINFO[0m | __main__             | <module>                  | L2066 | ================================================================================
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | __main__             | post_init                 | L2125 | 🚦 Monitor de semáforo iniciado
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | __main__             | setup_bot_commands        | L727  | ✅ Menú de comandos configurado
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 11:00:02 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 0 roles desde GROUP_ROLES
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 0 asignaciones de roles
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 0 roles desde GROUP_ROLES
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 0 asignaciones de roles
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 11:00:03 | PID:2072   | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 11:00:09 | PID:2072   | [33mWARNING[0m | __main__             | cmd_help                  | L607  | ⚠️ No se encontró imagen de ayuda en ninguna ubicación
+2026-02-09 11:00:43 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Monchi (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:00:44 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Monchi → vendedor en grupo -1003160329074
+2026-02-09 11:01:02 | PID:2072   | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 11:01:29 | PID:2072   | [32mINFO[0m | __main__             | cmd_setall_rol            | L1028 | 🎭 /setall_rol iniciado por superusuario en grupo -1003108035087
+2026-02-09 11:01:29 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 1 roles desde GROUP_ROLES
+2026-02-09 11:01:47 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Emanuel → supervisor en grupo -1003108035087
+2026-02-09 11:01:48 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Cristian → supervisor en grupo -1003108035087
+2026-02-09 11:01:48 | PID:2072   | [32mINFO[0m | __main__             | invalidate_role_cache     | L214  | 🔄 Cache de roles invalidado - se recargará en próxima consulta
+2026-02-09 11:01:48 | PID:2072   | [32mINFO[0m | __main__             | save_role_changes         | L1370 | ✅ Roles actualizados: 2 cambios en grupo -1003108035087
+2026-02-09 11:01:59 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=637fc16c...
+2026-02-09 11:02:00 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:02:57 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 11:02:57 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 3 roles desde GROUP_ROLES
+2026-02-09 11:02:57 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 3 asignaciones de roles
+2026-02-09 11:02:57 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Sergio Gustavo (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:02:58 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Sergio Gustavo → vendedor en grupo -5040939393
+2026-02-09 11:03:25 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=bd9d5b6f...
+2026-02-09 11:03:25 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:06:24 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 11:06:24 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 11:06:24 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 11:07:59 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=13dbee50...
+2026-02-09 11:08:00 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:08:03 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=13dbee50... → Rechazado
+2026-02-09 11:08:05 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 11:09:45 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Nacho (@) en grupo -1003355556463
+2026-02-09 11:09:45 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Nacho (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:09:45 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Nacho → vendedor en grupo -1003355556463
+2026-02-09 11:10:07 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Luciano (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:10:08 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Luciano → vendedor en grupo -5069978844
+2026-02-09 11:10:12 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-09 14:11:11 UTC)" was missed by 0:00:01.353269
+2026-02-09 11:10:23 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=9a87f598...
+2026-02-09 11:10:24 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:11:03 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=68d191e7...
+2026-02-09 11:11:04 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:15:33 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 11:15:33 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 11:15:33 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 11:16:43 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Guille (@) en grupo -1003187635276
+2026-02-09 11:16:43 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Guille (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:16:43 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Guille → vendedor en grupo -1003187635276
+2026-02-09 11:17:01 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=9cc9164d...
+2026-02-09 11:17:02 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:20:13 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Eugenia (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:20:14 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Eugenia → vendedor en grupo -4895023920
+2026-02-09 11:20:33 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=bd721e6a...
+2026-02-09 11:20:33 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:23:36 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=7eea3df6...
+2026-02-09 11:23:38 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:23:38 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 14:24:06 UTC)" was missed by 0:00:02.023052
+2026-02-09 11:24:01 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 11:24:01 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 11:24:01 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 11:25:03 | PID:2072   | [31mERROR[0m | __main__             | handle_text               | L1588 | Error enviando botones: Timed out
+2026-02-09 11:26:25 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Hernan (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:26:25 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Hernan → vendedor en grupo -4911150406
+2026-02-09 11:27:36 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=c6310545...
+2026-02-09 11:27:37 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:27:37 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 14:28:06 UTC)" was missed by 0:00:01.201248
+2026-02-09 11:28:28 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 11:28:28 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 11:28:28 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 11:28:40 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1840 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 11:28:40 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1847 | Traceback completo:
+2026-02-09 11:28:40 | PID:2072   | [31mERROR[0m | __main__             | error_handler             | L1848 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 11:29:55 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Darío (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:29:55 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Darío → vendedor en grupo -5070199320
+2026-02-09 11:30:03 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=0c046920...
+2026-02-09 11:30:03 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:30:26 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=6aa0dab3...
+2026-02-09 11:30:26 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:31:26 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=cb692fe8...
+2026-02-09 11:31:26 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:31:30 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: David (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 11:31:30 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: David → vendedor en grupo -1003198174763
+2026-02-09 11:32:45 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=cf270abd...
+2026-02-09 11:32:46 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:37:31 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=22207323...
+2026-02-09 11:37:32 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:45:09 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=ea63264d...
+2026-02-09 11:45:10 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:45:10 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 14:45:36 UTC)" was missed by 0:00:03.968448
+2026-02-09 11:45:12 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-09 14:46:11 UTC)" was missed by 0:00:01.166421
+2026-02-09 11:50:40 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=f0658d00...
+2026-02-09 11:50:41 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:50:55 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=a3cce3e0...
+2026-02-09 11:50:56 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 11:53:09 | PID:2072   | [32mINFO[0m | __main__             | cmd_setall_rol            | L1028 | 🎭 /setall_rol iniciado por superusuario en grupo -5070199320
+2026-02-09 11:53:10 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 11 roles desde GROUP_ROLES
+2026-02-09 11:54:59 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=d9ab4517...
+2026-02-09 11:55:00 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:01:38 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Nacho (@nachopiazza) en grupo -5070199320
+2026-02-09 12:02:40 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=0831daaf...
+2026-02-09 12:02:41 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:06:02 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=dd12cd43...
+2026-02-09 12:06:03 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:07:40 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=9b6d0fee...
+2026-02-09 12:07:41 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:08:15 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=02f6969d...
+2026-02-09 12:08:15 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:09:01 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=7338629f...
+2026-02-09 12:09:02 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:14:40 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 15:15:06 UTC)" was missed by 0:00:04.425723
+2026-02-09 12:15:02 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=dd4ee833...
+2026-02-09 12:15:03 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:16:04 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=befda447...
+2026-02-09 12:16:05 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:17:33 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=59aaecf7...
+2026-02-09 12:17:34 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:17:38 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 15:18:06 UTC)" was missed by 0:00:01.985347
+2026-02-09 12:21:26 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Leonardo (@) en grupo -1003391687358
+2026-02-09 12:21:26 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Leonardo (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 12:21:27 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Leonardo → vendedor en grupo -1003391687358
+2026-02-09 12:27:31 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=25f27465...
+2026-02-09 12:27:31 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:31:30 | PID:2072   | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Claudio (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 12:31:31 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Claudio → vendedor en grupo -5264245283
+2026-02-09 12:32:16 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=79e7bbe4...
+2026-02-09 12:32:17 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:32:17 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 15:32:46 UTC)" was missed by 0:00:01.211100
+2026-02-09 12:35:21 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=babe13d5...
+2026-02-09 12:35:22 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:40:54 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=8b1e7f18...
+2026-02-09 12:40:55 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:55:17 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=3a12627e...
+2026-02-09 12:55:18 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:55:18 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 15:55:46 UTC)" was missed by 0:00:01.759460
+2026-02-09 12:57:22 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=babe13d5... → Aprobado
+2026-02-09 12:57:24 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 12:57:58 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Matías (@) en grupo -5069978844
+2026-02-09 12:58:04 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=d9ab4517... → Aprobado
+2026-02-09 12:58:05 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 12:59:32 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=3cd71f27...
+2026-02-09 12:59:33 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 12:59:35 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=7eea3df6... → Rechazado
+2026-02-09 12:59:38 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 12:59:38 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 16:00:06 UTC)" was missed by 0:00:02.301979
+2026-02-09 12:59:50 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=68d191e7... → Destacado
+2026-02-09 12:59:52 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 13:00:03 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=f7db7923... → Aprobado
+2026-02-09 13:00:05 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 13:00:20 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=de07de4d... → Destacado
+2026-02-09 13:00:22 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 13:01:00 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=447103ea... → Aprobado
+2026-02-09 13:01:02 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 13:06:19 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=bd9d5b6f... → Aprobado
+2026-02-09 13:06:21 | PID:2072   | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 13:09:48 | PID:2072   | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Nacho (@nachopiazza) en grupo -5069978844
+2026-02-09 13:37:14 | PID:2072   | [32mINFO[0m | __main__             | cmd_setall_rol            | L1028 | 🎭 /setall_rol iniciado por superusuario en grupo -5069978844
+2026-02-09 13:37:15 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 13 roles desde GROUP_ROLES
+2026-02-09 13:37:33 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Matías → supervisor en grupo -5069978844
+2026-02-09 13:37:33 | PID:2072   | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Nacho → supervisor en grupo -5069978844
+2026-02-09 13:37:33 | PID:2072   | [32mINFO[0m | __main__             | invalidate_role_cache     | L214  | 🔄 Cache de roles invalidado - se recargará en próxima consulta
+2026-02-09 13:37:34 | PID:2072   | [32mINFO[0m | __main__             | save_role_changes         | L1370 | ✅ Roles actualizados: 2 cambios en grupo -5069978844
+2026-02-09 13:48:43 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 15 roles desde GROUP_ROLES
+2026-02-09 14:01:56 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 14:01:56 | PID:2072   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 15 roles desde GROUP_ROLES
+2026-02-09 14:01:56 | PID:2072   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 15 asignaciones de roles
+2026-02-09 14:10:07 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 4 evaluaciones desde el Visor...
+2026-02-09 14:10:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 10916 editado exitosamente.
+2026-02-09 14:10:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 10934 editado exitosamente.
+2026-02-09 14:10:09 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 1039 editado exitosamente.
+2026-02-09 14:10:09 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 171 editado exitosamente.
+2026-02-09 14:10:36 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-09 14:10:37 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 1100 editado exitosamente.
+2026-02-09 14:10:38 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 187 editado exitosamente.
+2026-02-09 14:10:39 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 103 editado exitosamente.
+2026-02-09 14:11:06 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-09 14:11:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11390 editado exitosamente.
+2026-02-09 14:11:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11395 editado exitosamente.
+2026-02-09 14:11:09 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11401 editado exitosamente.
+2026-02-09 14:11:36 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 4 evaluaciones desde el Visor...
+2026-02-09 14:11:38 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 75 editado exitosamente.
+2026-02-09 14:11:40 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11414 editado exitosamente.
+2026-02-09 14:11:41 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11420 editado exitosamente.
+2026-02-09 14:11:41 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 80 editado exitosamente.
+2026-02-09 14:12:06 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 2 evaluaciones desde el Visor...
+2026-02-09 14:12:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11425 editado exitosamente.
+2026-02-09 14:12:08 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 38 editado exitosamente.
+2026-02-09 14:12:33 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=e0600456...
+2026-02-09 14:12:34 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:12:37 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 3 evaluaciones desde el Visor...
+2026-02-09 14:12:37 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11437 editado exitosamente.
+2026-02-09 14:12:38 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 85 editado exitosamente.
+2026-02-09 14:12:38 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11445 editado exitosamente.
+2026-02-09 14:13:38 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=0293bfa2...
+2026-02-09 14:13:38 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:13:38 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 17:14:06 UTC)" was missed by 0:00:02.480955
+2026-02-09 14:14:46 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=b48c011d...
+2026-02-09 14:14:47 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:14:47 | PID:2072   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 17:15:16 UTC)" was missed by 0:00:01.517858
+2026-02-09 14:16:03 | PID:2072   | [31mERROR[0m | __main__             | button_callback           | L1689 | Error procesando subida inmediata: Timed out
+2026-02-09 14:16:42 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=31b5df20...
+2026-02-09 14:16:45 | PID:2072   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:18:36 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1868 | 🔄 Sincronizando 1 evaluaciones desde el Visor...
+2026-02-09 14:18:37 | PID:2072   | [32mINFO[0m | __main__             | sync_telegram_job         | L1919 | ✅ Mensaje 11451 editado exitosamente.
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260209.log
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 28260
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-09 14:19:44 | PID:28260  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-09 14:19:48 | PID:28260  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-09 14:19:48 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2152 | ================================================================================
+2026-02-09 14:19:48 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2153 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-09 14:19:48 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2154 | ================================================================================
+2026-02-09 14:19:48 | PID:28260  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:28260)
+2026-02-09 14:19:50 | PID:28260  | [32mINFO[0m | host_lock            | try_acquire_host          | L133  | ♻️ Recuperando sesión
+2026-02-09 14:19:51 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2172 | ================================================================================
+2026-02-09 14:19:51 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2173 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:28260)
+2026-02-09 14:19:51 | PID:28260  | [32mINFO[0m | __main__             | <module>                  | L2174 | ================================================================================
+2026-02-09 14:19:52 | PID:28260  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-09 14:19:52 | PID:28260  | [32mINFO[0m | __main__             | post_init                 | L2234 | 🚦 Monitor de semáforo iniciado
+2026-02-09 14:19:52 | PID:28260  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | setup_bot_commands        | L727  | ✅ Menú de comandos configurado
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 15 roles desde GROUP_ROLES
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 15 asignaciones de roles
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 15 roles desde GROUP_ROLES
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 15 asignaciones de roles
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 14:19:53 | PID:28260  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 14:20:02 | PID:28260  | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 15 roles desde GROUP_ROLES
+2026-02-09 14:20:52 | PID:28260  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 14:21:30 | PID:28260  | [32mINFO[0m | sheets_manager       | register_known_user       | L1695 | 👤 Usuario registrado: Group (@GroupAnonymousBot) en grupo -1003198174763
+2026-02-09 14:32:16 | PID:28260  | [32mINFO[0m | __main__             | handle_photo              | L1409 | 🆕 Usuario nuevo detectado enviando foto: Dante (rol actual: observador). Auto-asignando 'vendedor'...
+2026-02-09 14:32:17 | PID:28260  | [32mINFO[0m | sheets_manager       | set_user_role_in_group    | L1577 | ✅ Rol asignado: Dante → vendedor en grupo -1003306729958
+2026-02-09 14:32:53 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1585 | 📝 Procesando texto de : '21545' | Stage: WAITING_ID
+2026-02-09 14:32:53 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1604 | ✅ NRO_CLIENTE guardado: 21545 | Obteniendo tipos de PDV...
+2026-02-09 14:32:53 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1622 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 14:32:54 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1653 | ✅ Botones de tipo PDV enviados correctamente a 
+2026-02-09 14:33:10 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=b05b287f...
+2026-02-09 14:33:11 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:33:11 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 17:33:36 UTC)" was missed by 0:00:04.533701
+2026-02-09 14:35:04 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1585 | 📝 Procesando texto de : '21755' | Stage: WAITING_ID
+2026-02-09 14:35:04 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1604 | ✅ NRO_CLIENTE guardado: 21755 | Obteniendo tipos de PDV...
+2026-02-09 14:35:04 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1622 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 14:35:05 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1653 | ✅ Botones de tipo PDV enviados correctamente a 
+2026-02-09 14:35:14 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=f4ac0416...
+2026-02-09 14:35:15 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:37:07 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1585 | 📝 Procesando texto de : '21503' | Stage: WAITING_ID
+2026-02-09 14:37:07 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1604 | ✅ NRO_CLIENTE guardado: 21503 | Obteniendo tipos de PDV...
+2026-02-09 14:37:07 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1622 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 14:37:08 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1653 | ✅ Botones de tipo PDV enviados correctamente a 
+2026-02-09 14:37:18 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=df6be2f1...
+2026-02-09 14:37:19 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 14:41:38 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1585 | 📝 Procesando texto de : '21803' | Stage: WAITING_ID
+2026-02-09 14:41:38 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1604 | ✅ NRO_CLIENTE guardado: 21803 | Obteniendo tipos de PDV...
+2026-02-09 14:41:38 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1622 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 14:41:39 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1653 | ✅ Botones de tipo PDV enviados correctamente a 
+2026-02-09 14:41:48 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=a9892996...
+2026-02-09 14:41:48 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 15:44:04 | PID:28260  | [31mERROR[0m | __main__             | error_handler             | L1915 | Error capturado por error_handler: httpx.RemoteProtocolError: Server disconnected without sending a response.
+2026-02-09 15:44:04 | PID:28260  | [31mERROR[0m | __main__             | error_handler             | L1922 | Traceback completo:
+2026-02-09 15:44:04 | PID:28260  | [31mERROR[0m | __main__             | error_handler             | L1923 | Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 4860, in get_updates
+    await self._post(
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cigar\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\request\_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-02-09 16:05:36 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=6aa0dab3... → Aprobado
+2026-02-09 16:05:38 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:05:38 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 19:06:06 UTC)" was missed by 0:00:01.707446
+2026-02-09 16:05:42 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=22207323... → Aprobado
+2026-02-09 16:05:44 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:05:47 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=f0658d00... → Aprobado
+2026-02-09 16:05:48 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:06:19 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=02f6969d... → Aprobado
+2026-02-09 16:06:21 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:06:34 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=9b6d0fee... → Aprobado
+2026-02-09 16:06:36 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:06:49 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=cb692fe8... → Aprobado
+2026-02-09 16:06:50 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:02 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=be9daa23... → Aprobado
+2026-02-09 16:07:04 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:09 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=bd721e6a... → Aprobado
+2026-02-09 16:07:12 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:42 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=9a87f598... → Aprobado
+2026-02-09 16:07:44 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:51 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=dd4ee833... → Aprobado
+2026-02-09 16:07:53 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:56 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=befda447... → Aprobado
+2026-02-09 16:07:58 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:07:58 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 19:08:26 UTC)" was missed by 0:00:01.855146
+2026-02-09 16:08:18 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=59aaecf7... → Aprobado
+2026-02-09 16:08:20 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:08:38 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 19:09:06 UTC)" was missed by 0:00:01.483952
+2026-02-09 16:08:43 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=bdf2cde5... → Aprobado
+2026-02-09 16:08:45 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:08:46 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=107a77dc... → Aprobado
+2026-02-09 16:08:49 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:08:53 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=9cc9164d... → Destacado
+2026-02-09 16:08:55 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:09:05 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1585 | 📝 Procesando texto de : '664' | Stage: WAITING_ID
+2026-02-09 16:09:05 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1604 | ✅ NRO_CLIENTE guardado: 664 | Obteniendo tipos de PDV...
+2026-02-09 16:09:05 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1622 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 16:09:07 | PID:28260  | [32mINFO[0m | __main__             | handle_text               | L1653 | ✅ Botones de tipo PDV enviados correctamente a 
+2026-02-09 16:09:07 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=0c046920... → Aprobado
+2026-02-09 16:09:09 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:09:18 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=2ebfd7b2...
+2026-02-09 16:09:19 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 16:09:24 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=2b2532bf...
+2026-02-09 16:09:25 | PID:28260  | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 16:09:27 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "sync_telegram_job (trigger: interval[0:00:30], next run at: 2026-02-09 19:09:56 UTC)" was missed by 0:00:01.051419
+2026-02-09 16:09:29 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=a3cce3e0... → Aprobado
+2026-02-09 16:09:31 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:09:32 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=0831daaf... → Aprobado
+2026-02-09 16:09:34 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:09:48 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=25f27465... → Aprobado
+2026-02-09 16:09:50 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:10:24 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=3cd71f27... → Aprobado
+2026-02-09 16:10:25 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:11:20 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=cf270abd... → Destacado
+2026-02-09 16:11:21 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:11:25 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=ea63264d... → Aprobado
+2026-02-09 16:11:27 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:11:59 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=8ae2e411... → Aprobado
+2026-02-09 16:12:01 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:12:11 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=b05b287f... → Aprobado
+2026-02-09 16:12:13 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:12:28 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=f4ac0416... → Aprobado
+2026-02-09 16:12:29 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:12:34 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=df6be2f1... → Aprobado
+2026-02-09 16:12:37 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:12:41 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=a9892996... → Aprobado
+2026-02-09 16:12:43 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:13:09 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=637fc16c... → Aprobado
+2026-02-09 16:13:11 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:13:15 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=dd12cd43... → Aprobado
+2026-02-09 16:13:17 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:13:20 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=8b1e7f18... → Aprobado
+2026-02-09 16:13:21 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:13:25 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=3a12627e... → Aprobado
+2026-02-09 16:13:27 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:13:41 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=e0600456... → Destacado
+2026-02-09 16:13:43 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:14:01 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=0293bfa2... → Aprobado
+2026-02-09 16:14:03 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:14:03 | PID:28260  | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "update_host_heartbeat (trigger: interval[0:01:00], next run at: 2026-02-09 19:15:01 UTC)" was missed by 0:00:01.430760
+2026-02-09 16:14:14 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=b48c011d... → Aprobado
+2026-02-09 16:14:15 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:14:27 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=31b5df20... → Aprobado
+2026-02-09 16:14:29 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:14:30 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=2ebfd7b2... → Aprobado
+2026-02-09 16:14:32 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:14:37 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L907  | 🔄 Actualizando estado: UUID=2b2532bf... → Aprobado
+2026-02-09 16:14:39 | PID:28260  | [32mINFO[0m | sheets_manager       | update_status_by_uuid     | L935  | ✅ Estado actualizado correctamente
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260209.log
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 7464
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-09 16:29:31 | PID:7464   | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-09 16:29:32 | PID:7464   | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-09 16:29:36 | PID:7464   | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-09 16:29:36 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2176 | ================================================================================
+2026-02-09 16:29:36 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2177 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-09 16:29:36 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2178 | ================================================================================
+2026-02-09 16:29:36 | PID:7464   | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:7464)
+2026-02-09 16:29:38 | PID:7464   | [32mINFO[0m | host_lock            | _cleanup_all              | L1207 | 🧹 Host muerto (97s), limpiando...
+2026-02-09 16:29:39 | PID:7464   | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:7464)
+2026-02-09 16:29:39 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2196 | ================================================================================
+2026-02-09 16:29:39 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2197 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:7464)
+2026-02-09 16:29:39 | PID:7464   | [32mINFO[0m | __main__             | <module>                  | L2198 | ================================================================================
+2026-02-09 16:29:40 | PID:7464   | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-09 16:29:40 | PID:7464   | [32mINFO[0m | __main__             | post_init                 | L2258 | 🚦 Monitor de semáforo iniciado
+2026-02-09 16:29:41 | PID:7464   | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-09 16:29:41 | PID:7464   | [32mINFO[0m | __main__             | setup_bot_commands        | L727  | ✅ Menú de comandos configurado
+2026-02-09 16:29:41 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 16:29:41 | PID:7464   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 16 roles desde GROUP_ROLES
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 16 asignaciones de roles
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | sheets_manager       | get_all_group_roles       | L1456 | 📊 Cargados 16 roles desde GROUP_ROLES
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | load_roles_cache          | L178  | ✅ Cache cargado: 16 asignaciones de roles
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-09 16:29:42 | PID:7464   | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-09 16:30:12 | PID:7464   | [32mINFO[0m | __main__             | handle_photo              | L1510 | 📸 Foto adicional agregada a ráfaga: nachopiazza (2 fotos)
+2026-02-09 16:30:12 | PID:7464   | [32mINFO[0m | __main__             | handle_photo              | L1510 | 📸 Foto adicional agregada a ráfaga: nachopiazza (3 fotos)
+2026-02-09 16:30:15 | PID:7464   | [32mINFO[0m | __main__             | handle_text               | L1609 | 📝 Procesando texto de nachopiazza: '234' | Stage: WAITING_ID
+2026-02-09 16:30:15 | PID:7464   | [32mINFO[0m | __main__             | handle_text               | L1628 | ✅ NRO_CLIENTE guardado: 234 | Obteniendo tipos de PDV...
+2026-02-09 16:30:16 | PID:7464   | [32mINFO[0m | __main__             | handle_text               | L1646 | 📋 Tipos de PDV obtenidos: 2
+2026-02-09 16:30:16 | PID:7464   | [32mINFO[0m | __main__             | handle_text               | L1677 | ✅ Botones de tipo PDV enviados correctamente a nachopiazza
+2026-02-09 16:30:26 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=c9528b1b...
+2026-02-09 16:30:27 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 16:30:27 | PID:7464   | [33mWARNING[0m | apscheduler.executors.default | run_coroutine_job         | L176  | Run time of job "procesar_cola_imagenes_pendientes (trigger: interval[0:00:30], next run at: 2026-02-09 19:30:54 UTC)" was missed by 0:00:02.668691
+2026-02-09 16:30:31 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=5243d9c5...
+2026-02-09 16:30:32 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 16:30:37 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L824  | 📝 Registrando imagen: UUID=77611beb...
+2026-02-09 16:30:38 | PID:7464   | [32mINFO[0m | sheets_manager       | register_image            | L873  | ✅ Imagen registrada correctamente
+2026-02-09 16:30:43 | PID:7464   | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario

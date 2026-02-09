@@ -1,0 +1,102 @@
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260207.log
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 16388
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L126  | ================================================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L127  | 🤖 BOT HOST INICIANDO...
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L128  | ================================================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-07 12:46:50 | PID:16388  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-07 12:46:51 | PID:16388  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-07 12:46:54 | PID:16388  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-07 12:46:54 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1045 | ================================================================================
+2026-02-07 12:46:54 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1046 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-07 12:46:54 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1047 | ================================================================================
+2026-02-07 12:46:54 | PID:16388  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:16388)
+2026-02-07 12:46:56 | PID:16388  | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:16388)
+2026-02-07 12:46:56 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1065 | ================================================================================
+2026-02-07 12:46:56 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1066 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:16388)
+2026-02-07 12:46:56 | PID:16388  | [32mINFO[0m | __main__             | <module>                  | L1067 | ================================================================================
+2026-02-07 12:46:58 | PID:16388  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-07 12:46:58 | PID:16388  | [32mINFO[0m | __main__             | post_init                 | L1124 | 🚦 Monitor de semáforo iniciado
+2026-02-07 12:46:58 | PID:16388  | [32mINFO[0m | __main__             | notify_superuser          | L216  | 📬 Notificación enviada al superusuario
+2026-02-07 12:46:58 | PID:16388  | [33mWARNING[0m | __main__             | on_shutdown               | L1143 | 🛑 Bot cerrándose...
+2026-02-07 12:46:58 | PID:16388  | [32mINFO[0m | __main__             | on_shutdown               | L1145 | 🔓 Liberando host lock...
+2026-02-07 12:46:58 | PID:16388  | [32mINFO[0m | host_lock            | release_host              | L169  | 🔓 Liberando host (cierre normal)
+2026-02-07 12:46:59 | PID:16388  | [31mERROR[0m | __main__             | notify_superuser          | L219  | Error al notificar al superusuario: Unknown error in HTTP implementation: RuntimeError('This HTTPXRequest is not initialized!')
+2026-02-07 12:46:59 | PID:16388  | [31mERROR[0m | __main__             | host_event_callback       | L166  | Error enviando notificación de host: Unknown error in HTTP implementation: RuntimeError('This HTTPXRequest is not initialized!')
+2026-02-07 12:46:59 | PID:16388  | [31mERROR[0m | asyncio              | default_exception_handler | L1757 | Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<SemaforoMonitor._monitor_loop() running at C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\internal\semaforo_monitor.py:71> wait_for=<Future finished result={'archivos_total': 0, 'estado': 'LIBRE', 'inicio': None, 'progreso': '', ...}>>
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260207.log
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 24136
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L126  | ================================================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L127  | 🤖 BOT HOST INICIANDO...
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L128  | ================================================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-07 12:54:47 | PID:24136  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-07 12:54:48 | PID:24136  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-07 12:54:51 | PID:24136  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-07 12:54:51 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1081 | ================================================================================
+2026-02-07 12:54:51 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1082 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-07 12:54:51 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1083 | ================================================================================
+2026-02-07 12:54:51 | PID:24136  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:24136)
+2026-02-07 12:54:52 | PID:24136  | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:24136)
+2026-02-07 12:54:53 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1101 | ================================================================================
+2026-02-07 12:54:53 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1102 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:24136)
+2026-02-07 12:54:53 | PID:24136  | [32mINFO[0m | __main__             | <module>                  | L1103 | ================================================================================
+2026-02-07 12:54:54 | PID:24136  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-07 12:54:54 | PID:24136  | [32mINFO[0m | __main__             | post_init                 | L1161 | 🚦 Monitor de semáforo iniciado
+2026-02-07 12:54:54 | PID:24136  | [32mINFO[0m | __main__             | notify_superuser          | L232  | 📬 Notificación enviada al superusuario
+2026-02-07 12:55:53 | PID:24136  | [32mINFO[0m | __main__             | notify_superuser          | L232  | 📬 Notificación enviada al superusuario
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | root                 | setup_logging             | L112  | 📝 Logs guardándose en: logs\app_20260207.log
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | root                 | setup_logging             | L136  | ================================================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | root                 | setup_logging             | L137  | 🚀 LOGGING INICIALIZADO | Host: cigarreros2025 | PID: 23624
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | root                 | setup_logging             | L138  | ================================================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L127  | ================================================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L128  | 🤖 BOT HOST INICIANDO...
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L129  | ================================================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | ConfigManager        | _find_config_file         | L113  | Archivo encontrado en: C:\Users\cigar\OneDrive\Desktop\BOT BUILD ESTABLE\dist\Launcher\CONFIG_GLOBAL\config.json
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | ConfigManager        | _load_config              | L128  | Configuración cargada correctamente.
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | sheets_manager       | __init__                  | L131  | ============================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | sheets_manager       | __init__                  | L132  | 📊 Inicializando SheetsManager...
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | sheets_manager       | __init__                  | L133  | ============================================================
+2026-02-07 13:17:32 | PID:23624  | [32mINFO[0m | sheets_manager       | _connect                  | L303  | 🔌 Conectando a Google Sheets...
+2026-02-07 13:17:33 | PID:23624  | [32mINFO[0m | sheets_manager       | _connect                  | L342  | ✅ Conectado exitosamente a spreadsheet: 1vyoTRNRXoCWZlWdknOl...
+2026-02-07 13:17:36 | PID:23624  | [32mINFO[0m | semaforo_monitor     | __init__                  | L44   | 🚦 SemaforoMonitor inicializado
+2026-02-07 13:17:36 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1936 | ================================================================================
+2026-02-07 13:17:36 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1937 | 🔐 INICIANDO SISTEMA DE HOST LOCK
+2026-02-07 13:17:36 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1938 | ================================================================================
+2026-02-07 13:17:36 | PID:23624  | [32mINFO[0m | host_lock            | __init__                  | L90   | 🔐 HostLock: cigar@cigarreros2025 (PID:23624)
+2026-02-07 13:17:38 | PID:23624  | [32mINFO[0m | host_lock            | _cleanup_all              | L1207 | 🧹 Host muerto (95s), limpiando...
+2026-02-07 13:17:39 | PID:23624  | [32mINFO[0m | host_lock            | _become_host              | L989  | 👑 Host asignado: cigar@cigarreros2025 (PID:23624)
+2026-02-07 13:17:39 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1956 | ================================================================================
+2026-02-07 13:17:39 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1957 | 👑 HOST LOCK ADQUIRIDO: cigar@cigarreros2025 (PID:23624)
+2026-02-07 13:17:39 | PID:23624  | [32mINFO[0m | __main__             | <module>                  | L1958 | ================================================================================
+2026-02-07 13:17:40 | PID:23624  | [32mINFO[0m | semaforo_monitor     | start                     | L54   | ✅ Monitor iniciado (intervalo: 15s)
+2026-02-07 13:17:40 | PID:23624  | [32mINFO[0m | __main__             | post_init                 | L2017 | 🚦 Monitor de semáforo iniciado
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | setup_bot_commands        | L694  | ✅ Menú de comandos configurado
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-07 13:17:41 | PID:23624  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L366  | 🔧 Inicializando extensiones del bot...
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | load_roles_cache          | L165  | 🔄 Cargando cache de roles desde GROUP_ROLES...
+2026-02-07 13:17:41 | PID:23624  | [31mERROR[0m | __main__             | load_roles_cache          | L180  | ❌ Error cargando cache de roles: 'SheetsManager' object has no attribute 'get_all_group_roles'
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L394  | ✅ Jobs de hibernación programados (22:00-06:00)
+2026-02-07 13:17:41 | PID:23624  | [32mINFO[0m | __main__             | post_init_extensions      | L398  | ✅ Extensiones del bot inicializadas
+2026-02-07 13:18:09 | PID:23624  | [32mINFO[0m | __main__             | cmd_setall_rol            | L983  | 🎭 /setall_rol iniciado por superusuario en grupo -1003108035087
+2026-02-07 13:18:09 | PID:23624  | [31mERROR[0m | __main__             | cmd_setall_rol            | L1032 | Error en /setall_rol: 'SheetsManager' object has no attribute 'get_known_users_in_group'
+2026-02-07 13:18:40 | PID:23624  | [32mINFO[0m | __main__             | notify_superuser          | L506  | 📬 Notificación enviada al superusuario
+2026-02-07 13:20:16 | PID:23624  | [32mINFO[0m | __main__             | cmd_set_role              | L927  | Rol supervisor asignado a 7685841194 por SU
