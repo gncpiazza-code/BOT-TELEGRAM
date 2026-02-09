@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 file: visor.py
+Visor de Fotos - Panel de Supervisión para evaluar exhibiciones.
 """
 
 from __future__ import annotations
 
+import base64
 import re
 import socket
 import sys
@@ -82,6 +84,18 @@ STATUS_REJECTED = "Rechazado"
 
 PLACEHOLDER_IMG = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
 
+# Colores del tema
+BG_MAIN = "#0f172a"
+BG_PANEL = "#1e293b"
+BG_CARD = "#1F2937"
+BG_IMG = "#111827"
+BG_INPUT = "#374151"
+COLOR_GREEN = "#4ade80"
+COLOR_AMBER = "#fb923c"
+COLOR_RED = "#f87171"
+COLOR_CYAN = "#22d3ee"
+COLOR_MUTED = "white70"
+
 _DRIVE_FILE_RE = re.compile(r"drive\.google\.com/file/d/([a-zA-Z0-9_-]+)")
 _DRIVE_OPEN_RE = re.compile(r"drive\.google\.com/open\?id=([a-zA-Z0-9_-]+)")
 _DRIVE_UC_RE = re.compile(r"drive\.google\.com/uc\?export=(?:download|view)&id=([a-zA-Z0-9_-]+)")
@@ -116,9 +130,6 @@ def drive_file_id(url: str) -> Optional[str]:
 
 
 def drive_candidates(url: str) -> List[str]:
-    """
-    Para imágenes en Drive, estos endpoints suelen funcionar mejor que /view.
-    """
     u = (url or "").strip()
     fid = drive_file_id(u)
     if not fid:
@@ -145,10 +156,24 @@ def _extract_confirm_from_html(html: str) -> Optional[str]:
     return None
 
 
+def _bytes_to_base64_src(data: bytes) -> str:
+    """Convierte bytes de imagen a data URL base64 para ft.Image.src."""
+    b64 = base64.b64encode(data).decode("utf-8")
+    # Detectar MIME type
+    mime = "image/jpeg"
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        mime = "image/png"
+    elif data[:3] == b"\xff\xd8\xff":
+        mime = "image/jpeg"
+    elif data[:6] in (b"GIF87a", b"GIF89a"):
+        mime = "image/gif"
+    elif data[:4] == b"RIFF" and b"WEBP" in data[8:16]:
+        mime = "image/webp"
+    return f"data:{mime};base64,{b64}"
+
+
 def fetch_image_bytes(url: str, timeout: float = 25.0) -> Tuple[Optional[bytes], str]:
-    """
-    Devuelve (bytes, reason).
-    """
+    """Devuelve (bytes, reason)."""
     u = (url or "").strip()
     if not u or not u.startswith("http"):
         return None, "EMPTY"
@@ -210,6 +235,8 @@ def fetch_image_bytes(url: str, timeout: float = 25.0) -> Tuple[Optional[bytes],
         return None, "HTML"
     except Exception:
         return None, "EXC"
+    finally:
+        session.close()
 
 
 # =============================================================================
@@ -334,44 +361,62 @@ class BatchManager:
 
 
 # =============================================================================
+# SNACKBAR HELPER
+# =============================================================================
+
+def _show_snackbar(page: ft.Page, message: str, bgcolor: str = "green") -> None:
+    """Muestra un SnackBar usando la API correcta de Flet."""
+    sb = ft.SnackBar(ft.Text(message), bgcolor=bgcolor)
+    page.overlay.append(sb)
+    sb.open = True
+    page.update()
+
+
+# =============================================================================
 # UI
 # =============================================================================
 
 def main(page: ft.Page) -> None:
     if _IMPORT_ERROR:
-        page.add(ft.Text(f"Error importando módulos: {_IMPORT_ERROR}", size=14))
+        page.add(ft.Text(f"Error importando modulos: {_IMPORT_ERROR}", size=14))
         return
 
     manager = BatchManager()
 
-    page.title = "Visor de Fotos - Supervisión"
+    page.title = "Visor de Fotos - Supervision"
     page.window.min_width = 1200
     page.window.min_height = 800
     page.padding = 16
-    page.bgcolor = "#0f172a"
+    page.bgcolor = BG_MAIN
     page.theme_mode = ft.ThemeMode.DARK
 
-    # ESTADO: Se agrega 'is_typing'
     state: Dict[str, Any] = {
-        "is_loading": False, 
-        "is_empty": False, 
+        "is_loading": False,
+        "is_empty": False,
         "is_evaluating": False,
-        "is_typing": False 
+        "is_typing": False,
     }
     last_img_reason = {"value": "-"}
 
-    # Header
-    txt_title = ft.Text("📷 Visor de Fotos", size=26, weight="bold")
-    txt_user = ft.Text(f"Supervisor: {manager.machine_id}", size=12, color="white70")
-    txt_batch = ft.Text("Batch: -", size=12, color="white70")
+    # =========================================================================
+    # HEADER
+    # =========================================================================
+    txt_title = ft.Text("Visor de Fotos", size=26, weight="bold")
+    txt_user = ft.Text(f"Supervisor: {manager.machine_id}", size=12, color=COLOR_MUTED)
+    txt_batch = ft.Text("Batch: -", size=12, color=COLOR_MUTED)
     txt_progress = ft.Text("0/0", size=14, weight="bold")
-    progress_bar = ft.ProgressBar(width=260, value=0)
+    progress_bar = ft.ProgressBar(width=260, value=0, color=COLOR_CYAN)
 
     header = ft.Container(
         content=ft.Column(
             [
-                ft.Row([txt_title], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
-                ft.Row([txt_user]),
+                ft.Row(
+                    [
+                        ft.Row([ft.Icon(ft.Icons.CAMERA_ALT, size=28, color=COLOR_CYAN), ft.Container(width=8), txt_title]),
+                        ft.Row([txt_user]),
+                    ],
+                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                ),
                 ft.Row(
                     [
                         txt_batch,
@@ -382,80 +427,120 @@ def main(page: ft.Page) -> None:
             ],
             spacing=6,
         ),
-        bgcolor="#1e293b",
+        bgcolor=BG_PANEL,
         padding=14,
         border_radius=12,
     )
 
-    # Image viewer
+    # =========================================================================
+    # IMAGE VIEWER
+    # =========================================================================
     img_control = ft.Image(src=PLACEHOLDER_IMG, fit=ft.BoxFit.CONTAIN, expand=True, border_radius=10)
 
-    btn_prev = ft.IconButton(icon=ft.Icons.ARROW_BACK, icon_size=36, tooltip="Anterior (←)", disabled=True)
-    btn_next = ft.IconButton(icon=ft.Icons.ARROW_FORWARD, icon_size=36, tooltip="Siguiente (→)", disabled=True)
+    btn_prev = ft.IconButton(icon=ft.Icons.ARROW_BACK, icon_size=36, tooltip="Anterior", disabled=True)
+    btn_next = ft.IconButton(icon=ft.Icons.ARROW_FORWARD, icon_size=36, tooltip="Siguiente", disabled=True)
 
     img_container = ft.Container(
-        content=ft.Row([btn_prev, ft.Container(content=img_control, expand=True), btn_next], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
-        bgcolor="#111827",
+        content=ft.Row(
+            [btn_prev, ft.Container(content=img_control, expand=True), btn_next],
+            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+        ),
+        bgcolor=BG_IMG,
         padding=10,
         border_radius=12,
         expand=True,
     )
 
-    # Right panel
+    # =========================================================================
+    # RIGHT PANEL: DETAILS
+    # =========================================================================
     txt_cliente = ft.Text("Cliente: -", size=14)
     txt_vendedor = ft.Text("Vendedor: -", size=14)
-    txt_fecha = ft.Text("Fecha/Hora: -", size=12, color="white70")
-    txt_img_status = ft.Text("Imagen: -", size=12, color="white70")
-    btn_open_link = ft.OutlinedButton("Abrir link en navegador")
+    txt_tipo_pdv = ft.Text("Tipo PDV: -", size=14, color=COLOR_CYAN)
+    txt_fecha = ft.Text("Fecha/Hora: -", size=12, color=COLOR_MUTED)
+    txt_img_status = ft.Text("Imagen: -", size=12, color=COLOR_MUTED)
+    btn_open_link = ft.OutlinedButton("Abrir link en navegador", icon=ft.Icons.OPEN_IN_NEW)
 
     details_panel = ft.Container(
         content=ft.Column(
             [
-                ft.Text("🧾 Detalles", size=18, weight="bold"),
+                ft.Row([ft.Icon(ft.Icons.DESCRIPTION, size=20, color=COLOR_CYAN), ft.Text("Detalles", size=18, weight="bold")]),
                 ft.Container(height=4),
-                txt_cliente,
-                txt_vendedor,
-                txt_fecha,
+                ft.Row([ft.Icon(ft.Icons.STORE, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_cliente]),
+                ft.Row([ft.Icon(ft.Icons.PERSON, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_vendedor]),
+                ft.Row([ft.Icon(ft.Icons.PLACE, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_tipo_pdv]),
+                ft.Row([ft.Icon(ft.Icons.ACCESS_TIME, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_fecha]),
+                ft.Divider(height=1, color="white10"),
                 txt_img_status,
-                ft.Container(height=8),
+                ft.Container(height=4),
                 btn_open_link,
             ],
             spacing=6,
         ),
-        bgcolor="#1F2937",
+        bgcolor=BG_CARD,
         padding=16,
         border_radius=12,
     )
 
-    # Stats
+    # =========================================================================
+    # RIGHT PANEL: STATS
+    # =========================================================================
     stat_reviewed = ft.Text("0", size=18, weight="bold")
-    stat_approved = ft.Text("0", size=18, weight="bold", color="#4ade80")
-    stat_highlighted = ft.Text("0", size=18, weight="bold", color="#fb923c")
-    stat_rejected = ft.Text("0", size=18, weight="bold", color="#f87171")
+    stat_approved = ft.Text("0", size=18, weight="bold", color=COLOR_GREEN)
+    stat_highlighted = ft.Text("0", size=18, weight="bold", color=COLOR_AMBER)
+    stat_rejected = ft.Text("0", size=18, weight="bold", color=COLOR_RED)
     stat_avg_time = ft.Text("0.0s", size=18, weight="bold")
 
     stats_panel = ft.Container(
         content=ft.Column(
             [
-                ft.Text("📊 Estadísticas", size=18, weight="bold"),
+                ft.Row([ft.Icon(ft.Icons.BAR_CHART, size=20, color=COLOR_CYAN), ft.Text("Estadisticas", size=18, weight="bold")]),
                 ft.Container(height=8),
                 ft.Row([ft.Text("Revisadas:", size=12), stat_reviewed]),
-                ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, color="#4ade80", size=20), ft.Text("Aprobadas:", size=12), stat_approved]),
-                ft.Row([ft.Icon(ft.Icons.STAR, color="#fb923c", size=20), ft.Text("Destacadas:", size=12), stat_highlighted]),
-                ft.Row([ft.Icon(ft.Icons.CLOSE, color="#f87171", size=20), ft.Text("Rechazadas:", size=12), stat_rejected]),
+                ft.Row([ft.Icon(ft.Icons.CHECK_CIRCLE, color=COLOR_GREEN, size=20), ft.Text("Aprobadas:", size=12), stat_approved]),
+                ft.Row([ft.Icon(ft.Icons.STAR, color=COLOR_AMBER, size=20), ft.Text("Destacadas:", size=12), stat_highlighted]),
+                ft.Row([ft.Icon(ft.Icons.CLOSE, color=COLOR_RED, size=20), ft.Text("Rechazadas:", size=12), stat_rejected]),
                 ft.Divider(height=1, color="white10"),
                 ft.Row([ft.Icon(ft.Icons.ACCESS_TIME, size=20), ft.Text("Tiempo/foto:", size=12), stat_avg_time]),
             ],
             spacing=10,
         ),
-        bgcolor="#1F2937",
+        bgcolor=BG_CARD,
         padding=16,
         border_radius=12,
     )
 
-    right_panel = ft.Container(width=380, content=ft.Column([details_panel, ft.Container(height=10), stats_panel], spacing=10))
+    # =========================================================================
+    # RIGHT PANEL: ATAJOS
+    # =========================================================================
+    shortcuts_panel = ft.Container(
+        content=ft.Column(
+            [
+                ft.Text("Atajos de teclado", size=13, weight="bold", color=COLOR_MUTED),
+                ft.Container(height=4),
+                ft.Row([ft.Text("A", size=12, weight="bold", color=COLOR_GREEN), ft.Text("Aprobar", size=11, color=COLOR_MUTED)]),
+                ft.Row([ft.Text("D", size=12, weight="bold", color=COLOR_AMBER), ft.Text("Destacar", size=11, color=COLOR_MUTED)]),
+                ft.Row([ft.Text("R", size=12, weight="bold", color=COLOR_RED), ft.Text("Rechazar", size=11, color=COLOR_MUTED)]),
+                ft.Row([ft.Text("<- ->", size=12, weight="bold"), ft.Text("Navegar fotos", size=11, color=COLOR_MUTED)]),
+            ],
+            spacing=4,
+        ),
+        bgcolor=BG_CARD,
+        padding=12,
+        border_radius=12,
+    )
 
-    # Bottom bar y Text Field con eventos
+    right_panel = ft.Container(
+        width=380,
+        content=ft.Column(
+            [details_panel, ft.Container(height=10), stats_panel, ft.Container(height=10), shortcuts_panel],
+            spacing=0,
+        ),
+    )
+
+    # =========================================================================
+    # BOTTOM BAR: EVALUATION BUTTONS + COMMENT
+    # =========================================================================
     txt_comment = ft.TextField(
         label="Comentario",
         hint_text="Opcional...",
@@ -463,12 +548,11 @@ def main(page: ft.Page) -> None:
         min_lines=2,
         max_lines=3,
         text_size=12,
-        bgcolor="#374151",
+        bgcolor=BG_INPUT,
         border_color="transparent",
         color="white",
         width=320,
         border_radius=12,
-        # Detectar foco para bloquear atajos
         on_focus=lambda e: state.update({"is_typing": True}),
         on_blur=lambda e: state.update({"is_typing": False}),
     )
@@ -511,29 +595,20 @@ def main(page: ft.Page) -> None:
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
-        bgcolor="#1e293b",
+        bgcolor=BG_PANEL,
         padding=12,
         border_radius=12,
     )
 
-    # Overlays
+    # =========================================================================
+    # OVERLAYS
+    # =========================================================================
     loading_overlay = ft.Container(
-        content=ft.Column([ft.ProgressRing(width=70, height=70), ft.Container(height=16), ft.Text("⌛ Cargando pendientes...", size=18)], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
-        alignment=ft.Alignment.CENTER,
-        expand=True,
-        visible=False,
-    )
-
-    empty_overlay = ft.Container(
         content=ft.Column(
             [
-                ft.Icon(ft.Icons.EMOJI_EVENTS, size=110, color="#fbbf24"),
-                ft.Container(height=14),
-                ft.Text("¡Buen trabajo!", size=30, weight="bold"),
-                ft.Container(height=8),
-                ft.Text("No hay más fotos pendientes en este momento", size=15, color="white70"),
-                ft.Container(height=20),
-                ft.ElevatedButton(content=ft.Text("RECARGAR"), icon=ft.Icons.REFRESH, bgcolor="blue", color="white", height=48),
+                ft.ProgressRing(width=70, height=70),
+                ft.Container(height=16),
+                ft.Text("Cargando pendientes...", size=18),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         ),
@@ -542,15 +617,47 @@ def main(page: ft.Page) -> None:
         visible=False,
     )
 
-    main_area = ft.Row([ft.Column([img_container], expand=True), ft.Container(width=14), right_panel], expand=True)
+    btn_reload = ft.ElevatedButton(
+        content=ft.Text("RECARGAR"),
+        icon=ft.Icons.REFRESH,
+        bgcolor="blue",
+        color="white",
+        height=48,
+    )
 
-    root = ft.Column([header, ft.Container(height=10), main_area, ft.Container(height=10), bottom_bar], expand=True)
+    empty_overlay = ft.Container(
+        content=ft.Column(
+            [
+                ft.Icon(ft.Icons.EMOJI_EVENTS, size=110, color="#fbbf24"),
+                ft.Container(height=14),
+                ft.Text("Buen trabajo!", size=30, weight="bold"),
+                ft.Container(height=8),
+                ft.Text("No hay mas fotos pendientes en este momento", size=15, color=COLOR_MUTED),
+                ft.Container(height=20),
+                btn_reload,
+            ],
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+        ),
+        alignment=ft.Alignment.CENTER,
+        expand=True,
+        visible=False,
+    )
+
+    main_area = ft.Row(
+        [ft.Column([img_container], expand=True), ft.Container(width=14), right_panel],
+        expand=True,
+    )
+
+    root = ft.Column(
+        [header, ft.Container(height=10), main_area, ft.Container(height=10), bottom_bar],
+        expand=True,
+    )
     stack = ft.Stack([root, loading_overlay, empty_overlay], expand=True)
     page.add(stack)
 
-    # -------------------------------------------------------------------------
-    # Helpers
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # HELPERS
+    # =========================================================================
 
     def set_loading(v: bool) -> None:
         state["is_loading"] = v
@@ -590,6 +697,7 @@ def main(page: ft.Page) -> None:
     def update_details(photo: Dict[str, Any]) -> None:
         txt_cliente.value = f"Cliente: {str(photo.get('cliente') or '-').strip()}"
         txt_vendedor.value = f"Vendedor: {str(photo.get('vendedor') or '-').strip()}"
+        txt_tipo_pdv.value = f"Tipo PDV: {str(photo.get('tipo') or '-').strip()}"
         fecha = str(photo.get("fecha") or "").strip()
         hora = str(photo.get("hora") or "").strip()
         txt_fecha.value = f"Fecha/Hora: {fecha} {hora}".strip()
@@ -612,7 +720,7 @@ def main(page: ft.Page) -> None:
             last_img_reason["value"] = reason
             if data:
                 try:
-                    img_control.src = data  # bytes
+                    img_control.src = _bytes_to_base64_src(data)
                 except Exception:
                     img_control.src = PLACEHOLDER_IMG
         else:
@@ -622,9 +730,9 @@ def main(page: ft.Page) -> None:
         set_buttons_enabled(True)
         update_details(photo)
 
-    # -------------------------------------------------------------------------
-    # Load batch
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # LOAD BATCH
+    # =========================================================================
 
     def load_batch() -> None:
         set_empty(False)
@@ -644,21 +752,20 @@ def main(page: ft.Page) -> None:
                     return
                 show_current_photo()
                 update_stats()
-                page.show_dialog(ft.SnackBar(ft.Text("✅ Pendientes cargadas"), bgcolor="green"))
+                _show_snackbar(page, "Pendientes cargadas", bgcolor="green")
 
+            # Ejecutar callback en el hilo principal de Flet
             page.run_thread(on_loaded)
 
         page.run_thread(_load)
 
-    # -------------------------------------------------------------------------
-    # Navigation / Evaluate / Keyboard
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # NAVIGATION / EVALUATE / KEYBOARD
+    # =========================================================================
 
     def prev_photo() -> None:
         if manager.go_prev():
             show_current_photo()
-        else:
-            page.show_dialog(ft.SnackBar(ft.Text("Ya estás en la primera foto"), bgcolor="orange"))
 
     def next_photo() -> None:
         if manager.go_next():
@@ -683,19 +790,19 @@ def main(page: ft.Page) -> None:
                 state["is_evaluating"] = False
                 if not success:
                     if code == "LOCKED":
-                        page.show_dialog(ft.SnackBar(ft.Text("🔒 Ya fue evaluada por otra persona"), bgcolor="orange"))
+                        _show_snackbar(page, "Ya fue evaluada por otra persona", bgcolor="orange")
                         next_photo()
                         return
-                    page.show_dialog(ft.SnackBar(ft.Text("❌ Error guardando en Sheets"), bgcolor="red"))
+                    _show_snackbar(page, "Error guardando en Sheets", bgcolor="red")
                     set_buttons_enabled(True)
                     return
 
                 if decision == STATUS_APPROVED:
-                    page.show_dialog(ft.SnackBar(ft.Text("✅ Foto aprobada"), bgcolor="green"))
+                    _show_snackbar(page, "Foto aprobada", bgcolor="green")
                 elif decision == STATUS_HIGHLIGHTED:
-                    page.show_dialog(ft.SnackBar(ft.Text("⭐ Foto destacada"), bgcolor="orange"))
+                    _show_snackbar(page, "Foto destacada", bgcolor="orange")
                 elif decision == STATUS_REJECTED:
-                    page.show_dialog(ft.SnackBar(ft.Text("❌ Foto rechazada"), bgcolor="red"))
+                    _show_snackbar(page, "Foto rechazada", bgcolor="red")
 
                 txt_comment.value = ""
                 update_stats()
@@ -706,10 +813,8 @@ def main(page: ft.Page) -> None:
         page.run_thread(_save)
 
     def on_keyboard(e: ft.KeyboardEvent) -> None:
-        # SI ESTÁ ESCRIBIENDO, IGNORAR TODO
         if state["is_typing"]:
             return
-
         if state["is_loading"] or state["is_empty"] or state["is_evaluating"]:
             return
         if e.key == "ArrowLeft":
@@ -723,6 +828,9 @@ def main(page: ft.Page) -> None:
         elif e.key.upper() == "R":
             evaluate(STATUS_REJECTED)
 
+    # =========================================================================
+    # EVENT BINDINGS
+    # =========================================================================
     btn_prev.on_click = lambda e: prev_photo()
     btn_next.on_click = lambda e: next_photo()
     btn_approve.on_click = lambda e: evaluate(STATUS_APPROVED)
@@ -738,12 +846,11 @@ def main(page: ft.Page) -> None:
             safe_open_url(link)
 
     btn_open_link.on_click = on_open_link
-
-    empty_overlay.content.controls[5].on_click = lambda e: load_batch()
+    btn_reload.on_click = lambda e: load_batch()
     page.on_keyboard_event = on_keyboard
 
     load_batch()
 
 
 if __name__ == "__main__":
-    ft.run(main)
+    ft.app(target=main)

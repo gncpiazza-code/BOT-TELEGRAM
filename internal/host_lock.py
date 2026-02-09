@@ -1059,6 +1059,14 @@ class HostLock:
         """Timestamp actual."""
         return datetime.now(AR_TZ).strftime("%d/%m/%Y %H:%M:%S")
     
+    def _extract_machine_id(self, identity: str) -> Optional[str]:
+        """Extrae 'user@host' de un identity string como 'user@host (PID:1234)'."""
+        if not identity:
+            return None
+        # Formato: "user@hostname (PID:12345)"
+        parts = identity.strip().split(" (PID:")
+        return parts[0].strip() if parts[0].strip() else None
+
     def _is_same_machine(self, identity: str) -> bool:
         """Verifica si el identity es de esta máquina."""
         if not identity:

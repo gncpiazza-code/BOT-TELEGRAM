@@ -97,7 +97,7 @@ except ImportError:
 try:
     from config_manager import ConfigManager
 except ImportError:
-    from config_manager import ConfigManager
+    from CONFIG_GLOBAL.config_manager import ConfigManager
 
 try:
     from logger_config import setup_logging, get_logger, log_exception  # type: ignore
@@ -2142,21 +2142,6 @@ async def send_periodic_status(context: ContextTypes.DEFAULT_TYPE) -> None:
     msg = f"📊 <b>Status Periódico</b>\n\nIs⏱️ Uptime: {_uptime_hhmmss()}\nIs👑 Host: {host_lock.identity}\nIs✅ Funcionando correctamente"
     await notify_superuser(context, msg)
 
-async def handle_hibernation_start(context: ContextTypes.DEFAULT_TYPE) -> None:
-    global bot_hibernating
-    if not host_lock or not host_lock.is_host: return
-    bot_hibernating = True
-    logger.info("🌙 Modo hibernación ACTIVADO (22:00-06:00)")
-    await notify_superuser(context, "🌙 <b>Modo Hibernación</b>\n\nBot en modo reducido hasta las 06:00")
-
-async def handle_hibernation_end(context: ContextTypes.DEFAULT_TYPE) -> None:
-    global bot_hibernating
-    if not host_lock or not host_lock.is_host: return
-    bot_hibernating = False
-    logger.info("☀️ Modo hibernación DESACTIVADO (06:00)")
-    await notify_superuser(context, "☀️ <b>Modo Normal</b>\n\nBot operando normalmente")
-
-
 # ==========================================
 # MAIN
 # ==========================================
@@ -2288,8 +2273,6 @@ if __name__ == "__main__":
             f"Is✅ Todos los sistemas operativos",
         )
         await setup_bot_commands(application)
-        await post_init_extensions(application)
-
         await post_init_extensions(application)
 
     app.post_init = post_init
