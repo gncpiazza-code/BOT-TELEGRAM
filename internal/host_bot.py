@@ -947,29 +947,65 @@ async def cmd_set_role(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if str(uid) != BOT_OWNER_ID:
         await update.message.reply_text("❌ Solo el superusuario puede asignar roles")
         return
-    
+
     if not context.args or len(context.args) < 1:
-        await update.message.reply_text("Uso: /set_role {supervisor|vendedor}")
+        await update.message.reply_text(
+            "Uso: /set_role {supervisor|vendedor|observador}\n"
+            "Respondé al mensaje de un usuario para asignarle el rol.",
+            parse_mode=ParseMode.HTML
+        )
         return
-    
+
     role = context.args[0].lower()
-    if role not in ["supervisor", "vendedor"]:
-        await update.message.reply_text("❌ Rol inválido. Usa: supervisor o vendedor")
+    if role not in ["supervisor", "vendedor", "observador"]:
+        await update.message.reply_text("❌ Rol inválido. Usa: supervisor, vendedor u observador")
         return
-    
+
     if not update.message.reply_to_message:
         await update.message.reply_text("❌ Responde al mensaje de un usuario para asignarle el rol")
         return
-    
+
+    chat_id = update.message.chat.id
     target_user = update.message.reply_to_message.from_user
     target_id = target_user.id
-    target_name = target_user.first_name
-    
-    await update.message.reply_text(
-        f"✅ Rol <b>{role}</b> asignado a {target_name} (ID: {target_id})",
-        parse_mode=ParseMode.HTML
-    )
-    logger.info(f"Rol {role} asignado a {target_id} por SU")
+    target_name = target_user.first_name or "Usuario"
+    target_username = target_user.username or ""
+    supervisor_name = update.message.from_user.first_name or "Superusuario"
+
+    try:
+        success = sheets.set_user_role_in_group(
+            chat_id=chat_id,
+            user_id=target_id,
+            username=target_username,
+            full_name=target_name,
+            rol=role,
+            asignado_por=supervisor_name
+        )
+
+        if success:
+            # Actualizar cache local inmediatamente
+            role_cache[(chat_id, target_id)] = role
+            invalidate_role_cache()
+
+            emoji = {"vendedor": "🛒", "supervisor": "👁️", "observador": "📋"}.get(role, "❓")
+            await update.message.reply_text(
+                f"✅ Rol {emoji} <b>{role}</b> asignado a <b>{target_name}</b> (ID: <code>{target_id}</code>)\n\n"
+                f"💡 El cambio es efectivo inmediatamente.",
+                parse_mode=ParseMode.HTML
+            )
+            logger.info(f"Rol {role} asignado a {target_id} ({target_name}) por SU en grupo {chat_id}")
+        else:
+            await update.message.reply_text(
+                "❌ Error al guardar el rol en Google Sheets.\n"
+                "Intentá de nuevo en unos segundos.",
+                parse_mode=ParseMode.HTML
+            )
+    except Exception as e:
+        logger.error(f"Error en cmd_set_role: {e}", exc_info=True)
+        await update.message.reply_text(
+            f"❌ Error al asignar rol: {e}",
+            parse_mode=ParseMode.HTML
+        )
 
 
 # ==========================================

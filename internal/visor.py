@@ -2,6 +2,7 @@
 """
 file: visor.py
 Visor de Fotos - Panel de Supervisión para evaluar exhibiciones.
+Soporta exhibiciones multi-foto (ráfaga) con galería interactiva.
 """
 
 from __future__ import annotations
@@ -12,8 +13,9 @@ import socket
 import sys
 import threading
 import time
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import flet as ft
 
@@ -77,6 +79,7 @@ except Exception as e:
 # =============================================================================
 
 BATCH_SIZE = 10
+GROUPING_WINDOW_SECONDS = 90  # Ventana de agrupación para fotos de misma exhibición
 
 STATUS_APPROVED = "Aprobado"
 STATUS_HIGHLIGHTED = "Destacado"
@@ -95,6 +98,10 @@ COLOR_AMBER = "#fb923c"
 COLOR_RED = "#f87171"
 COLOR_CYAN = "#22d3ee"
 COLOR_MUTED = "white70"
+COLOR_BLUE = "#60a5fa"
+THUMB_ACTIVE_BORDER = "#22d3ee"
+THUMB_SEEN_BG = "#1a3a2a"
+THUMB_UNSEEN_BG = "#374151"
 
 _DRIVE_FILE_RE = re.compile(r"drive\.google\.com/file/d/([a-zA-Z0-9_-]+)")
 _DRIVE_OPEN_RE = re.compile(r"drive\.google\.com/open\?id=([a-zA-Z0-9_-]+)")
@@ -159,7 +166,6 @@ def _extract_confirm_from_html(html: str) -> Optional[str]:
 def _bytes_to_base64_src(data: bytes) -> str:
     """Convierte bytes de imagen a data URL base64 para ft.Image.src."""
     b64 = base64.b64encode(data).decode("utf-8")
-    # Detectar MIME type
     mime = "image/jpeg"
     if data[:8] == b"\x89PNG\r\n\x1a\n":
         mime = "image/png"
@@ -240,7 +246,114 @@ def fetch_image_bytes(url: str, timeout: float = 25.0) -> Tuple[Optional[bytes],
 
 
 # =============================================================================
-# BATCH MANAGER
+# AGRUPACIÓN DE EXHIBICIONES MULTI-FOTO
+# =============================================================================
+
+def _parse_timestamp(fecha: str, hora: str) -> Optional[datetime]:
+    """Parsea fecha y hora de Sheets a datetime."""
+    f = (fecha or "").strip()
+    h = (hora or "").strip()
+    if not f:
+        return None
+    try:
+        if h:
+            return datetime.strptime(f"{f} {h}", "%d/%m/%Y %H:%M")
+        return datetime.strptime(f, "%d/%m/%Y")
+    except Exception:
+        return None
+
+
+def _same_exhibition(a: Dict[str, Any], b: Dict[str, Any]) -> bool:
+    """Determina si dos filas pertenecen a la misma exhibición."""
+    if str(a.get("vendedor") or "").strip() != str(b.get("vendedor") or "").strip():
+        return False
+    if str(a.get("cliente") or "").strip() != str(b.get("cliente") or "").strip():
+        return False
+    if str(a.get("tipo") or "").strip() != str(b.get("tipo") or "").strip():
+        return False
+
+    ts_a = _parse_timestamp(a.get("fecha", ""), a.get("hora", ""))
+    ts_b = _parse_timestamp(b.get("fecha", ""), b.get("hora", ""))
+
+    if ts_a and ts_b:
+        diff = abs((ts_a - ts_b).total_seconds())
+        if diff > GROUPING_WINDOW_SECONDS:
+            return False
+
+    return True
+
+
+def group_into_exhibitions(photos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Agrupa filas individuales en exhibiciones.
+    Cada exhibición contiene 1+ fotos del mismo vendedor/cliente/tipo dentro
+    de la ventana temporal.
+
+    Returns:
+        Lista de exhibiciones, cada una con:
+        - id: str identificador único
+        - vendedor, cliente, tipo, fecha, hora: datos de la primera foto
+        - fotos: lista de dicts con {row_num, uuid, url_foto, fecha, hora}
+        - total_fotos: int
+    """
+    if not photos:
+        return []
+
+    exhibitions: List[Dict[str, Any]] = []
+    processed: Set[int] = set()
+
+    for i, photo in enumerate(photos):
+        if i in processed:
+            continue
+
+        # Crear nueva exhibición con esta foto como base
+        exh: Dict[str, Any] = {
+            "vendedor": str(photo.get("vendedor") or "-").strip(),
+            "cliente": str(photo.get("cliente") or "-").strip(),
+            "tipo": str(photo.get("tipo") or "-").strip(),
+            "fecha": str(photo.get("fecha") or "").strip(),
+            "hora": str(photo.get("hora") or "").strip(),
+            "fotos": [{
+                "row_num": photo.get("row_num"),
+                "uuid": photo.get("uuid"),
+                "url_foto": photo.get("url_foto", ""),
+                "fecha": photo.get("fecha", ""),
+                "hora": photo.get("hora", ""),
+                "msg_id_telegram": photo.get("msg_id_telegram"),
+            }],
+        }
+        processed.add(i)
+
+        # Buscar fotos relacionadas
+        for j, other in enumerate(photos):
+            if j in processed:
+                continue
+            if _same_exhibition(photo, other):
+                exh["fotos"].append({
+                    "row_num": other.get("row_num"),
+                    "uuid": other.get("uuid"),
+                    "url_foto": other.get("url_foto", ""),
+                    "fecha": other.get("fecha", ""),
+                    "hora": other.get("hora", ""),
+                    "msg_id_telegram": other.get("msg_id_telegram"),
+                })
+                processed.add(j)
+
+        # Ordenar fotos por hora
+        exh["fotos"].sort(key=lambda f: f.get("hora") or "")
+        exh["total_fotos"] = len(exh["fotos"])
+
+        # Generar ID
+        first_uuid = exh["fotos"][0].get("uuid") or str(i)
+        exh["id"] = f"{exh['vendedor']}_{exh['cliente']}_{first_uuid[:8]}"
+
+        exhibitions.append(exh)
+
+    return exhibitions
+
+
+# =============================================================================
+# BATCH MANAGER (con soporte multi-foto)
 # =============================================================================
 
 class BatchManager:
@@ -250,9 +363,13 @@ class BatchManager:
         self.sheets = SheetsManager()
         self.machine_id = get_machine_id()
 
-        self.current_batch: List[Dict[str, Any]] = []
-        self.current_index = 0
+        self.exhibitions: List[Dict[str, Any]] = []
+        self.current_exh_index = 0
+        self.current_photo_index = 0  # Índice de foto dentro de la exhibición
         self.batch_id = "-"
+
+        # Tracking de fotos vistas por exhibición
+        self.photos_seen: Dict[str, Set[int]] = {}  # exh_id -> set de índices vistos
 
         self._lock = threading.Lock()
 
@@ -263,6 +380,9 @@ class BatchManager:
         self.total_seconds_spent = 0.0
         self.last_photo_loaded_at: Optional[float] = None
 
+        # Cache de imágenes descargadas (para thumbnails y galería)
+        self._image_cache: Dict[str, Optional[str]] = {}  # url -> base64_src or None
+
     def load_new_batch(self) -> bool:
         with self._lock:
             try:
@@ -271,37 +391,123 @@ class BatchManager:
                 pendientes = []
 
             if not pendientes:
-                self.current_batch = []
-                self.current_index = 0
+                self.exhibitions = []
+                self.current_exh_index = 0
+                self.current_photo_index = 0
                 self.batch_id = "-"
+                self.photos_seen = {}
                 return False
 
-            self.current_batch = pendientes[:BATCH_SIZE]
-            self.current_index = 0
+            # Agrupar en exhibiciones
+            all_exhibitions = group_into_exhibitions(pendientes)
+
+            # Tomar un batch limitado
+            self.exhibitions = all_exhibitions[:BATCH_SIZE]
+            self.current_exh_index = 0
+            self.current_photo_index = 0
             self.batch_id = f"batch_{int(time.time())}"
             self.last_photo_loaded_at = time.time()
+
+            # Inicializar tracking de fotos vistas
+            self.photos_seen = {}
+            for exh in self.exhibitions:
+                self.photos_seen[exh["id"]] = set()
+
             return True
 
-    def get_current_photo(self) -> Optional[Dict[str, Any]]:
-        if 0 <= self.current_index < len(self.current_batch):
-            return self.current_batch[self.current_index]
+    def get_current_exhibition(self) -> Optional[Dict[str, Any]]:
+        if 0 <= self.current_exh_index < len(self.exhibitions):
+            return self.exhibitions[self.current_exh_index]
         return None
 
-    def go_prev(self) -> bool:
+    def get_current_photo(self) -> Optional[Dict[str, Any]]:
+        exh = self.get_current_exhibition()
+        if not exh:
+            return None
+        fotos = exh.get("fotos", [])
+        if 0 <= self.current_photo_index < len(fotos):
+            return fotos[self.current_photo_index]
+        return None
+
+    def mark_photo_seen(self) -> None:
+        """Marca la foto actual como vista."""
+        exh = self.get_current_exhibition()
+        if not exh:
+            return
+        exh_id = exh["id"]
+        if exh_id not in self.photos_seen:
+            self.photos_seen[exh_id] = set()
+        self.photos_seen[exh_id].add(self.current_photo_index)
+
+    def all_photos_seen(self) -> bool:
+        """Retorna True si se vieron todas las fotos de la exhibición actual."""
+        exh = self.get_current_exhibition()
+        if not exh:
+            return False
+        total = exh.get("total_fotos", 1)
+        if total <= 1:
+            return True  # Exhibiciones de 1 foto siempre están "vistas"
+        exh_id = exh["id"]
+        seen = self.photos_seen.get(exh_id, set())
+        return len(seen) >= total
+
+    def get_seen_count(self) -> Tuple[int, int]:
+        """Retorna (vistas, total) para la exhibición actual."""
+        exh = self.get_current_exhibition()
+        if not exh:
+            return 0, 0
+        total = exh.get("total_fotos", 1)
+        exh_id = exh["id"]
+        seen = len(self.photos_seen.get(exh_id, set()))
+        return seen, total
+
+    def go_prev_exhibition(self) -> bool:
         with self._lock:
-            if self.current_index > 0:
-                self.current_index -= 1
+            if self.current_exh_index > 0:
+                self.current_exh_index -= 1
+                self.current_photo_index = 0
                 self.last_photo_loaded_at = time.time()
                 return True
             return False
 
-    def go_next(self) -> bool:
+    def go_next_exhibition(self) -> bool:
         with self._lock:
-            if self.current_index < len(self.current_batch) - 1:
-                self.current_index += 1
+            if self.current_exh_index < len(self.exhibitions) - 1:
+                self.current_exh_index += 1
+                self.current_photo_index = 0
                 self.last_photo_loaded_at = time.time()
                 return True
             return False
+
+    def go_to_photo(self, index: int) -> bool:
+        """Navega a una foto específica dentro de la exhibición actual."""
+        exh = self.get_current_exhibition()
+        if not exh:
+            return False
+        total = exh.get("total_fotos", 1)
+        if 0 <= index < total:
+            self.current_photo_index = index
+            return True
+        return False
+
+    def go_prev_photo(self) -> bool:
+        exh = self.get_current_exhibition()
+        if not exh:
+            return False
+        if self.current_photo_index > 0:
+            self.current_photo_index -= 1
+            return True
+        return False
+
+    def go_next_photo(self) -> bool:
+        exh = self.get_current_exhibition()
+        if not exh:
+            return False
+        total = exh.get("total_fotos", 1)
+        if self.current_photo_index < total - 1:
+            self.current_photo_index += 1
+            return True
+        return False
 
     def _mark_time_spent(self) -> None:
         now = time.time()
@@ -311,14 +517,15 @@ class BatchManager:
         self.total_seconds_spent += max(0.0, now - self.last_photo_loaded_at)
         self.last_photo_loaded_at = now
 
-    def evaluate_current(self, decision: str, comment_extra: str) -> Tuple[bool, str]:
+    def evaluate_current_exhibition(self, decision: str, comment_extra: str) -> Tuple[bool, str]:
+        """Evalúa TODAS las fotos de la exhibición actual con el mismo estado."""
         with self._lock:
-            photo = self.get_current_photo()
-            if not photo:
+            exh = self.get_current_exhibition()
+            if not exh:
                 return False, "ERROR"
 
-            row_num = int(photo.get("row_num") or 0)
-            if row_num <= 1:
+            fotos = exh.get("fotos", [])
+            if not fotos:
                 return False, "ERROR"
 
             self._mark_time_spent()
@@ -327,17 +534,31 @@ class BatchManager:
             base = f"Evaluado por {self.machine_id}"
             comments = f"{base} | Nota: {extra}" if extra else base
 
-            try:
-                res = self.sheets.update_evaluation_status(
-                    row_num=row_num,
-                    new_status=decision,
-                    comments=comments,
-                )
-            except Exception:
-                res = "ERROR"
+            all_ok = True
+            last_code = "OK"
 
-            if res != "OK":
-                return False, res
+            for foto in fotos:
+                row_num = int(foto.get("row_num") or 0)
+                if row_num <= 1:
+                    continue
+
+                try:
+                    res = self.sheets.update_evaluation_status(
+                        row_num=row_num,
+                        new_status=decision,
+                        comments=comments,
+                    )
+                except Exception:
+                    res = "ERROR"
+
+                if res != "OK":
+                    all_ok = False
+                    last_code = res
+
+            if not all_ok and last_code == "LOCKED":
+                return False, "LOCKED"
+            if not all_ok:
+                return False, last_code
 
             self.reviewed += 1
             if decision == STATUS_APPROVED:
@@ -359,13 +580,20 @@ class BatchManager:
             "avg_time": avg,
         }
 
+    def get_cached_image(self, url: str) -> Optional[str]:
+        """Obtiene imagen cacheada o None si no está en cache."""
+        return self._image_cache.get(url)
+
+    def cache_image(self, url: str, base64_src: Optional[str]) -> None:
+        """Guarda imagen en cache."""
+        self._image_cache[url] = base64_src
+
 
 # =============================================================================
 # SNACKBAR HELPER
 # =============================================================================
 
 def _show_snackbar(page: ft.Page, message: str, bgcolor: str = "green") -> None:
-    """Muestra un SnackBar usando la API correcta de Flet."""
     sb = ft.SnackBar(ft.Text(message), bgcolor=bgcolor)
     page.overlay.append(sb)
     sb.open = True
@@ -405,6 +633,7 @@ def main(page: ft.Page) -> None:
     txt_user = ft.Text(f"Supervisor: {manager.machine_id}", size=12, color=COLOR_MUTED)
     txt_batch = ft.Text("Batch: -", size=12, color=COLOR_MUTED)
     txt_progress = ft.Text("0/0", size=14, weight="bold")
+    txt_total_fotos = ft.Text("", size=12, color=COLOR_MUTED)
     progress_bar = ft.ProgressBar(width=260, value=0, color=COLOR_CYAN)
 
     header = ft.Container(
@@ -420,6 +649,8 @@ def main(page: ft.Page) -> None:
                 ft.Row(
                     [
                         txt_batch,
+                        ft.Container(width=8),
+                        txt_total_fotos,
                         ft.Container(width=12),
                         ft.Row([txt_progress, ft.Container(width=10), ft.Container(content=progress_bar, width=260)]),
                     ]
@@ -433,22 +664,64 @@ def main(page: ft.Page) -> None:
     )
 
     # =========================================================================
-    # IMAGE VIEWER
+    # IMAGE VIEWER (foto principal)
     # =========================================================================
     img_control = ft.Image(src=PLACEHOLDER_IMG, fit=ft.BoxFit.CONTAIN, expand=True, border_radius=10)
 
-    btn_prev = ft.IconButton(icon=ft.Icons.ARROW_BACK, icon_size=36, tooltip="Anterior", disabled=True)
-    btn_next = ft.IconButton(icon=ft.Icons.ARROW_FORWARD, icon_size=36, tooltip="Siguiente", disabled=True)
+    btn_prev_exh = ft.IconButton(icon=ft.Icons.ARROW_BACK, icon_size=36, tooltip="Exhibicion anterior", disabled=True)
+    btn_next_exh = ft.IconButton(icon=ft.Icons.ARROW_FORWARD, icon_size=36, tooltip="Siguiente exhibicion", disabled=True)
 
     img_container = ft.Container(
         content=ft.Row(
-            [btn_prev, ft.Container(content=img_control, expand=True), btn_next],
+            [btn_prev_exh, ft.Container(content=img_control, expand=True), btn_next_exh],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
         ),
         bgcolor=BG_IMG,
         padding=10,
         border_radius=12,
         expand=True,
+    )
+
+    # =========================================================================
+    # GALERÍA DE MINIATURAS (debajo de la imagen principal)
+    # =========================================================================
+    txt_foto_counter = ft.Text("", size=13, weight="bold", color=COLOR_CYAN)
+    txt_fotos_vistas_status = ft.Text("", size=12, color=COLOR_MUTED)
+    gallery_row = ft.Row(spacing=8, scroll=ft.ScrollMode.AUTO)
+
+    btn_prev_foto = ft.IconButton(
+        icon=ft.Icons.CHEVRON_LEFT, icon_size=24,
+        tooltip="Foto anterior", disabled=True,
+    )
+    btn_next_foto = ft.IconButton(
+        icon=ft.Icons.CHEVRON_RIGHT, icon_size=24,
+        tooltip="Siguiente foto", disabled=True,
+    )
+
+    gallery_nav = ft.Row(
+        [
+            btn_prev_foto,
+            ft.Container(content=gallery_row, expand=True),
+            btn_next_foto,
+        ],
+        vertical_alignment=ft.CrossAxisAlignment.CENTER,
+    )
+
+    gallery_panel = ft.Container(
+        content=ft.Column(
+            [
+                ft.Row(
+                    [txt_foto_counter, ft.Container(expand=True), txt_fotos_vistas_status],
+                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                ),
+                gallery_nav,
+            ],
+            spacing=6,
+        ),
+        bgcolor=BG_PANEL,
+        padding=10,
+        border_radius=10,
+        visible=False,  # Solo visible cuando hay múltiples fotos
     )
 
     # =========================================================================
@@ -459,6 +732,7 @@ def main(page: ft.Page) -> None:
     txt_tipo_pdv = ft.Text("Tipo PDV: -", size=14, color=COLOR_CYAN)
     txt_fecha = ft.Text("Fecha/Hora: -", size=12, color=COLOR_MUTED)
     txt_img_status = ft.Text("Imagen: -", size=12, color=COLOR_MUTED)
+    txt_fotos_count = ft.Text("", size=13, weight="bold", color=COLOR_BLUE)
     btn_open_link = ft.OutlinedButton("Abrir link en navegador", icon=ft.Icons.OPEN_IN_NEW)
 
     details_panel = ft.Container(
@@ -470,6 +744,7 @@ def main(page: ft.Page) -> None:
                 ft.Row([ft.Icon(ft.Icons.PERSON, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_vendedor]),
                 ft.Row([ft.Icon(ft.Icons.PLACE, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_tipo_pdv]),
                 ft.Row([ft.Icon(ft.Icons.ACCESS_TIME, size=16, color=COLOR_MUTED), ft.Container(width=4), txt_fecha]),
+                txt_fotos_count,
                 ft.Divider(height=1, color="white10"),
                 txt_img_status,
                 ft.Container(height=4),
@@ -521,7 +796,8 @@ def main(page: ft.Page) -> None:
                 ft.Row([ft.Text("A", size=12, weight="bold", color=COLOR_GREEN), ft.Text("Aprobar", size=11, color=COLOR_MUTED)]),
                 ft.Row([ft.Text("D", size=12, weight="bold", color=COLOR_AMBER), ft.Text("Destacar", size=11, color=COLOR_MUTED)]),
                 ft.Row([ft.Text("R", size=12, weight="bold", color=COLOR_RED), ft.Text("Rechazar", size=11, color=COLOR_MUTED)]),
-                ft.Row([ft.Text("<- ->", size=12, weight="bold"), ft.Text("Navegar fotos", size=11, color=COLOR_MUTED)]),
+                ft.Row([ft.Text("<- ->", size=12, weight="bold"), ft.Text("Navegar exhibiciones", size=11, color=COLOR_MUTED)]),
+                ft.Row([ft.Text("1-5", size=12, weight="bold"), ft.Text("Ir a foto N", size=11, color=COLOR_MUTED)]),
             ],
             spacing=4,
         ),
@@ -539,7 +815,7 @@ def main(page: ft.Page) -> None:
     )
 
     # =========================================================================
-    # BOTTOM BAR: EVALUATION BUTTONS + COMMENT
+    # BOTTOM BAR: EVALUATION BUTTONS + COMMENT + LOCK WARNING
     # =========================================================================
     txt_comment = ft.TextField(
         label="Comentario",
@@ -585,15 +861,35 @@ def main(page: ft.Page) -> None:
         disabled=True,
     )
 
-    bottom_bar = ft.Container(
+    txt_lock_warning = ft.Container(
         content=ft.Row(
             [
-                ft.Row([btn_approve, ft.Container(width=12), btn_highlight, ft.Container(width=12), btn_reject], expand=True),
-                ft.Container(width=14),
-                ft.Container(content=txt_comment, width=320),
+                ft.Icon(ft.Icons.LOCK, size=16, color=COLOR_AMBER),
+                ft.Text("Ve todas las fotos antes de evaluar", size=12, color=COLOR_AMBER, weight="bold"),
             ],
-            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        bgcolor="#3d2800",
+        padding=ft.padding.symmetric(vertical=6, horizontal=12),
+        border_radius=8,
+        visible=False,
+    )
+
+    bottom_bar = ft.Container(
+        content=ft.Column(
+            [
+                txt_lock_warning,
+                ft.Row(
+                    [
+                        ft.Row([btn_approve, ft.Container(width=12), btn_highlight, ft.Container(width=12), btn_reject], expand=True),
+                        ft.Container(width=14),
+                        ft.Container(content=txt_comment, width=320),
+                    ],
+                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                ),
+            ],
+            spacing=6,
         ),
         bgcolor=BG_PANEL,
         padding=12,
@@ -632,7 +928,7 @@ def main(page: ft.Page) -> None:
                 ft.Container(height=14),
                 ft.Text("Buen trabajo!", size=30, weight="bold"),
                 ft.Container(height=8),
-                ft.Text("No hay mas fotos pendientes en este momento", size=15, color=COLOR_MUTED),
+                ft.Text("No hay mas exhibiciones pendientes en este momento", size=15, color=COLOR_MUTED),
                 ft.Container(height=20),
                 btn_reload,
             ],
@@ -644,7 +940,11 @@ def main(page: ft.Page) -> None:
     )
 
     main_area = ft.Row(
-        [ft.Column([img_container], expand=True), ft.Container(width=14), right_panel],
+        [
+            ft.Column([img_container, gallery_panel], expand=True, spacing=8),
+            ft.Container(width=14),
+            right_panel,
+        ],
         expand=True,
     )
 
@@ -669,10 +969,23 @@ def main(page: ft.Page) -> None:
         empty_overlay.visible = v
         page.update()
 
-    def set_buttons_enabled(enabled: bool) -> None:
+    def set_eval_buttons_enabled(enabled: bool) -> None:
         btn_approve.disabled = not enabled
         btn_highlight.disabled = not enabled
         btn_reject.disabled = not enabled
+
+    def update_eval_buttons() -> None:
+        """Actualiza el estado de los botones según si se vieron todas las fotos."""
+        exh = manager.get_current_exhibition()
+        if not exh:
+            set_eval_buttons_enabled(False)
+            txt_lock_warning.visible = False
+            page.update()
+            return
+
+        can_eval = manager.all_photos_seen()
+        set_eval_buttons_enabled(can_eval)
+        txt_lock_warning.visible = not can_eval
         page.update()
 
     def update_stats() -> None:
@@ -685,50 +998,183 @@ def main(page: ft.Page) -> None:
         page.update()
 
     def update_progress() -> None:
-        total = len(manager.current_batch)
-        idx = manager.current_index + 1 if total else 0
-        txt_progress.value = f"{idx}/{total}"
-        progress_bar.value = (idx / total) if total else 0
+        total_exh = len(manager.exhibitions)
+        idx = manager.current_exh_index + 1 if total_exh else 0
+        txt_progress.value = f"Exhibicion {idx}/{total_exh}"
+        progress_bar.value = (idx / total_exh) if total_exh else 0
         txt_batch.value = f"Batch: {manager.batch_id}"
-        btn_prev.disabled = idx <= 1
-        btn_next.disabled = idx >= total
+
+        # Contar fotos totales
+        total_fotos = sum(e.get("total_fotos", 1) for e in manager.exhibitions)
+        txt_total_fotos.value = f"({total_fotos} fotos totales)"
+
+        btn_prev_exh.disabled = idx <= 1
+        btn_next_exh.disabled = idx >= total_exh
         page.update()
 
-    def update_details(photo: Dict[str, Any]) -> None:
-        txt_cliente.value = f"Cliente: {str(photo.get('cliente') or '-').strip()}"
-        txt_vendedor.value = f"Vendedor: {str(photo.get('vendedor') or '-').strip()}"
-        txt_tipo_pdv.value = f"Tipo PDV: {str(photo.get('tipo') or '-').strip()}"
-        fecha = str(photo.get("fecha") or "").strip()
-        hora = str(photo.get("hora") or "").strip()
+    def update_details() -> None:
+        exh = manager.get_current_exhibition()
+        if not exh:
+            return
+
+        txt_cliente.value = f"Cliente: {exh.get('cliente', '-')}"
+        txt_vendedor.value = f"Vendedor: {exh.get('vendedor', '-')}"
+        txt_tipo_pdv.value = f"Tipo PDV: {exh.get('tipo', '-')}"
+        fecha = exh.get("fecha", "")
+        hora = exh.get("hora", "")
         txt_fecha.value = f"Fecha/Hora: {fecha} {hora}".strip()
         txt_img_status.value = f"Imagen: {last_img_reason['value']}"
+
+        total = exh.get("total_fotos", 1)
+        if total > 1:
+            txt_fotos_count.value = f"{total} fotos en esta exhibicion"
+            txt_fotos_count.visible = True
+        else:
+            txt_fotos_count.value = ""
+            txt_fotos_count.visible = False
+
+        page.update()
+
+    def _build_thumbnail(index: int, foto: Dict[str, Any], is_active: bool, is_seen: bool) -> ft.Container:
+        """Construye un widget de miniatura para la galería."""
+        if is_active:
+            border = ft.border.all(3, THUMB_ACTIVE_BORDER)
+            bg = BG_IMG
+        elif is_seen:
+            border = ft.border.all(2, COLOR_GREEN)
+            bg = THUMB_SEEN_BG
+        else:
+            border = ft.border.all(1, "white20")
+            bg = THUMB_UNSEEN_BG
+
+        status_icon = ""
+        if is_seen:
+            status_icon = "✓"
+
+        label = ft.Text(f"Foto {index + 1} {status_icon}", size=10, text_align=ft.TextAlign.CENTER)
+
+        def on_thumb_click(e, idx=index):
+            navigate_to_photo(idx)
+
+        return ft.Container(
+            content=ft.Column(
+                [
+                    ft.Container(
+                        content=ft.Icon(
+                            ft.Icons.IMAGE,
+                            size=28,
+                            color=COLOR_GREEN if is_seen else (COLOR_CYAN if is_active else COLOR_MUTED),
+                        ),
+                        width=60,
+                        height=50,
+                        alignment=ft.Alignment.CENTER,
+                        bgcolor=bg,
+                        border_radius=6,
+                        border=border,
+                    ),
+                    label,
+                ],
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                spacing=2,
+            ),
+            on_click=on_thumb_click,
+            ink=True,
+            padding=4,
+            border_radius=8,
+        )
+
+    def update_gallery() -> None:
+        """Actualiza la galería de miniaturas."""
+        exh = manager.get_current_exhibition()
+        if not exh:
+            gallery_panel.visible = False
+            page.update()
+            return
+
+        total = exh.get("total_fotos", 1)
+        if total <= 1:
+            gallery_panel.visible = False
+            page.update()
+            return
+
+        gallery_panel.visible = True
+
+        # Actualizar contador
+        current = manager.current_photo_index + 1
+        txt_foto_counter.value = f"Foto {current} de {total}"
+
+        # Actualizar estado de vistas
+        seen, total_f = manager.get_seen_count()
+        if seen >= total_f:
+            txt_fotos_vistas_status.value = f"Vistas: {seen}/{total_f} ✓"
+            txt_fotos_vistas_status.color = COLOR_GREEN
+        else:
+            txt_fotos_vistas_status.value = f"Vistas: {seen}/{total_f}"
+            txt_fotos_vistas_status.color = COLOR_AMBER
+
+        # Navegación de fotos
+        btn_prev_foto.disabled = manager.current_photo_index <= 0
+        btn_next_foto.disabled = manager.current_photo_index >= total - 1
+
+        # Reconstruir miniaturas
+        exh_id = exh["id"]
+        seen_set = manager.photos_seen.get(exh_id, set())
+        gallery_row.controls.clear()
+
+        for i, foto in enumerate(exh.get("fotos", [])):
+            is_active = (i == manager.current_photo_index)
+            is_seen = (i in seen_set)
+            thumb = _build_thumbnail(i, foto, is_active, is_seen)
+            gallery_row.controls.append(thumb)
+
         page.update()
 
     def show_current_photo() -> None:
+        """Muestra la foto actual de la exhibición actual."""
         photo = manager.get_current_photo()
         if not photo:
-            set_buttons_enabled(False)
+            set_eval_buttons_enabled(False)
             return
 
         img_control.src = PLACEHOLDER_IMG
         last_img_reason["value"] = "-"
-        update_details(photo)
+        update_details()
 
         link = str(photo.get("url_foto") or "").strip()
         if link:
-            data, reason = fetch_image_bytes(link)
-            last_img_reason["value"] = reason
-            if data:
-                try:
-                    img_control.src = _bytes_to_base64_src(data)
-                except Exception:
-                    img_control.src = PLACEHOLDER_IMG
+            # Intentar cache primero
+            cached = manager.get_cached_image(link)
+            if cached is not None:
+                img_control.src = cached
+                last_img_reason["value"] = "OK (cache)"
+            else:
+                data, reason = fetch_image_bytes(link)
+                last_img_reason["value"] = reason
+                if data:
+                    try:
+                        src = _bytes_to_base64_src(data)
+                        img_control.src = src
+                        manager.cache_image(link, src)
+                    except Exception:
+                        img_control.src = PLACEHOLDER_IMG
+                        manager.cache_image(link, None)
+                else:
+                    manager.cache_image(link, None)
         else:
             last_img_reason["value"] = "SIN_LINK"
 
+        # Marcar como vista
+        manager.mark_photo_seen()
+
         update_progress()
-        set_buttons_enabled(True)
-        update_details(photo)
+        update_gallery()
+        update_eval_buttons()
+        update_details()
+
+    def navigate_to_photo(index: int) -> None:
+        """Navega a una foto específica dentro de la exhibición."""
+        if manager.go_to_photo(index):
+            show_current_photo()
 
     # =========================================================================
     # LOAD BATCH
@@ -737,7 +1183,7 @@ def main(page: ft.Page) -> None:
     def load_batch() -> None:
         set_empty(False)
         set_loading(True)
-        set_buttons_enabled(False)
+        set_eval_buttons_enabled(False)
         txt_comment.value = ""
         page.update()
 
@@ -748,13 +1194,14 @@ def main(page: ft.Page) -> None:
                 set_loading(False)
                 if not ok:
                     set_empty(True)
-                    set_buttons_enabled(False)
+                    set_eval_buttons_enabled(False)
                     return
                 show_current_photo()
                 update_stats()
-                _show_snackbar(page, "Pendientes cargadas", bgcolor="green")
+                n_exh = len(manager.exhibitions)
+                total_fotos = sum(e.get("total_fotos", 1) for e in manager.exhibitions)
+                _show_snackbar(page, f"{n_exh} exhibiciones cargadas ({total_fotos} fotos)", bgcolor="green")
 
-            # Ejecutar callback en el hilo principal de Flet
             page.run_thread(on_loaded)
 
         page.run_thread(_load)
@@ -763,50 +1210,67 @@ def main(page: ft.Page) -> None:
     # NAVIGATION / EVALUATE / KEYBOARD
     # =========================================================================
 
-    def prev_photo() -> None:
-        if manager.go_prev():
+    def prev_exhibition() -> None:
+        if manager.go_prev_exhibition():
             show_current_photo()
 
-    def next_photo() -> None:
-        if manager.go_next():
+    def next_exhibition() -> None:
+        if manager.go_next_exhibition():
             show_current_photo()
             return
         load_batch()
+
+    def prev_photo() -> None:
+        if manager.go_prev_photo():
+            show_current_photo()
+
+    def next_photo() -> None:
+        if manager.go_next_photo():
+            show_current_photo()
 
     def evaluate(decision: str) -> None:
         if state["is_evaluating"]:
             return
 
+        # Verificar que se vieron todas las fotos
+        if not manager.all_photos_seen():
+            _show_snackbar(page, "Debes ver todas las fotos antes de evaluar", bgcolor="orange")
+            return
+
         state["is_evaluating"] = True
-        set_buttons_enabled(False)
+        set_eval_buttons_enabled(False)
         page.update()
 
         extra = (txt_comment.value or "").strip()
 
         def _save():
-            success, code = manager.evaluate_current(decision, extra)
+            exh = manager.get_current_exhibition()
+            n_fotos = exh.get("total_fotos", 1) if exh else 1
+
+            success, code = manager.evaluate_current_exhibition(decision, extra)
 
             def on_saved():
                 state["is_evaluating"] = False
                 if not success:
                     if code == "LOCKED":
                         _show_snackbar(page, "Ya fue evaluada por otra persona", bgcolor="orange")
-                        next_photo()
+                        next_exhibition()
                         return
                     _show_snackbar(page, "Error guardando en Sheets", bgcolor="red")
-                    set_buttons_enabled(True)
+                    update_eval_buttons()
                     return
 
+                fotos_text = f" ({n_fotos} fotos)" if n_fotos > 1 else ""
                 if decision == STATUS_APPROVED:
-                    _show_snackbar(page, "Foto aprobada", bgcolor="green")
+                    _show_snackbar(page, f"Exhibicion aprobada{fotos_text}", bgcolor="green")
                 elif decision == STATUS_HIGHLIGHTED:
-                    _show_snackbar(page, "Foto destacada", bgcolor="orange")
+                    _show_snackbar(page, f"Exhibicion destacada{fotos_text}", bgcolor="orange")
                 elif decision == STATUS_REJECTED:
-                    _show_snackbar(page, "Foto rechazada", bgcolor="red")
+                    _show_snackbar(page, f"Exhibicion rechazada{fotos_text}", bgcolor="red")
 
                 txt_comment.value = ""
                 update_stats()
-                next_photo()
+                next_exhibition()
 
             page.run_thread(on_saved)
 
@@ -817,22 +1281,31 @@ def main(page: ft.Page) -> None:
             return
         if state["is_loading"] or state["is_empty"] or state["is_evaluating"]:
             return
-        if e.key == "ArrowLeft":
-            prev_photo()
-        elif e.key == "ArrowRight":
-            next_photo()
-        elif e.key.upper() == "A":
+
+        key = e.key
+
+        if key == "ArrowLeft":
+            prev_exhibition()
+        elif key == "ArrowRight":
+            next_exhibition()
+        elif key.upper() == "A":
             evaluate(STATUS_APPROVED)
-        elif e.key.upper() == "D":
+        elif key.upper() == "D":
             evaluate(STATUS_HIGHLIGHTED)
-        elif e.key.upper() == "R":
+        elif key.upper() == "R":
             evaluate(STATUS_REJECTED)
+        elif key in ("1", "2", "3", "4", "5"):
+            # Navegar a foto N dentro de la exhibición
+            idx = int(key) - 1
+            navigate_to_photo(idx)
 
     # =========================================================================
     # EVENT BINDINGS
     # =========================================================================
-    btn_prev.on_click = lambda e: prev_photo()
-    btn_next.on_click = lambda e: next_photo()
+    btn_prev_exh.on_click = lambda e: prev_exhibition()
+    btn_next_exh.on_click = lambda e: next_exhibition()
+    btn_prev_foto.on_click = lambda e: prev_photo()
+    btn_next_foto.on_click = lambda e: next_photo()
     btn_approve.on_click = lambda e: evaluate(STATUS_APPROVED)
     btn_highlight.on_click = lambda e: evaluate(STATUS_HIGHLIGHTED)
     btn_reject.on_click = lambda e: evaluate(STATUS_REJECTED)

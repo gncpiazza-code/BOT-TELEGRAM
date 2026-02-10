@@ -1417,7 +1417,7 @@ class SheetsManager:
         """
         Obtiene TODOS los roles de TODOS los grupos.
         Para cache: se llama 1 vez cada 24hs.
-    
+
         Returns:
             Lista de dicts con chat_id, user_id, rol
         """
@@ -1427,22 +1427,27 @@ class SheetsManager:
             ws = self._create_group_roles_sheet()
             if not ws:
                 return []
-    
+
         try:
-            records = self._gspread_call(
-                lambda: ws.get_all_records(),
+            # Usar get_all_values() en vez de get_all_records() para evitar
+            # problemas de precision con IDs numericos grandes/negativos
+            all_vals = self._gspread_call(
+                lambda: ws.get_all_values(),
                 op='GROUP_ROLES:get_all',
                 cache_key='group_roles:all',
                 cache_ttl=600,  # 10 min (se invalida al usar /setall_rol)
                 retries=2
             )
-        
+
             result = []
-            for r in records:
-                chat_id_str = str(r.get("CHAT_ID", "")).strip()
-                user_id_str = str(r.get("USER_ID", "")).strip()
-                rol = str(r.get("ROL", "")).strip().lower()
-            
+            for row in all_vals[1:]:  # Skip header
+                if len(row) < 5:
+                    continue
+
+                chat_id_str = str(row[0]).strip()
+                user_id_str = str(row[1]).strip()
+                rol = str(row[4]).strip().lower()
+
                 if chat_id_str and user_id_str and rol:
                     try:
                         result.append({
@@ -1452,10 +1457,10 @@ class SheetsManager:
                         })
                     except ValueError:
                         continue
-        
+
             logger.info(f"📊 Cargados {len(result)} roles desde GROUP_ROLES")
             return result
-        
+
         except Exception as e:
             logger.error(f"Error obteniendo roles: {e}")
             return []
@@ -1569,11 +1574,11 @@ class SheetsManager:
         
             if existing_row:
                 # Actualizar fila existente
-                ws.update(f"A{existing_row}:G{existing_row}", [data])
+                ws.update(f"A{existing_row}:G{existing_row}", [data], value_input_option="RAW")
                 logger.info(f"🔄 Rol actualizado: {full_name} → {rol} en grupo {chat_id}")
             else:
-                # Agregar nueva fila
-                ws.append_row(data, value_input_option="USER_ENTERED")
+                # Agregar nueva fila (RAW para evitar que Sheets interprete IDs negativos)
+                ws.append_row(data, value_input_option="RAW")
                 logger.info(f"✅ Rol asignado: {full_name} → {rol} en grupo {chat_id}")
         
             # Invalidar cache
@@ -1682,7 +1687,7 @@ class SheetsManager:
                 # Actualizar username/full_name por si cambió
                 ws.update(f"C{existing_row}:D{existing_row}", [[username, full_name]])
             else:
-                # Agregar nuevo usuario
+                # Agregar nuevo usuario (RAW para evitar que Sheets interprete IDs negativos)
                 data = [
                     str(chat_id),
                     str(user_id),
@@ -1691,7 +1696,7 @@ class SheetsManager:
                     timestamp,  # FIRST_SEEN
                     timestamp   # LAST_SEEN
                 ]
-                ws.append_row(data, value_input_option="USER_ENTERED")
+                ws.append_row(data, value_input_option="RAW")
                 logger.info(f"👤 Usuario registrado: {full_name} (@{username}) en grupo {chat_id}")
         
             # Invalidar cache
