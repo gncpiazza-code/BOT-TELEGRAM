@@ -377,24 +377,54 @@ async def post_init_extensions(application: Application) -> None:
     
     # 3. Programar jobs de hibernación
     try:
-        # Job para INICIAR hibernación a las 22:00
+        # ========================================
+        # 🧪 MODO TEST: Descomenta estas líneas para testear con horarios automáticos
+        # ========================================
+        # DESCOMENTAR PARA TEST (hibernación en 2 minutos):
+        # hora_test_inicio = (datetime.now(AR_TZ) + timedelta(minutes=2)).time()
+        # hora_test_fin = (datetime.now(AR_TZ) + timedelta(minutes=4)).time()
+        # logger.warning(f"🧪 MODO TEST: Hibernación en 2 min ({hora_test_inicio}), despertar en 4 min ({hora_test_fin})")
+
+        # ========================================
+        # ✅ PRODUCCIÓN: Jobs con timezone correcto
+        # ========================================
+        # Job para INICIAR hibernación a las 22:00 Argentina
         application.job_queue.run_daily(
             handle_hibernation_start,
             time=datetime.strptime("22:00", "%H:%M").time(),
+            timezone=AR_TZ,  # ← FIX: Timezone Argentina
             name="hibernation_start"
         )
-        
-        # Job para TERMINAR hibernación a las 06:00
+
+        # Job para TERMINAR hibernación a las 06:00 Argentina
         application.job_queue.run_daily(
             handle_hibernation_end,
             time=datetime.strptime("06:00", "%H:%M").time(),
+            timezone=AR_TZ,  # ← FIX: Timezone Argentina
             name="hibernation_end"
         )
-        
-        logger.info("✅ Jobs de hibernación programados (22:00-06:00)")
+
+        # ========================================
+        # 🧪 PARA TEST: Reemplaza los jobs de arriba por estos (descomentar)
+        # ========================================
+        # application.job_queue.run_daily(
+        #     handle_hibernation_start,
+        #     time=hora_test_inicio,
+        #     timezone=AR_TZ,
+        #     name="hibernation_start"
+        # )
+        #
+        # application.job_queue.run_daily(
+        #     handle_hibernation_end,
+        #     time=hora_test_fin,
+        #     timezone=AR_TZ,
+        #     name="hibernation_end"
+        # )
+
+        logger.info("✅ Jobs de hibernación programados (22:00-06:00 Argentina)")
     except Exception as e:
         logger.error(f"❌ Error programando jobs de hibernación: {e}")
-    
+
     logger.info("✅ Extensiones del bot inicializadas")
 
 
@@ -1463,8 +1493,145 @@ async def save_role_changes(
 # application.add_handler(CallbackQueryHandler(handle_role_callback, pattern="^ROL_"))
 #
 
+# ============================================================================
+# COMANDOS DE TEST - HIBERNACIÓN (ELIMINAR EN PRODUCCIÓN)
+# ============================================================================
+
+async def cmd_test_hibernar(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """TEST: Activa hibernación manualmente."""
+    if not update.message:
+        return
+
+    user_id = update.message.from_user.id
+
+    # Solo superusuario
+    if str(user_id) != BOT_OWNER_ID:
+        await update.message.reply_text("❌ Solo el superusuario puede usar comandos de test")
+        return
+
+    global bot_hibernating
+
+    if bot_hibernating:
+        await update.message.reply_text(
+            "⚠️ <b>Ya estás hibernando</b>\n\n"
+            f"Hora actual: {datetime.now(AR_TZ).strftime('%H:%M:%S')}",
+            parse_mode=ParseMode.HTML
+        )
+        return
+
+    logger.info("🧪 TEST: Activando hibernación manualmente")
+    await handle_hibernation_start(context)
+
+    await update.message.reply_text(
+        "🌙 <b>HIBERNACIÓN ACTIVADA (TEST)</b>\n\n"
+        f"🕐 Hora Argentina: {datetime.now(AR_TZ).strftime('%d/%m/%Y %H:%M:%S')}\n"
+        f"📸 Snapshot tomado: {hibernation_snapshot.get('timestamp', '-')}\n\n"
+        f"<b>Para desactivar:</b> /test_despertar",
+        parse_mode=ParseMode.HTML
+    )
+
+
+async def cmd_test_despertar(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """TEST: Desactiva hibernación manualmente."""
+    if not update.message:
+        return
+
+    user_id = update.message.from_user.id
+
+    # Solo superusuario
+    if str(user_id) != BOT_OWNER_ID:
+        await update.message.reply_text("❌ Solo el superusuario puede usar comandos de test")
+        return
+
+    global bot_hibernating
+
+    if not bot_hibernating:
+        await update.message.reply_text(
+            "⚠️ <b>No estás hibernando</b>\n\n"
+            f"Hora actual: {datetime.now(AR_TZ).strftime('%H:%M:%S')}",
+            parse_mode=ParseMode.HTML
+        )
+        return
+
+    logger.info("🧪 TEST: Desactivando hibernación manualmente")
+    await handle_hibernation_end(context)
+
+    await update.message.reply_text(
+        "☀️ <b>HIBERNACIÓN DESACTIVADA (TEST)</b>\n\n"
+        f"🕐 Hora Argentina: {datetime.now(AR_TZ).strftime('%d/%m/%Y %H:%M:%S')}\n\n"
+        f"✅ Bot operativo - Todos los sistemas activos",
+        parse_mode=ParseMode.HTML
+    )
+
+
+async def cmd_test_horarios(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """TEST: Muestra diagnóstico de horarios y timezone."""
+    if not update.message:
+        return
+
+    user_id = update.message.from_user.id
+
+    # Solo superusuario
+    if str(user_id) != BOT_OWNER_ID:
+        await update.message.reply_text("❌ Solo el superusuario puede usar comandos de test")
+        return
+
+    now_system = datetime.now()
+    now_ar = datetime.now(AR_TZ)
+
+    # Calcular diferencia
+    diff_hours = (now_ar.hour - now_system.hour) % 24
+
+    # Estado de hibernación
+    estado_hibernacion = "🌙 SÍ (ACTIVA)" if bot_hibernating else "☀️ NO (OPERATIVO)"
+
+    # Listar jobs de hibernación
+    jobs_info = ""
+    try:
+        jobs = context.application.job_queue.jobs()
+        for job in jobs:
+            if "hibernation" in job.name:
+                # Obtener próxima ejecución
+                next_run = job.next_t
+                if next_run:
+                    next_run_str = next_run.strftime('%d/%m/%Y %H:%M:%S')
+                else:
+                    next_run_str = "No programado"
+
+                jobs_info += f"• <b>{job.name}</b>\n  Próximo: {next_run_str}\n\n"
+    except Exception as e:
+        jobs_info = f"Error listando jobs: {e}\n"
+
+    msg = (
+        f"🕐 <b>DIAGNÓSTICO DE HORARIOS</b>\n\n"
+        f"<b>Hora del Sistema:</b>\n"
+        f"{now_system.strftime('%d/%m/%Y %H:%M:%S %Z')}\n\n"
+        f"<b>Hora Argentina (AR_TZ):</b>\n"
+        f"{now_ar.strftime('%d/%m/%Y %H:%M:%S %Z')}\n\n"
+        f"<b>Diferencia:</b> {diff_hours} hora(s)\n\n"
+        f"━━━━━━━━━━━━━━━━━━\n\n"
+        f"<b>Estado del Bot:</b>\n"
+        f"• Hibernando: {estado_hibernacion}\n"
+        f"• Hora inicio: 22:00 ARG\n"
+        f"• Hora fin: 06:00 ARG\n\n"
+        f"━━━━━━━━━━━━━━━━━━\n\n"
+        f"<b>Jobs Programados:</b>\n\n"
+        f"{jobs_info}"
+        f"<b>Snapshot:</b>\n"
+        f"• Timestamp: {hibernation_snapshot.get('timestamp', 'Sin snapshot')}\n"
+        f"• Vendedores: {len(hibernation_snapshot.get('ranking', []))}\n\n"
+        f"━━━━━━━━━━━━━━━━━━\n\n"
+        f"<b>Comandos de Test:</b>\n"
+        f"• /test_hibernar - Activar hibernación\n"
+        f"• /test_despertar - Desactivar hibernación\n"
+        f"• /test_horarios - Este diagnóstico"
+    )
+
+    await update.message.reply_text(msg, parse_mode=ParseMode.HTML)
+
+
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if not update.message or not update.message.photo: 
+    if not update.message or not update.message.photo:
         return
     
     if host_lock and not host_lock.is_host:
@@ -2320,6 +2487,15 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("misgrupos", cmd_misgrupos))
     app.add_handler(CommandHandler("ranking", cmd_ranking))
     app.add_handler(CommandHandler("set_role", cmd_set_role))
+
+    # ========================================
+    # 🧪 COMANDOS DE TEST - ELIMINAR EN PRODUCCIÓN
+    # ========================================
+    app.add_handler(CommandHandler("test_hibernar", cmd_test_hibernar))
+    app.add_handler(CommandHandler("test_despertar", cmd_test_despertar))
+    app.add_handler(CommandHandler("test_horarios", cmd_test_horarios))
+    # ========================================
+
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_text))
     app.add_handler(CallbackQueryHandler(handle_role_callback, pattern="^ROL_"))
