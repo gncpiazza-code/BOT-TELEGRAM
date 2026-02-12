@@ -1,1 +1,3 @@
 CONFIG_GLOBAL/
+__pycache__/
+*.pyc
