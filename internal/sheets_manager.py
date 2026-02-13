@@ -1710,6 +1710,147 @@ class SheetsManager:
 
 
     # ============================================================================
+    # HISTORIAL DE EXHIBICIONES POR PDV
+    # ============================================================================
+
+    def get_client_history_in_group(
+        self,
+        nro_cliente: str,
+        chat_id: int,
+        limit: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        Obtiene el historial de exhibiciones anteriores para un cliente
+        en un grupo específico.
+
+        Args:
+            nro_cliente: Número de cliente a buscar
+            chat_id: ID del grupo de Telegram
+            limit: Máximo de resultados a retornar (default 5)
+
+        Returns:
+            Lista de dicts con claves: fecha, tipo_pdv, estado.
+            Lista vacía si no hay historial o ante cualquier error.
+        """
+        try:
+            ws = self._get_ws("STATS")
+            if not ws:
+                return []
+
+            all_vals = self._gspread_call(
+                lambda: ws.get_all_values(),
+                op="STATS:client_history",
+                cache_key=f"client_history:{chat_id}:{nro_cliente}",
+                cache_ttl=180,
+                retries=2,
+            )
+
+            if not all_vals or len(all_vals) < 2:
+                return []
+
+            # Mapear columnas por nombre del header
+            header = all_vals[0]
+            col_map = {name.strip(): idx for idx, name in enumerate(header)}
+
+            col_fecha = col_map.get("FECHA")
+            col_cliente = col_map.get("CLIENTE")
+            col_tipo = col_map.get("TIPO_PDV")
+            col_estado = col_map.get("ESTADO_AUDITORIA")
+            col_chat = col_map.get("CHAT_ID_REF")
+
+            if col_fecha is None or col_cliente is None or col_chat is None:
+                return []
+
+            nro_cliente_str = str(nro_cliente).strip()
+            chat_id_str = str(chat_id).strip()
+
+            resultados = []
+            for row in all_vals[1:]:
+                if len(row) <= max(
+                    col_fecha, col_cliente, col_chat,
+                    col_tipo or 0, col_estado or 0
+                ):
+                    continue
+
+                if str(row[col_cliente]).strip() != nro_cliente_str:
+                    continue
+
+                # Comparar chat_id como int para evitar problemas de formato
+                try:
+                    row_chat_id = int(float(str(row[col_chat]).strip()))
+                except (ValueError, TypeError):
+                    continue
+
+                if row_chat_id != chat_id:
+                    continue
+
+                fecha_raw = str(row[col_fecha]).strip()
+                tipo_pdv = str(row[col_tipo]).strip() if col_tipo is not None else ""
+                estado = str(row[col_estado]).strip() if col_estado is not None else ""
+                if not estado:
+                    estado = "Pendiente"
+
+                # Extraer DD/MM para display
+                fecha_short = fecha_raw
+                if "/" in fecha_raw:
+                    partes = fecha_raw.split("/")
+                    if len(partes) >= 2:
+                        fecha_short = f"{partes[0]}/{partes[1]}"
+
+                # Parsear fecha completa para ordenar
+                dia, mes, anio = 0, 0, 0
+                if "/" in fecha_raw:
+                    partes = fecha_raw.split("/")
+                    try:
+                        dia = int(partes[0]) if len(partes) > 0 else 0
+                        mes = int(partes[1]) if len(partes) > 1 else 0
+                        anio = int(partes[2]) if len(partes) > 2 else 0
+                    except ValueError:
+                        pass
+
+                resultados.append({
+                    "fecha": fecha_short,
+                    "tipo_pdv": tipo_pdv,
+                    "estado": estado,
+                    "_fecha_full": (anio, mes, dia),
+                })
+
+            # Ordenar por fecha descendente (más nueva primero)
+            resultados.sort(key=lambda x: x["_fecha_full"], reverse=True)
+
+            # Retornar los primeros `limit` resultados
+            return resultados[:limit]
+
+        except Exception as e:
+            logger.debug(f"Error obteniendo historial de cliente: {e}")
+            return []
+
+    # ============================================================================
+    # ROLE LOOKUP GLOBAL
+    # ============================================================================
+
+    def get_existing_role_for_user(self, user_id: int) -> Optional[str]:
+        """
+        Busca si un user_id tiene algún rol asignado en cualquier grupo
+        del sistema.
+
+        Args:
+            user_id: ID del usuario de Telegram
+
+        Returns:
+            El rol existente (str) si se encuentra, None si no tiene
+            ningún rol en ningún grupo o ante cualquier error.
+        """
+        try:
+            all_roles = self.get_all_group_roles()
+            for entry in all_roles:
+                if entry.get("user_id") == user_id:
+                    return entry.get("rol")
+            return None
+        except Exception:
+            return None
+
+    # ============================================================================
     # NOTA SOBRE MÉTODOS ANTIGUOS
     # ============================================================================
     # 

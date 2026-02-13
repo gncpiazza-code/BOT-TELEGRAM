@@ -194,18 +194,35 @@ def get_cached_role(chat_id: int, user_id: int) -> str:
     """
     Obtiene el rol de un usuario desde el cache en memoria.
     Si el cache expiró, lo recarga automáticamente.
-    
+    Incluye fallback global: si no tiene rol en este grupo,
+    busca rol previo en cualquier otro grupo del sistema.
+
     Returns:
         Rol del usuario: "vendedor", "supervisor", "observador"
     """
     # Superusuario siempre tiene permisos globales
     if str(user_id) == BOT_OWNER_ID:
         return "supervisor"  # Superusuario actúa como supervisor global
-    
+
     if should_reload_role_cache():
         load_roles_cache()
-    
-    return role_cache.get((chat_id, user_id), "observador")
+
+    # 1. Buscar en cache del grupo específico (igual que antes)
+    cached = role_cache.get((chat_id, user_id))
+    if cached:
+        return cached
+
+    # 2. Fallback: consultar rol previo global
+    #    sin I/O adicional, usa cache en memoria de get_all_group_roles()
+    try:
+        existing = sheets.get_existing_role_for_user(user_id)
+        if existing is not None:
+            return existing
+    except Exception:
+        pass
+
+    # 3. Default final: sin rol previo = observador
+    return "observador"
 
 
 def invalidate_role_cache() -> None:
@@ -1651,40 +1668,52 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
     rol = get_cached_role(chat_id, user_id)
     
-    # LÓGICA PERMISIVA: Auto-asignar "vendedor" si no tiene rol
+    # LÓGICA DE JERARQUÍA GLOBAL: respetar rol previo en cualquier grupo
     if rol not in ["vendedor", "supervisor", "admin"]:
-        logger.info(f"🆕 Usuario nuevo detectado enviando foto: {full_name} (rol actual: {rol}). Auto-asignando 'vendedor'...")
-        
-        try:
-            # Guardar en Sheets
-            success = sheets.set_user_role_in_group(
-                chat_id=chat_id,
-                user_id=user_id,
-                username=username,  # ✅ Agregar parámetro faltante
-                full_name=full_name,  # ✅ Agregar parámetro faltante
-                rol="vendedor",
-                asignado_por="Auto-Permissive"
+
+        # Consultar si el usuario tiene algún rol previo
+        # en cualquier otro grupo del sistema.
+        # No genera lecturas a Sheets, usa cache en memoria.
+        existing_role = sheets.get_existing_role_for_user(user_id)
+
+        if existing_role is not None:
+            # El usuario ya existe en el sistema con un rol previo.
+            # Respetar ese rol siempre, sin excepciones.
+            role_to_assign = existing_role
+            logger.info(
+                f"🎭 Usuario {full_name} ya tiene rol '{existing_role}' "
+                f"en otro grupo. Asignando ese mismo rol en {chat_id}."
             )
-            
-            if success:
-                # Actualizar cache local INMEDIATAMENTE
-                role_cache[(chat_id, user_id)] = "vendedor"  # ✅ Usar int, no str
-                rol = "vendedor"  # Actualizar variable local
-                
-                # Feedback positivo al usuario
-                try:
-                    await update.message.reply_text(
-                        f"👋 <b>Bienvenido {full_name}</b>\n"
-                        f"Te he registrado automáticamente como <b>VENDEDOR</b>.\n"
-                        f"Procesando tu exhibición...",
-                        parse_mode=ParseMode.HTML
-                    )
-                except:
-                    pass
-        except Exception as e:
-            logger.error(f"⚠️ Error en auto-asignación de rol: {e}")
-            # Si falla sheets, seguimos procesando igual (resilience)
-            rol = "vendedor"
+        else:
+            # Usuario completamente nuevo en toda la base de datos.
+            # Asignar vendedor por defecto.
+            role_to_assign = "vendedor"
+            logger.info(
+                f"🆕 Usuario nuevo {full_name}. "
+                f"Sin rol previo. Asignando 'vendedor'."
+            )
+
+        success = sheets.set_user_role_in_group(
+            chat_id=chat_id,
+            user_id=user_id,
+            username=username,
+            full_name=full_name,
+            rol=role_to_assign,
+            asignado_por="Auto-Hierarchy"
+        )
+
+        if success:
+            role_cache[(chat_id, user_id)] = role_to_assign
+            rol = role_to_assign
+            try:
+                await update.message.reply_text(
+                    f"👋 <b>Bienvenido {full_name}</b>\n"
+                    f"Te registré como <b>{role_to_assign.upper()}</b>.\n"
+                    f"Procesando tu exhibición...",
+                    parse_mode=ParseMode.HTML
+                )
+            except:
+                pass
     
     # Ahora verificar permisos (post auto-asignación)
     if rol == "observador":
@@ -2051,7 +2080,40 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     fotos_text = f"📸 <b>{procesadas_count} fotos subidas</b>\n\n"
                 else:
                     fotos_text = ""
-                
+
+                # Obtener historial del PDV
+                historial = []
+                try:
+                    historial = await asyncio.to_thread(
+                        sheets.get_client_history_in_group,
+                        nro_cliente,
+                        chat_id,
+                        5
+                    )
+                except Exception as e:
+                    logger.debug(f"No se pudo obtener historial PDV: {e}")
+
+                # Construir bloque de texto del historial
+                historial_text = ""
+                if historial:
+                    estado_emoji = {
+                        "Aprobado":  "✅",
+                        "Destacado": "🔥",
+                        "Rechazado": "❌",
+                        "Pendiente": "⏳",
+                    }
+                    lineas = []
+                    for h in historial:
+                        emoji = estado_emoji.get(h["estado"], "❓")
+                        lineas.append(
+                            f"   • {h['fecha']} — {h['tipo_pdv']} — {emoji} {h['estado']}"
+                        )
+                    total_hist = len(historial)
+                    historial_text = (
+                        f"\n\n📂 <b>Historial en este PDV ({total_hist} anteriores):</b>\n"
+                        + "\n".join(lineas)
+                    )
+
                 keyboard = [
                     [
                         InlineKeyboardButton("✅ Aprobar", callback_data=f"APR_{primera_ref['uuid']}_{uploader_id}"),
@@ -2071,7 +2133,8 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     f"👤 <b>Vendedor:</b> {uploader_name}\n"
                     f"🏪 <b>Cliente:</b> {nro_cliente}\n"
                     f"📍 <b>Tipo:</b> {tipo_pdv_display}\n"
-                    f"🔗 <a href='{primera_ref['drive_link']}'>Ver en Drive</a>\n\n"
+                    f"🔗 <a href='{primera_ref['drive_link']}'>Ver en Drive</a>"
+                    f"{historial_text}\n\n"
                     f"<b>Evaluar:</b>"
                 )
                 
