@@ -393,15 +393,26 @@ MAGENTA = "#EC4899"
 BRONZE = "#F97316"
 GOLD_GLOW = "#F59E0B"
 
+# Paleta de confetti: 12 colores vibrantes, se ven espectaculares en TV grande
+CONFETTI_COLORS = [
+    "#FF6B6B", "#FF3D71", "#FF8C00", "#FFD700",
+    "#FBBF24", "#22C55E", "#10B981", "#22D3EE",
+    "#3B82F6", "#8B5CF6", "#EC4899", "#F97316",
+    "#FFFFFF", "#FCD34D", "#A3E635", "#06B6D4",
+]
+
 TOP = 15
-REFRESH = 60
+REFRESH = 90                      # 1 min 30 s — da tiempo a las animaciones
 TICK_MS = 16
 CAROUSEL_INTERVAL = 12.0
-CAROUSEL_FADE_DUR = 0.8
-CONFETTI_COUNT = 70
-CONFETTI_DURATION = 3.0
-LEADER_BANNER_DUR = 5.0
+CAROUSEL_FADE_DUR = 1.4           # cross-fade más suave (era 0.8)
+CAROUSEL_PRELOAD_AHEAD = 3.5      # precarga la próxima imagen N segundos antes
+CONFETTI_COUNT = 120              # más confetti (era 70)
+CONFETTI_DURATION = 7.0           # celebración más larga (era 3.0)
+LEADER_BANNER_DUR = 8.0           # banner visible más tiempo (era 5.0)
 ARROW_BOUNCE_DUR = 0.4
+RANK_FLASH_DUR = 2.2              # duración del flash de fila en ranking
+KPI_PULSE_DUR = 0.7               # duración del pulso en KPIs
 
 
 def _vsep(*, h: int = 18) -> ft.Control:
@@ -620,6 +631,8 @@ def main(page: ft.Page) -> None:
         "carousel_last_switch": time.monotonic(),
         "carousel_fading": False,
         "carousel_fade_start": None,
+        "carousel_front": "a",        # "a" o "b" — cual wrap es el visible actualmente
+        "carousel_preloaded": False,  # imagen siguiente ya cargada en buffer back
         # IDEA 2 - Flechas de posición
         "prev_rank_map": {},
         "rank_changes": {},
@@ -631,11 +644,16 @@ def main(page: ft.Page) -> None:
         "leader_name": "",
         "confetti_particles": [],
         "confetti_start": None,
+        # Animaciones adicionales PRO
+        "rank_flash": {},             # vendor -> mono inicio flash de fila
+        "kpi_pulse_start": None,      # mono inicio pulso bordes KPI
     }
 
     cache: List[Dict[str, Any]] = []
     img_cache: Dict[str, str] = {}
     q_updates: SimpleQueue = SimpleQueue()
+    # Referencias a filas del ranking para animarlas individualmente
+    rank_row_refs: Dict[str, ft.Container] = {}
 
     cfg = ConfigManager() if ConfigManager else None
     sheets = None
@@ -719,13 +737,13 @@ def main(page: ft.Page) -> None:
             ),
         )
 
+    kpi_card_ok   = kpi_card("APROBADAS", kpi_ok, "CHECK_CIRCLE", GREEN, "A")
+    kpi_card_dest = kpi_card("DESTACADAS", kpi_destacadas, "WHATSHOT", AMBER, "D")
+    kpi_card_bad  = kpi_card("RECHAZADAS", kpi_bad, "CANCEL", RED, "R")
+
     kpis = ft.Row(
         spacing=14,
-        controls=[
-            kpi_card("APROBADAS", kpi_ok, "CHECK_CIRCLE", GREEN, "A"),
-            kpi_card("DESTACADAS", kpi_destacadas, "WHATSHOT", AMBER, "D"),
-            kpi_card("RECHAZADAS", kpi_bad, "CANCEL", RED, "R"),
-        ],
+        controls=[kpi_card_ok, kpi_card_dest, kpi_card_bad],
     )
 
     # -------------------------
@@ -1038,19 +1056,34 @@ def main(page: ft.Page) -> None:
         right=0,
     )
 
-    # Pool de confetti pre-allocado
+    # Pool de confetti pre-allocado — 3 formas: rectángulo, círculo, streamer
     MAX_CONFETTI = CONFETTI_COUNT
     confetti_controls: List[ft.Container] = []
-    for _ in range(MAX_CONFETTI):
+    _confetti_shapes = []
+    for _ci in range(MAX_CONFETTI):
+        _shape = random.choice(["rect", "rect", "rect", "circle", "streamer"])
+        if _shape == "circle":
+            _cw = _ch = random.uniform(7, 12)
+            _cbr = 999
+        elif _shape == "streamer":
+            _cw = random.uniform(3, 5)
+            _ch = random.uniform(14, 22)
+            _cbr = 2
+        else:
+            _cw = random.uniform(9, 15)
+            _ch = random.uniform(5, 10)
+            _cbr = 3
+        _confetti_shapes.append({"w": _cw, "h": _ch, "br": _cbr})
         confetti_controls.append(
             ft.Container(
-                width=8,
-                height=5,
-                border_radius=2,
+                width=_cw,
+                height=_ch,
+                border_radius=_cbr,
                 bgcolor=AMBER,
                 visible=False,
                 top=-20,
                 left=0,
+                opacity=1.0,
             )
         )
 
@@ -1242,21 +1275,31 @@ def main(page: ft.Page) -> None:
             return True
         return False
 
+    # ¿Soporta rotate el Container en esta versión de Flet?
+    _confetti_can_rotate = "rotate" in _sig_params(ft.Container)
+
     def spawn_confetti(now_mono: float) -> None:
-        """Initialize confetti particles for celebration."""
+        """Initialize confetti particles — física pro con wobble y rotación."""
         particles = []
-        colors = [AMBER, "#FFD700", BRONZE, "#FF8C00", "#FBBF24", "#F59E0B"]
         for i in range(MAX_CONFETTI):
+            color = random.choice(CONFETTI_COLORS)
+            shape = _confetti_shapes[i] if i < len(_confetti_shapes) else {"w": 10, "h": 6, "br": 2}
+            # Velocidad inicial: arrancan rápido desde el tope y caen
             particles.append({
-                "x": random.uniform(50, 750),
-                "y": random.uniform(-80, -10),
-                "vx": random.uniform(-3, 3),
-                "vy": random.uniform(1.5, 5.0),
-                "gravity": 0.15,
-                "size_w": random.uniform(6, 12),
-                "size_h": random.uniform(4, 8),
-                "color": random.choice(colors),
+                "x": random.uniform(30, 870),
+                "y": random.uniform(-150, -5),
+                "vx": random.uniform(-5.0, 5.0),
+                "vy": random.uniform(0.8, 7.5),
+                "gravity": random.uniform(0.07, 0.22),
+                "wobble_freq": random.uniform(1.5, 5.0),
+                "wobble_amp": random.uniform(6, 30),
+                "wobble_phase": random.uniform(0, math.pi * 2),
+                "rotation": random.uniform(0, 360),
+                "rotation_speed": random.uniform(-12, 12),
+                "color": color,
                 "opacity": 1.0,
+                "shape_w": shape["w"],
+                "shape_h": shape["h"],
             })
         state["confetti_particles"] = particles
         state["confetti_start"] = now_mono
@@ -1267,8 +1310,8 @@ def main(page: ft.Page) -> None:
                 c = confetti_controls[idx]
                 c.visible = True
                 c.bgcolor = p["color"]
-                c.width = p["size_w"]
-                c.height = p["size_h"]
+                c.width = p["shape_w"]
+                c.height = p["shape_h"]
                 c.top = p["y"]
                 c.left = p["x"]
                 c.opacity = 1.0
@@ -1323,6 +1366,7 @@ def main(page: ft.Page) -> None:
 
     def render_rank(data: List[Dict[str, Any]]) -> None:
         rank_list.controls.clear()
+        rank_row_refs.clear()
         if not data:
             rank_list.controls.append(ft.Text("Sin datos", size=14, color=MUTED))
             return
@@ -1416,8 +1460,7 @@ def main(page: ft.Page) -> None:
             medal = _guaranteed_icon("EMOJI_EVENTS", color=pos_color, size=14, fallback_text="🏆") if i < 3 else None
             arrow_indicator = _make_arrow_indicator(d["v"])
 
-            rank_list.controls.append(
-                ft.Container(
+            _row_cont = ft.Container(
                     padding=_padding_symmetric(12, 10),
                     border_radius=12,
                     bgcolor="transparent",
@@ -1479,7 +1522,8 @@ def main(page: ft.Page) -> None:
                         ],
                     ),
                 )
-            )
+            rank_row_refs[d["v"]] = _row_cont
+            rank_list.controls.append(_row_cont)
 
     # -------------------------
     # CAROUSEL + FOOTER UPDATE
@@ -1580,7 +1624,6 @@ def main(page: ft.Page) -> None:
 
     def apply_carousel(carousel_data: List[Dict[str, Any]], now_mono: float) -> None:
         """Initialize the carousel with fresh data."""
-        items = state["carousel_items"]
         new_items = carousel_data if carousel_data else []
         state["carousel_items"] = new_items
 
@@ -1591,6 +1634,8 @@ def main(page: ft.Page) -> None:
         state["carousel_index"] = idx
         state["carousel_last_switch"] = now_mono
         state["carousel_fading"] = False
+        state["carousel_front"] = "a"
+        state["carousel_preloaded"] = False
 
         first = new_items[idx]
         src = first.get("src", "")
@@ -1598,6 +1643,7 @@ def main(page: ft.Page) -> None:
             img_a.src = src
         img_a_wrap.opacity = 1.0
         img_b_wrap.opacity = 0.0
+        img_b.src = ""
 
         update_footer_from_row(first.get("row"))
         update_carousel_highlight(first.get("status", ""))
@@ -1655,6 +1701,11 @@ def main(page: ft.Page) -> None:
 
         render_rank(rank_data)
 
+        # Flash filas que cambiaron de posición
+        for vendor, change in state["rank_changes"].items():
+            if change != 0:  # cualquier movimiento — nuevo, subió o bajó
+                state["rank_flash"][vendor] = now_mono
+
         # IDEA 3: Check for new leader
         if check_new_leader(rank_data):
             trigger_leader_celebration(state["current_leader"], now_mono)
@@ -1678,6 +1729,7 @@ def main(page: ft.Page) -> None:
 
         state["count"] += 1
         state["pulse_started"] = now_mono
+        state["kpi_pulse_start"] = now_mono  # pulso en bordes de KPI
 
     def update_badge_time() -> None:
         now = datetime.now()
@@ -1704,7 +1756,8 @@ def main(page: ft.Page) -> None:
         if ps is None:
             return
 
-        DURATION = 0.25
+        # Pulso más largo y dramático para TV grande — doble ciclo visible
+        DURATION = 1.8
         dt = now_mono - ps
 
         if dt > DURATION:
@@ -1719,75 +1772,97 @@ def main(page: ft.Page) -> None:
             base_width = 3.0
         elif status == "Aprobado":
             pulse_color = GREEN
-            base_width = 2.0
+            base_width = 2.5
         else:
             pulse_color = CYAN
-            base_width = 1.5
+            base_width = 2.0
 
         progress = dt / DURATION
-        factor = math.sin(progress * math.pi)
+        # Doble latido: dos pulsos que decaen exponencialmente
+        factor = math.sin(progress * math.pi * 2.5) * math.exp(-progress * 3.0)
+        abs_factor = abs(factor)
 
-        width = base_width + (2.0 * factor)
-        opacity = 0.3 + (0.7 * factor)
+        width = base_width + (5.0 * abs_factor)
+        opacity = 0.25 + (0.75 * abs_factor)
 
         b = _border_all(width, _op(opacity, pulse_color))
-
         left.border = b
         right.border = b
 
     # -------------------------
-    # ANIMATION: CAROUSEL TICK (IDEA 1)
+    # ANIMATION: CAROUSEL TICK (IDEA 1) — con precarga para eliminar parpadeo
     # -------------------------
     def carousel_tick(now_mono: float) -> None:
         items = state["carousel_items"]
         if not items or len(items) <= 1:
             return
 
+        front = state["carousel_front"]
+        old_idx = state["carousel_index"]
+        next_idx = (old_idx + 1) % len(items)
+
+        # Determinar qué wrap es front y cuál es back (buffer)
+        if front == "a":
+            front_wrap, back_wrap = img_a_wrap, img_b_wrap
+            back_img = img_b
+        else:
+            front_wrap, back_wrap = img_b_wrap, img_a_wrap
+            back_img = img_a
+
+        # ── Fade activo ──────────────────────────────────────────────────────
         if state["carousel_fading"]:
             fade_elapsed = now_mono - state["carousel_fade_start"]
 
             if fade_elapsed >= CAROUSEL_FADE_DUR:
-                # Fade complete
-                img_a_wrap.opacity = 1.0
-                img_b_wrap.opacity = 0.0
+                # Fade completo — confirmar opacidades finales y voltear front/back
+                front_wrap.opacity = 0.0
+                back_wrap.opacity = 1.0
                 state["carousel_fading"] = False
+                state["carousel_front"] = "b" if front == "a" else "a"
             else:
                 t = fade_elapsed / CAROUSEL_FADE_DUR
-                # Smoothstep easing
+                # Smoothstep + ligero ease-out para TV (se ve más natural)
                 t = t * t * (3.0 - 2.0 * t)
-                img_a_wrap.opacity = t
-                img_b_wrap.opacity = 1.0 - t
+                front_wrap.opacity = 1.0 - t
+                back_wrap.opacity = t
             return
 
         elapsed = now_mono - state["carousel_last_switch"]
+
+        # ── Precarga de la siguiente imagen (N segundos antes del switch) ────
+        # Setea src en el buffer invisible para que el browser la descargue
+        # antes de que empiece el fade → elimina el parpadeo/flash
+        if not state["carousel_preloaded"] and elapsed >= CAROUSEL_INTERVAL - CAROUSEL_PRELOAD_AHEAD:
+            next_item = items[next_idx]
+            next_src = next_item.get("src", "")
+            if next_src:
+                back_img.src = next_src   # invisible (opacity=0), solo carga
+            back_wrap.opacity = 0.0
+            state["carousel_preloaded"] = True
+
+        # ── Inicio de fade al completar el intervalo ─────────────────────────
         if elapsed >= CAROUSEL_INTERVAL:
-            old_idx = state["carousel_index"]
-            new_idx = (old_idx + 1) % len(items)
-            state["carousel_index"] = new_idx
+            state["carousel_index"] = next_idx
             state["carousel_last_switch"] = now_mono
+            state["carousel_preloaded"] = False
 
-            new_item = items[new_idx]
-
-            # img_b takes old (currently visible) image
-            img_b.src = img_a.src
-            img_b_wrap.opacity = 1.0
-
-            # img_a gets new image
-            new_src = new_item.get("src", "")
-            if new_src:
-                img_a.src = new_src
-            img_a_wrap.opacity = 0.0
+            # Si por algún motivo no se precargó antes, hacerlo ahora
+            if back_img.src != items[next_idx].get("src", ""):
+                next_src = items[next_idx].get("src", "")
+                if next_src:
+                    back_img.src = next_src
+            back_wrap.opacity = 0.0
 
             state["carousel_fading"] = True
             state["carousel_fade_start"] = now_mono
 
-            # Update footer and highlight for new image
+            new_item = items[next_idx]
             update_footer_from_row(new_item.get("row"))
             update_carousel_highlight(new_item.get("status", ""))
-            update_dots(new_idx, len(items))
+            update_dots(next_idx, len(items))
 
     # -------------------------
-    # ANIMATION: CONFETTI TICK (IDEA 3)
+    # ANIMATION: CONFETTI TICK — física pro con wobble sinusoidal y rotación
     # -------------------------
     def confetti_tick(now_mono: float) -> None:
         start = state.get("confetti_start")
@@ -1796,7 +1871,6 @@ def main(page: ft.Page) -> None:
 
         elapsed = now_mono - start
         if elapsed > CONFETTI_DURATION:
-            # Done - hide all
             confetti_layer.visible = False
             for c in confetti_controls:
                 c.visible = False
@@ -1804,28 +1878,43 @@ def main(page: ft.Page) -> None:
             state["confetti_start"] = None
             return
 
+        FADE_START = CONFETTI_DURATION - 2.0   # empieza a desvanecerse 2s antes del fin
         particles = state["confetti_particles"]
-        dt = TICK_MS / 1000.0
 
         for idx, p in enumerate(particles):
             if idx >= len(confetti_controls):
                 break
 
+            # Física: gravedad + velocidad
             p["vy"] += p["gravity"]
             p["x"] += p["vx"]
             p["y"] += p["vy"]
 
-            # Fade out in last second
-            if elapsed > CONFETTI_DURATION - 1.0:
-                p["opacity"] = max(0, 1.0 - (elapsed - (CONFETTI_DURATION - 1.0)))
+            # Rotación
+            p["rotation"] = (p["rotation"] + p["rotation_speed"]) % 360
+
+            # Wobble lateral sinusoidal — hace que "floten" al caer
+            wobble_x = p["wobble_amp"] * math.sin(elapsed * p["wobble_freq"] + p["wobble_phase"])
+
+            # Fade out suave al final
+            if elapsed > FADE_START:
+                p["opacity"] = max(0.0, 1.0 - (elapsed - FADE_START) / 2.0)
 
             c = confetti_controls[idx]
             c.top = p["y"]
-            c.left = p["x"]
+            c.left = p["x"] + wobble_x
             c.opacity = p["opacity"]
 
+            # Rotación si la versión de Flet la soporta
+            if _confetti_can_rotate:
+                try:
+                    angle_rad = p["rotation"] * math.pi / 180.0
+                    c.rotate = ft.transform.Rotate(angle_rad)
+                except Exception:
+                    pass
+
     # -------------------------
-    # ANIMATION: LEADER BANNER (IDEA 3)
+    # ANIMATION: LEADER BANNER — entrada bounce, glow pulsante, salida suave
     # -------------------------
     def leader_tick(now_mono: float) -> None:
         start = state.get("leader_celebration_start")
@@ -1836,46 +1925,118 @@ def main(page: ft.Page) -> None:
         total_dur = LEADER_BANNER_DUR
 
         if elapsed > total_dur:
-            # Hide banner
             leader_banner.visible = False
-            leader_banner.top = -100
+            leader_banner.top = -120
+            leader_banner.opacity = 1.0
+            leader_banner.border = _border_all(3, GOLD_GLOW)
             state["leader_celebration_start"] = None
             return
 
-        # Phase 1: Slide down with bounce (0-0.6s)
-        if elapsed < 0.6:
-            t = elapsed / 0.6
-            # Bounce easing: overshoot then settle
-            if t < 0.6:
-                pos = (t / 0.6) * 1.2
-            elif t < 0.8:
-                pos = 1.2 - ((t - 0.6) / 0.2) * 0.3
-            else:
-                pos = 0.9 + ((t - 0.8) / 0.2) * 0.1
-            target_y = 30
-            leader_banner.top = -100 + (100 + target_y) * min(pos, 1.0)
-            leader_banner.opacity = min(1.0, t * 2)
+        TARGET_Y = 28
+        SLIDE_DUR = 0.75      # entrada más larga y dramática
+        FADE_DUR  = 1.0       # salida suave
 
-        # Phase 2: Visible (0.6s - 4.2s)
-        elif elapsed < total_dur - 0.8:
-            leader_banner.top = 30
+        # ── Phase 1: Slide down con bounce elástico ──────────────────────────
+        if elapsed < SLIDE_DUR:
+            t = elapsed / SLIDE_DUR
+            # Elastic bounce: oscila alrededor del target y se asienta
+            bounce = math.sin(t * math.pi * 2.8) * math.exp(-t * 5.0) * 0.25
+            pos = min(t * 1.05, 1.0)  # avance con ligero overshoot
+            raw_top = -120 + (120 + TARGET_Y) * pos
+            leader_banner.top = raw_top + bounce * 40
+            leader_banner.opacity = min(1.0, t * 2.2)
+            leader_banner.border = _border_all(3, GOLD_GLOW)
+
+        # ── Phase 2: Visible con glow pulsante ──────────────────────────────
+        elif elapsed < total_dur - FADE_DUR:
+            leader_banner.top = TARGET_Y
             leader_banner.opacity = 1.0
+            # Glow pulsante: ciclo de ~1.2 segundos, entre borde delgado y grueso
+            cycle = (elapsed % 1.2) / 1.2
+            glow = 0.5 + 0.5 * math.sin(cycle * math.pi * 2)
+            bw = 3.0 + 6.0 * glow
+            bo = 0.55 + 0.45 * glow
+            leader_banner.border = _border_all(bw, _op(bo, GOLD_GLOW))
 
-        # Phase 3: Fade out upward (last 0.8s)
+        # ── Phase 3: Fade out hacia arriba ──────────────────────────────────
         else:
-            fade_t = (elapsed - (total_dur - 0.8)) / 0.8
-            leader_banner.top = 30 - 50 * fade_t
-            leader_banner.opacity = 1.0 - fade_t
+            fade_t = (elapsed - (total_dur - FADE_DUR)) / FADE_DUR
+            # Ease-in: arranca despacio y acelera al final
+            fade_t = fade_t * fade_t
+            leader_banner.top = TARGET_Y - 90 * fade_t
+            leader_banner.opacity = max(0.0, 1.0 - fade_t)
+            leader_banner.border = _border_all(3, GOLD_GLOW)
+
+    # -------------------------
+    # ANIMATION: RANK ROW FLASH — resalta filas que cambiaron de posición
+    # -------------------------
+    def rank_flash_tick(now_mono: float) -> None:
+        flash_map = state["rank_flash"]
+        if not flash_map:
+            return
+
+        to_remove = []
+        for vendor, start in list(flash_map.items()):
+            elapsed = now_mono - start
+            container = rank_row_refs.get(vendor)
+
+            if elapsed > RANK_FLASH_DUR or container is None:
+                if container is not None:
+                    container.bgcolor = "transparent"
+                to_remove.append(vendor)
+                continue
+
+            t = elapsed / RANK_FLASH_DUR
+            # Oscilación exponencialmente amortiguada — 3 "latidos" que se apagan
+            glow = math.sin(t * math.pi * 3.5) * math.exp(-t * 3.5)
+            opacity = max(0.0, abs(glow) * 0.38)
+
+            change = state["rank_changes"].get(vendor, 0)
+            if change == "new":
+                color = CYAN
+            elif isinstance(change, (int, float)) and change > 0:
+                color = GREEN
+            elif isinstance(change, (int, float)) and change < 0:
+                color = RED
+            else:
+                color = BLUE
+
+            container.bgcolor = _op(opacity, color)
+
+        for v in to_remove:
+            del flash_map[v]
+
+    # -------------------------
+    # ANIMATION: KPI BORDER PULSE — glow en las tarjetas al recibir datos nuevos
+    # -------------------------
+    def kpi_tick(now_mono: float) -> None:
+        ps = state.get("kpi_pulse_start")
+        if ps is None:
+            return
+
+        elapsed = now_mono - ps
+        if elapsed > KPI_PULSE_DUR:
+            kpi_card_ok.border   = _border_all(1, BORDER)
+            kpi_card_dest.border = _border_all(1, BORDER)
+            kpi_card_bad.border  = _border_all(1, BORDER)
+            state["kpi_pulse_start"] = None
+            return
+
+        t = elapsed / KPI_PULSE_DUR
+        # Pulso único fuerte: sube y baja suavemente
+        factor = math.sin(t * math.pi)
+        bw = 1.0 + 4.5 * factor
+        bo = 0.2 + 0.8 * factor
+
+        kpi_card_ok.border   = _border_all(bw, _op(bo, GREEN))
+        kpi_card_dest.border = _border_all(bw, _op(bo, AMBER))
+        kpi_card_bad.border  = _border_all(bw, _op(bo, RED))
 
     # -------------------------
     # ANIMATION: ARROW BOUNCE (IDEA 2)
     # -------------------------
-    # Arrow bounce is a visual-only effect. Since we rebuild the rank
-    # controls each refresh, the bounce is implicit in the initial
-    # scale of the arrow containers. For a real bounce we'd need
-    # to track per-row scale, but the visual rebuild already gives
-    # a "pop-in" feel. The ARROW_BOUNCE_DUR is reserved for future
-    # per-element animation if needed.
+    # Las flechas de posición se muestran en el rebuild de render_rank.
+    # El rank_flash_tick ya proporciona el efecto visual de cambio en la fila.
 
     # -------------------------
     # TICKER ASYNC
@@ -1902,12 +2063,16 @@ def main(page: ft.Page) -> None:
                 set_progress_color()
                 pulse_tick(now_m)
 
-                # IDEA 1: Carousel rotation
+                # IDEA 1: Carousel rotation (con precarga anti-parpadeo)
                 carousel_tick(now_m)
 
                 # IDEA 3: Confetti + Leader banner
                 confetti_tick(now_m)
                 leader_tick(now_m)
+
+                # Animaciones PRO adicionales
+                rank_flash_tick(now_m)
+                kpi_tick(now_m)
 
                 # Auto refresh
                 if elapsed >= REFRESH:
