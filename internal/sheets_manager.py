@@ -1271,12 +1271,18 @@ class SheetsManager:
         if not ws:
             return {"estado": "LIBRE", "inicio": None, "archivos_total": 0, "progreso": "", "timestamp_lectura": datetime.now(AR_TZ)}
         try:
-            # ✅ CORREGIDO: Removido default_blank (no existe en gspread)
-            # Obtenemos el rango y manejamos valores vacíos manualmente
             if ws.row_count < 2:
                 return {"estado": "LIBRE", "inicio": None, "archivos_total": 0, "progreso": "", "timestamp_lectura": datetime.now(AR_TZ)}
-            
-            result = ws.get("A2:D2")
+
+            # Cache de 25s: handle_photo lo llama en cada foto — evita N lecturas/minuto
+            raw = self._gspread_call(
+                lambda: ws.get("A2:D2"),
+                op='BOT_CONTROL:semaforo',
+                cache_key='semaforo:estado',
+                cache_ttl=25,
+                retries=1,
+            )
+            result = raw if raw else []
             valores = result[0] if result and len(result) > 0 else []
             
             if len(valores) < 1:
@@ -1663,24 +1669,31 @@ class SheetsManager:
     
         try:
             timestamp = datetime.now(AR_TZ).strftime("%d/%m/%Y %H:%M:%S")
-        
-            # Buscar si ya existe
-            all_vals = ws.get_all_values()
+
+            # Cache de 120s: evita leer toda la hoja en cada mensaje/foto/comando.
+            # Se invalida después de cualquier escritura para mantener coherencia.
+            all_vals = self._gspread_call(
+                lambda: ws.get_all_values(),
+                op='KNOWN_USERS:get_all',
+                cache_key='known_users:all',
+                cache_ttl=120,
+                retries=2,
+                allow_cache_on_error=True,
+            )
+
             existing_row = None
-        
             for i, row in enumerate(all_vals[1:], start=2):
                 if len(row) < 2:
                     continue
                 try:
                     row_chat = int(float(str(row[0]).strip()))
                     row_user = int(float(str(row[1]).strip()))
-                
                     if row_chat == chat_id and row_user == user_id:
                         existing_row = i
                         break
                 except (ValueError, IndexError):
                     continue
-        
+
             if existing_row:
                 # Actualizar LAST_SEEN (columna F)
                 ws.update(f"F{existing_row}", [[timestamp]])
@@ -1694,14 +1707,15 @@ class SheetsManager:
                     username,
                     full_name,
                     timestamp,  # FIRST_SEEN
-                    timestamp   # LAST_SEEN
+                    timestamp,  # LAST_SEEN
                 ]
                 ws.append_row(data, value_input_option="RAW")
                 logger.info(f"👤 Usuario registrado: {full_name} (@{username}) en grupo {chat_id}")
-        
-            # Invalidar cache
+
+            # Invalidar cache tras escritura para que la próxima llamada reluzca el nuevo estado
+            self._local_cache.pop('known_users:all', None)
             self._local_cache.pop(f'known_users:{chat_id}', None)
-        
+
             return True
         
         except Exception as e:

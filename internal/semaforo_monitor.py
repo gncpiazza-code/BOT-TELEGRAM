@@ -23,11 +23,11 @@ class SemaforoMonitor:
     y coordina la pausa/reanudación del procesamiento de imágenes.
     """
     
-    def __init__(self, sheets_manager, intervalo_segundos: int = 5):
+    def __init__(self, sheets_manager, intervalo_segundos: int = 30):
         """
         Args:
             sheets_manager: Instancia de SheetsManager
-            intervalo_segundos: Cada cuántos segundos verificar (default: 5)
+            intervalo_segundos: Cada cuántos segundos verificar (default: 30)
         """
         self.sheets = sheets_manager
         self.intervalo = intervalo_segundos
