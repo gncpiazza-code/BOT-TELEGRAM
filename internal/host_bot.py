@@ -1673,50 +1673,46 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     
     # LÓGICA DE JERARQUÍA GLOBAL: respetar rol previo en cualquier grupo
     if rol not in ["vendedor", "supervisor", "admin"]:
+        try:
+            # Consultar si el usuario tiene algún rol previo en cualquier otro grupo.
+            existing_role = await asyncio.to_thread(sheets.get_existing_role_for_user, user_id)
 
-        # Consultar si el usuario tiene algún rol previo en cualquier otro grupo.
-        # get_all_group_roles usa cache de 10 min, pero igual va a thread para no bloquear.
-        existing_role = await asyncio.to_thread(sheets.get_existing_role_for_user, user_id)
-
-        if existing_role is not None:
-            # El usuario ya existe en el sistema con un rol previo.
-            # Respetar ese rol siempre, sin excepciones.
-            role_to_assign = existing_role
-            logger.info(
-                f"🎭 Usuario {full_name} ya tiene rol '{existing_role}' "
-                f"en otro grupo. Asignando ese mismo rol en {chat_id}."
-            )
-        else:
-            # Usuario completamente nuevo en toda la base de datos.
-            # Asignar vendedor por defecto.
-            role_to_assign = "vendedor"
-            logger.info(
-                f"🆕 Usuario nuevo {full_name}. "
-                f"Sin rol previo. Asignando 'vendedor'."
-            )
-
-        success = await asyncio.to_thread(
-            sheets.set_user_role_in_group,
-            chat_id=chat_id,
-            user_id=user_id,
-            username=username,
-            full_name=full_name,
-            rol=role_to_assign,
-            asignado_por="Auto-Hierarchy",
-        )
-
-        if success:
-            role_cache[(chat_id, user_id)] = role_to_assign
-            rol = role_to_assign
-            try:
-                await update.message.reply_text(
-                    f"👋 <b>Bienvenido {full_name}</b>\n"
-                    f"Te registré como <b>{role_to_assign.upper()}</b>.\n"
-                    f"Procesando tu exhibición...",
-                    parse_mode=ParseMode.HTML
+            if existing_role is not None:
+                role_to_assign = existing_role
+                logger.info(
+                    f"🎭 Usuario {full_name} ya tiene rol '{existing_role}' "
+                    f"en otro grupo. Asignando ese mismo rol en {chat_id}."
                 )
-            except:
-                pass
+            else:
+                role_to_assign = "vendedor"
+                logger.info(f"🆕 Usuario nuevo {full_name}. Sin rol previo. Asignando 'vendedor'.")
+
+            success = await asyncio.to_thread(
+                sheets.set_user_role_in_group,
+                chat_id=chat_id,
+                user_id=user_id,
+                username=username,
+                full_name=full_name,
+                rol=role_to_assign,
+                asignado_por="Auto-Hierarchy",
+            )
+
+            if success:
+                role_cache[(chat_id, user_id)] = role_to_assign
+                rol = role_to_assign
+                try:
+                    await update.message.reply_text(
+                        f"👋 <b>Bienvenido {full_name}</b>\n"
+                        f"Te registré como <b>{role_to_assign.upper()}</b>.\n"
+                        f"Procesando tu exhibición...",
+                        parse_mode=ParseMode.HTML,
+                    )
+                except Exception:
+                    pass
+        except Exception as e:
+            # Sheets no disponible — usar "vendedor" como fallback para no bloquear al usuario
+            logger.error(f"Error asignando rol a {full_name} ({user_id}): {e}. Usando fallback 'vendedor'.")
+            rol = "vendedor"
     
     # Ahora verificar permisos (post auto-asignación)
     if rol == "observador":
@@ -1730,22 +1726,34 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     # Verificar semáforo — en thread (get_semaforo_estado tiene cache de 25s en sheets_manager)
     estado_sem = await asyncio.to_thread(sheets.get_semaforo_estado)
     if estado_sem["estado"] == "DISTRIBUYENDO":
-        await asyncio.to_thread(
-            sheets.encolar_imagen_pendiente,
-            chat_id=chat_id,
-            message_id=message_id,
-            user_id=user_id,
-            file_id=file_id,
-            username=username,
-        )
-        logger.info(f"📸 Foto encolada (semáforo ocupado) de {username}")
         try:
-            await update.message.reply_text(
-                "⏳ Sistema ocupado distribuyendo. Tu foto se procesará en breve.",
-                reply_to_message_id=message_id
+            await asyncio.to_thread(
+                sheets.encolar_imagen_pendiente,
+                chat_id=chat_id,
+                message_id=message_id,
+                user_id=user_id,
+                file_id=file_id,
+                username=username,
             )
-        except:
-            pass
+            logger.info(f"📸 Foto encolada (semáforo ocupado) de {username}")
+            try:
+                await update.message.reply_text(
+                    "⏳ Sistema ocupado distribuyendo. Tu foto se procesará en breve.",
+                    reply_to_message_id=message_id,
+                )
+            except Exception:
+                pass
+        except Exception as e:
+            logger.error(f"Error encolando imagen de {username}: {e}")
+            try:
+                await update.message.reply_text(
+                    "⚠️ <b>Error de conexión</b>\n\n"
+                    "No se pudo registrar tu foto. Por favor <b>reenviá la imagen</b>.",
+                    parse_mode=ParseMode.HTML,
+                    reply_to_message_id=message_id,
+                )
+            except Exception:
+                pass
         return
     
     # Anti-fraude (DESACTIVADO)
@@ -2024,17 +2032,18 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         group_title = session.get("chat_title") or str(chat_id)
         # ✅ SUBIDA INMEDIATA A DRIVE Y REGISTRO "PENDIENTE"
         procesadas_count = 0
+        fallidas_count = 0
         referencias_subidas = []
-        
+
         for photo_data in photos:
             file_id = photo_data["file_id"]
             message_id = photo_data["message_id"]
-            
+
             try:
                 # 1. Descargar
                 file = await context.bot.get_file(file_id)
                 file_bytes = await file.download_as_bytearray()
-                
+
                 # 2. Subir a Drive — en thread para no bloquear el event loop
                 result = await asyncio.to_thread(
                     sheets.upload_image_to_drive,
@@ -2057,7 +2066,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                         group_title=group_title,
                         chat_id=chat_id,
                     )
-                    
+
                     if uuid_ref:
                         referencias_subidas.append({
                             "uuid": uuid_ref,
@@ -2065,8 +2074,17 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                             "drive_link": result.drive_link
                         })
                         procesadas_count += 1
+                    else:
+                        # Drive OK pero Sheets falló — contar como falla
+                        logger.error(f"log_raw devolvió None para foto de {uploader_name} (Drive OK)")
+                        fallidas_count += 1
+                else:
+                    logger.error(f"upload_image_to_drive devolvió resultado vacío para {uploader_name}")
+                    fallidas_count += 1
+
             except Exception as e:
                 logger.error(f"Error procesando subida inmediata: {e}")
+                fallidas_count += 1
 
         # ✅ LIMPIEZA Y MENSAJE DE EVALUACIÓN
         if procesadas_count > 0:
@@ -2169,16 +2187,50 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     "uuid": primera_ref["uuid"],
                     "uploader_id": uploader_id,
                     "ref_msg": primera_ref["message_id"],
-                    "total_fotos": procesadas_count  # ← Info adicional
+                    "total_fotos": procesadas_count
                 }
+
+                # Notificar si alguna foto falló (pero al menos una fue OK)
+                if fallidas_count > 0:
+                    try:
+                        await context.bot.send_message(
+                            chat_id=chat_id,
+                            text=(
+                                f"⚠️ {fallidas_count} foto{'s' if fallidas_count > 1 else ''} "
+                                f"no pud{'ieron' if fallidas_count > 1 else 'o'} registrarse por "
+                                f"un error de conexión. Si falta alguna, reenviala."
+                            ),
+                            parse_mode=ParseMode.HTML,
+                        )
+                    except Exception:
+                        pass
 
             except Exception as e:
                 logger.error(f"Error en post-procesamiento: {e}")
         else:
+            # Todas las fotos fallaron — notificar al usuario con instrucción de reenvío
+            logger.error(
+                f"Todas las fotos fallaron para {uploader_name} "
+                f"(cliente: {nro_cliente}, tipo: {tipo_pdv_display})"
+            )
             try:
-                await q.edit_message_text("❌ Error al subir las fotos a Drive.")
-            except:
+                await q.edit_message_reply_markup(reply_markup=None)
+            except Exception:
                 pass
+            try:
+                first_msg_id = photos[0]["message_id"] if photos else None
+                await context.bot.send_message(
+                    chat_id=chat_id,
+                    text=(
+                        "⚠️ <b>Error de conexión con el servidor</b>\n\n"
+                        f"No se pudo registrar tu exhibición, {uploader_name}.\n"
+                        "Por favor <b>reenviá la foto</b> para cargarla correctamente."
+                    ),
+                    parse_mode=ParseMode.HTML,
+                    reply_to_message_id=first_msg_id,
+                )
+            except Exception as e:
+                logger.error(f"Error enviando notificación de fallo: {e}")
 
         # Limpiar sesión
         del upload_sessions[uploader_id]
@@ -2297,8 +2349,15 @@ async def sync_telegram_job(context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     try:
-        # 1. Buscar acciones pendientes de sincronizar — en thread (lee toda la hoja STATS)
-        actions = await asyncio.to_thread(sheets.get_unsynced_actions)
+        # 1. Buscar acciones pendientes — timeout de 20s para no bloquear instancias futuras
+        try:
+            actions = await asyncio.wait_for(
+                asyncio.to_thread(sheets.get_unsynced_actions),
+                timeout=20.0,
+            )
+        except asyncio.TimeoutError:
+            logger.warning("sync_telegram_job: timeout en get_unsynced_actions (Sheets 503?), saltando ciclo")
+            return
         if not actions:
             return
 
@@ -2363,9 +2422,15 @@ async def sync_telegram_job(context: ContextTypes.DEFAULT_TYPE) -> None:
             except Exception as e:
                 logger.error(f"❌ Error inesperado en Telegram: {e}")
 
-        # 3. Marcar en Sheets como sincronizado — en thread
+        # 3. Marcar en Sheets como sincronizado — timeout de 15s
         if rows_to_mark:
-            await asyncio.to_thread(sheets.mark_as_synced_rows, rows_to_mark)
+            try:
+                await asyncio.wait_for(
+                    asyncio.to_thread(sheets.mark_as_synced_rows, rows_to_mark),
+                    timeout=15.0,
+                )
+            except asyncio.TimeoutError:
+                logger.warning("sync_telegram_job: timeout en mark_as_synced_rows, se reintentará en el próximo ciclo")
 
     except Exception as e:
         logger.error(f"Error general en sync_telegram_job: {e}")
@@ -2377,16 +2442,32 @@ async def procesar_cola_imagenes_pendientes(context: ContextTypes.DEFAULT_TYPE) 
     if host_lock and not host_lock.is_host:
         return
     try:
-        pendientes = await asyncio.to_thread(sheets.get_imagenes_pendientes)
+        # Timeout de 20s: el job corre cada 30s; si Sheets da 503 con backoff
+        # la función tardaría >30s y APScheduler marcaría "max instances reached".
+        pendientes = await asyncio.wait_for(
+            asyncio.to_thread(sheets.get_imagenes_pendientes),
+            timeout=20.0,
+        )
         if not pendientes:
             return
         logger.info(f"📋 Procesando {len(pendientes)} imágenes pendientes...")
         for img in pendientes[:5]:
             try:
-                await asyncio.to_thread(sheets.marcar_imagen_procesada, img["row_num"])
+                await asyncio.wait_for(
+                    asyncio.to_thread(sheets.marcar_imagen_procesada, img["row_num"]),
+                    timeout=15.0,
+                )
+            except asyncio.TimeoutError:
+                logger.warning("Timeout marcando imagen procesada, saltando ciclo")
+                return
             except Exception as e:
                 logger.error(f"Error procesando imagen pendiente: {e}")
-        await asyncio.to_thread(sheets.limpiar_cola_imagenes)
+        await asyncio.wait_for(
+            asyncio.to_thread(sheets.limpiar_cola_imagenes),
+            timeout=15.0,
+        )
+    except asyncio.TimeoutError:
+        logger.warning("procesar_cola_imagenes_pendientes: timeout en lectura de Sheets (503?), saltando ciclo")
     except Exception as e:
         logger.error(f"Error en procesar_cola_imagenes_pendientes: {e}")
 
