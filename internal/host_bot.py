@@ -131,7 +131,7 @@ logger.info("=" * 80)
 
 cfg = ConfigManager()
 sheets = SheetsManager()
-semaforo = SemaforoMonitor(sheets, intervalo_segundos=15)
+semaforo = SemaforoMonitor(sheets, intervalo_segundos=30)
 
 def log_and_print(message: str, level: str = "info"):
     print(message)
@@ -253,8 +253,8 @@ async def take_hibernation_snapshot(context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("📸 Tomando snapshot para hibernación...")
     
     try:
-        # Cargar ranking y dejarlo en memoria
-        ranking = sheets.get_ranking_report()
+        # Cargar ranking y dejarlo en memoria — en thread
+        ranking = await asyncio.to_thread(sheets.get_ranking_report)
         
         hibernation_snapshot = {
             "timestamp": datetime.now(AR_TZ).strftime("%d/%m/%Y %H:%M:%S"),
@@ -343,11 +343,11 @@ async def handle_hibernation_end(context: ContextTypes.DEFAULT_TYPE) -> None:
 # REGISTRO AUTOMÁTICO DE KNOWN USERS
 # ============================================================================
 
-def register_user_interaction(chat_id: int, user_id: int, username: str, full_name: str) -> None:
+async def register_user_interaction(chat_id: int, user_id: int, username: str, full_name: str) -> None:
     """
     Registra que un usuario interactuó en un grupo (auto-registro en KNOWN_USERS).
-    Llamar en TODOS los handlers de mensajes, fotos, y comandos.
-    
+    Llamar con asyncio.create_task() para no bloquear el handler principal (fire-and-forget).
+
     Args:
         chat_id: ID del grupo (negativo)
         user_id: ID del usuario
@@ -357,17 +357,18 @@ def register_user_interaction(chat_id: int, user_id: int, username: str, full_na
     # Solo en grupos (chat_id negativo)
     if chat_id >= 0:
         return
-    
+
     try:
-        # Registrar en KNOWN_USERS (actualiza LAST_SEEN si ya existe)
-        sheets.register_known_user(
+        # Ejecutar en thread para no bloquear el event loop
+        await asyncio.to_thread(
+            sheets.register_known_user,
             chat_id=chat_id,
             user_id=user_id,
             username=username or "",
-            full_name=full_name or "Usuario"
+            full_name=full_name or "Usuario",
         )
     except Exception as e:
-        # Error silencioso, no bloquear el flujo
+        # Error silencioso — no bloquear el flujo principal
         logger.debug(f"Error registrando known user: {e}")
 
 
@@ -625,8 +626,8 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = update.message.from_user.id
     username = update.message.from_user.username or ""
     full_name = update.message.from_user.first_name or "Usuario"
-    register_user_interaction(chat_id, user_id, username, full_name)
-    
+    asyncio.create_task(register_user_interaction(chat_id, user_id, username, full_name))
+
     await update.message.reply_text(
         "¡Hola! Soy el bot de auditoría de PDV.\n"
         "Usa /help para ver cómo funciono."
@@ -714,9 +715,9 @@ async def cmd_mirol(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.message.chat.id
     
     try:
-        # Obtener todos los roles (puede retornar [] si la hoja está vacía)
-        all_roles = sheets.get_all_group_roles()
-        
+        # Obtener todos los roles — en thread (tiene cache de 10 min en _gspread_call)
+        all_roles = await asyncio.to_thread(sheets.get_all_group_roles)
+
         # Caso especial: Si no hay NINGÚN rol en el sistema
         if not all_roles:
             await update.message.reply_text(
@@ -876,8 +877,8 @@ async def cmd_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     uid = update.message.from_user.id
     username = update.message.from_user.username or ""
     full_name = update.message.from_user.first_name or "Usuario"
-    register_user_interaction(chat_id, uid, username, full_name)
-    
+    asyncio.create_task(register_user_interaction(chat_id, uid, username, full_name))
+
     # Durante hibernación, usar snapshot si está disponible
     if bot_hibernating and hibernation_snapshot and uid in hibernation_snapshot.get("stats_cache", {}):
         cached_msg = hibernation_snapshot["stats_cache"][uid]
@@ -890,7 +891,7 @@ async def cmd_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     
     # Modo normal o primera consulta en hibernación
     try:
-        report = sheets.get_stats_report(user_id=uid)
+        report = await asyncio.to_thread(sheets.get_stats_report, user_id=uid)
         hist = report["historico"]
         mes = report["ultimo_mes"]
         
@@ -985,8 +986,8 @@ async def cmd_ranking(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     user_id = update.message.from_user.id
     username = update.message.from_user.username or ""
     full_name = update.message.from_user.first_name or "Usuario"
-    register_user_interaction(chat_id, user_id, username, full_name)
-    
+    asyncio.create_task(register_user_interaction(chat_id, user_id, username, full_name))
+
     # Durante hibernación, usar snapshot
     if bot_hibernating and hibernation_snapshot:
         ranking = hibernation_snapshot.get("ranking", [])
@@ -1000,7 +1001,7 @@ async def cmd_ranking(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     else:
         # Modo normal
         try:
-            ranking = sheets.get_ranking_report()
+            ranking = await asyncio.to_thread(sheets.get_ranking_report)
         except Exception as e:
             logger.error(f"Error en cmd_ranking: {e}")
             await update.message.reply_text("❌ Error al obtener ranking")
@@ -1064,13 +1065,14 @@ async def cmd_set_role(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     supervisor_name = update.message.from_user.first_name or "Superusuario"
 
     try:
-        success = sheets.set_user_role_in_group(
+        success = await asyncio.to_thread(
+            sheets.set_user_role_in_group,
             chat_id=chat_id,
             user_id=target_id,
             username=target_username,
             full_name=target_name,
             rol=role,
-            asignado_por=supervisor_name
+            asignado_por=supervisor_name,
         )
 
         if success:
@@ -1155,9 +1157,9 @@ async def cmd_setall_rol(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     logger.info(f"🎭 /setall_rol iniciado por superusuario en grupo {chat_id}")
     
     try:
-        # Obtener usuarios conocidos del grupo
-        known_users = sheets.get_known_users_in_group(chat_id)
-        
+        # Obtener usuarios conocidos del grupo — en thread
+        known_users = await asyncio.to_thread(sheets.get_known_users_in_group, chat_id)
+
         if not known_users or len(known_users) == 0:
             await update.message.reply_text(
                 "👥 <b>Sistema de Roles - Grupo Vacío</b>\n\n"
@@ -1174,8 +1176,8 @@ async def cmd_setall_rol(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             )
             return
         
-        # Obtener roles actuales (puede ser [] si la hoja está vacía)
-        all_roles = sheets.get_all_group_roles()
+        # Obtener roles actuales — en thread
+        all_roles = await asyncio.to_thread(sheets.get_all_group_roles)
         roles_map = {}
         
         if all_roles:
@@ -1463,15 +1465,16 @@ async def save_role_changes(
     success_count = 0
     for change in changes:
         try:
-            result = sheets.set_user_role_in_group(
+            # Escrituras secuenciales en thread (evita race conditions en la misma hoja)
+            result = await asyncio.to_thread(
+                sheets.set_user_role_in_group,
                 chat_id=chat_id,
                 user_id=change["user_id"],
                 username=change["username"],
                 full_name=change["full_name"],
                 rol=change["new_rol"],
-                asignado_por=supervisor_name
+                asignado_por=supervisor_name,
             )
-            
             if result:
                 success_count += 1
         except Exception as e:
@@ -1660,7 +1663,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     username = update.message.from_user.username or ""
     full_name = update.message.from_user.first_name or "Usuario"
 
-    register_user_interaction(chat_id, user_id, username, full_name)
+    asyncio.create_task(register_user_interaction(chat_id, user_id, username, full_name))
 
     if bot_hibernating:
         logger.debug(f"Foto ignorada durante hibernación de {username}")
@@ -1671,10 +1674,9 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     # LÓGICA DE JERARQUÍA GLOBAL: respetar rol previo en cualquier grupo
     if rol not in ["vendedor", "supervisor", "admin"]:
 
-        # Consultar si el usuario tiene algún rol previo
-        # en cualquier otro grupo del sistema.
-        # No genera lecturas a Sheets, usa cache en memoria.
-        existing_role = sheets.get_existing_role_for_user(user_id)
+        # Consultar si el usuario tiene algún rol previo en cualquier otro grupo.
+        # get_all_group_roles usa cache de 10 min, pero igual va a thread para no bloquear.
+        existing_role = await asyncio.to_thread(sheets.get_existing_role_for_user, user_id)
 
         if existing_role is not None:
             # El usuario ya existe en el sistema con un rol previo.
@@ -1693,13 +1695,14 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
                 f"Sin rol previo. Asignando 'vendedor'."
             )
 
-        success = sheets.set_user_role_in_group(
+        success = await asyncio.to_thread(
+            sheets.set_user_role_in_group,
             chat_id=chat_id,
             user_id=user_id,
             username=username,
             full_name=full_name,
             rol=role_to_assign,
-            asignado_por="Auto-Hierarchy"
+            asignado_por="Auto-Hierarchy",
         )
 
         if success:
@@ -1724,15 +1727,16 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     
     file_id = update.message.photo[-1].file_id
     
-    # Verificar semáforo
-    estado_sem = sheets.get_semaforo_estado()
+    # Verificar semáforo — en thread (get_semaforo_estado tiene cache de 25s en sheets_manager)
+    estado_sem = await asyncio.to_thread(sheets.get_semaforo_estado)
     if estado_sem["estado"] == "DISTRIBUYENDO":
-        sheets.encolar_imagen_pendiente(
+        await asyncio.to_thread(
+            sheets.encolar_imagen_pendiente,
             chat_id=chat_id,
             message_id=message_id,
             user_id=user_id,
             file_id=file_id,
-            username=username
+            username=username,
         )
         logger.info(f"📸 Foto encolada (semáforo ocupado) de {username}")
         try:
@@ -1864,7 +1868,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     username = update.message.from_user.username or ""
     full_name = update.message.from_user.first_name or "Usuario"
 
-    register_user_interaction(chat_id, user_id, username, full_name)
+    asyncio.create_task(register_user_interaction(chat_id, user_id, username, full_name))
 
     if bot_hibernating:
         return
@@ -2031,25 +2035,27 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                 file = await context.bot.get_file(file_id)
                 file_bytes = await file.download_as_bytearray()
                 
-                # 2. Subir a Drive
-                result = sheets.upload_image_to_drive(
+                # 2. Subir a Drive — en thread para no bloquear el event loop
+                result = await asyncio.to_thread(
+                    sheets.upload_image_to_drive,
                     file_bytes=bytes(file_bytes),
                     filename=f"{nro_cliente}_{clean_code}_{int(time.time())}.jpg",
                     user_id=uploader_id,
-                    username=uploader_name
-                    , group_title=group_title
+                    username=uploader_name,
+                    group_title=group_title,
                 )
-                
+
                 if result and result.drive_link:
-                    # 3. Registrar en Sheets (Genera el estado "Pendiente")
-                    uuid_ref = sheets.log_raw(
+                    # 3. Registrar en Sheets (Genera el estado "Pendiente") — en thread
+                    uuid_ref = await asyncio.to_thread(
+                        sheets.log_raw,
                         user_id=uploader_id,
                         username=uploader_name,
                         nro_cliente=nro_cliente,
-                        tipo_pdv=tipo_pdv_display, # Guardamos el nombre bonito
-                        drive_link=result.drive_link
-                        , group_title=group_title
-                        , chat_id=chat_id
+                        tipo_pdv=tipo_pdv_display,
+                        drive_link=result.drive_link,
+                        group_title=group_title,
+                        chat_id=chat_id,
                     )
                     
                     if uuid_ref:
@@ -2147,13 +2153,16 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                     reply_to_message_id=primera_ref["message_id"]
                 )
                 
-                # Actualizar telegram_refs para TODAS las fotos (para tracking)
-                for ref_data in referencias_subidas:
-                    sheets.update_telegram_refs(
-                        uuid_ref=ref_data["uuid"], 
-                        chat_id=int(chat_id), 
-                        msg_id=int(sent_msg.message_id)
+                # Actualizar telegram_refs para TODAS las fotos — en threads concurrentes
+                await asyncio.gather(*[
+                    asyncio.to_thread(
+                        sheets.update_telegram_refs,
+                        uuid_ref=ref_data["uuid"],
+                        chat_id=int(chat_id),
+                        msg_id=int(sent_msg.message_id),
                     )
+                    for ref_data in referencias_subidas
+                ])
                 
                 # Guardar transacción activa (solo una vez)
                 active_transactions[sent_msg.message_id] = {
@@ -2211,12 +2220,13 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
             status = "Rechazado"
             icon = "❌"
 
-        # ✅ SOLO ACTUALIZAMOS EL ESTADO (La foto ya está en Drive)
-        result = sheets.update_status_by_uuid(
+        # ✅ SOLO ACTUALIZAMOS EL ESTADO (La foto ya está en Drive) — en thread
+        result = await asyncio.to_thread(
+            sheets.update_status_by_uuid,
             uuid_ref=uuid_ref,
             new_status=status,
             supervisor_name=q.from_user.first_name,
-            comments="" 
+            comments="",
         )
         
         if result == "LOCKED":
@@ -2287,8 +2297,8 @@ async def sync_telegram_job(context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     try:
-        # 1. Buscar acciones pendientes de sincronizar
-        actions = sheets.get_unsynced_actions()
+        # 1. Buscar acciones pendientes de sincronizar — en thread (lee toda la hoja STATS)
+        actions = await asyncio.to_thread(sheets.get_unsynced_actions)
         if not actions:
             return
 
@@ -2353,9 +2363,9 @@ async def sync_telegram_job(context: ContextTypes.DEFAULT_TYPE) -> None:
             except Exception as e:
                 logger.error(f"❌ Error inesperado en Telegram: {e}")
 
-        # 3. Marcar en Sheets como sincronizado
+        # 3. Marcar en Sheets como sincronizado — en thread
         if rows_to_mark:
-            sheets.mark_as_synced_rows(rows_to_mark)
+            await asyncio.to_thread(sheets.mark_as_synced_rows, rows_to_mark)
 
     except Exception as e:
         logger.error(f"Error general en sync_telegram_job: {e}")
@@ -2364,16 +2374,21 @@ async def procesar_cola_imagenes_pendientes(context: ContextTypes.DEFAULT_TYPE) 
     """Procesa cola de imágenes cada 30s."""
     if bot_hibernating:
         return
-    if host_lock and not host_lock.is_host: return
+    if host_lock and not host_lock.is_host:
+        return
     try:
-        pendientes = sheets.get_imagenes_pendientes()
-        if not pendientes: return
+        pendientes = await asyncio.to_thread(sheets.get_imagenes_pendientes)
+        if not pendientes:
+            return
         logger.info(f"📋 Procesando {len(pendientes)} imágenes pendientes...")
         for img in pendientes[:5]:
-            try: sheets.marcar_imagen_procesada(img["row_num"])
-            except Exception as e: logger.error(f"Error procesando imagen pendiente: {e}")
-        sheets.limpiar_cola_imagenes()
-    except Exception as e: logger.error(f"Error en procesar_cola_imagenes_pendientes: {e}")
+            try:
+                await asyncio.to_thread(sheets.marcar_imagen_procesada, img["row_num"])
+            except Exception as e:
+                logger.error(f"Error procesando imagen pendiente: {e}")
+        await asyncio.to_thread(sheets.limpiar_cola_imagenes)
+    except Exception as e:
+        logger.error(f"Error en procesar_cola_imagenes_pendientes: {e}")
 
 
 async def cleanup_expired_sessions(context: ContextTypes.DEFAULT_TYPE) -> None:
